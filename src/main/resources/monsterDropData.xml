@@ -1,35 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dropData xmlns="https://github.com/JPCMarques/RSAppModules">
-    <items>
-        <item id="coin" rsid="0" name="Coin" value="1"/>
-        <item id="bait" rsid="313" name="Fishing Bait" value="5"/>
-        <item id="pike" rsid="351" name="Pike" value="25"/>
-        <item id="thinSnail" rsid="3363" name="Thin Snail" value="424"/>
-        <item id="eyeOfNewt" rsid="221" name="Eye of newt" value="7"/>
-    </items>
     <monsters>
         <monster name="Banshee" slayerExp="15.5" hpExp="19.3" combatExp="58.5"  archetype="banshee">
-            <dropTable>
-                <drop itemID="coin" amount="950">
-                    <dropRates rarity="common"/>
-                </drop>
-                <drop itemID="bait" amount="11">
-                    <dropRates rarity="common"/>
-                </drop>
-                <drop itemID="pike" amount="1">
-                    <dropRates rarity="common"/>
-
-                </drop>
-                <drop itemID="thinSnail" amount="1.5">
-                    <dropRates rarity="common"/>
-                </drop>
-                <drop itemID="eyeOfNewt" amount="1">
-                    <dropRates rarity="uncommon"/>
-                </drop>
-                <drop itemID="mithrilArrow" amount="40">
-                    <dropRates rarity=""/>
-                </drop>
-            </dropTable>
             <masters>
                 <master>Chaeldar</master>
                 <master>Sumona</master>
@@ -43,8 +15,190 @@
                 <charmDropRate base="blue" rate="0.35"/>
                 <charmDropRate base="crimson" rate="1"/>
             </charms>
+            <dropTable type="primary">
+                <drop itemID="coin" amount="950">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="bait" amount="11">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="pike" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="thinSnail" amount="1.5">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="eyeOfNewt" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="mithrilArrow" amount="40">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="ironKiteshield" amount="1">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="darkMysticGloves" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="uncutSapphire" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="grimyGuam" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="grimyHarralander" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="grimyKwuarm" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="grimyMarrentill" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="grimyTarromin" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="grimyAvantoe" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="grimyCadantine" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="grimyDwarfWeed" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="grimyIrit" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="grimyLantadyme" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="grimyRanarr" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="ironOreN" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="airRune" amount="3">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="chaosRune" amount="6.6">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="cosmicRune" amount="2">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="fireRune" amount="6.5">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="limpwurtSeed" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="marrentillSeed" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="spiritWeedSeed" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="strawberrySeed" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="tarrominSeed" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="wildbloodSeed" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="ranarrSeed" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="belladonnaSeed" amount="1">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="cactusSeed" amount="1">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="dwarfWeedSeed" amount="1">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="jangerberrySeed" amount="1">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="whiteberrySeed" amount="1">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="lantadymeSeed" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="watermelonSeed" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="bronzeClaw" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="bronzeClawOH" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="staffOfAir" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="ironMace" amount="1">
+                    <dropRates rarity="rare"/>
+                </drop>
+            </dropTable>
+            <dropTable type="tertiary">
+                <drop itemID="ghostlyEssence" amount="5.5">
+                    <dropRates rarity="rare"/>
+                </drop>
+            </dropTable>
         </monster>
     </monsters>
+    <items>
+        
+        <item id="ironMace" rsid="1420" name="Iron mace" value="112"/>
+        <item id="staffOfAir" rsid="1381" name="Staff of air" value="898"/>
+        <item id="bronzeClawOH" rsid="25933" name="Off-hand bronze claw" value="40"/>
+        <item id="bronzeClaw" rsid="3095" name="Bronze claw" value="912"/>
+        <item id="watermelonSeed" rsid="5321" name="Watermelon seed" value="522"/>
+        <item id="lantadymeSeed" rsid="5302" name="Lantadyme seed" value="1105"/>
+        <item id="whiteberrySeed" rsid="5105" name="Whiteberry seed" value="36"/>
+        <item id="jangerberrySeed" rsid="5104" name="Jangerberry seed" value="5"/>
+        <item id="dwarfWeedSeed" rsid="5303" name="Dward weed seed" value="1131"/>
+        <item id="cactusSeed" rsid="5280" name="Cactus seed" value="226"/>
+        <item id="belladonnaSeed" rsid="5281" name="Belladonna seed" value="465"/>
+        <item id="ranarrSeed" rsid="5295" name="Ranarr seed" value="959"/>
+        <item id="wildbloodSeed" rsid="5311" name="Wildblood seed" value="46"/>
+        <item id="tarrominSeed" rsid="5293" name="Tarromin seed" value="19"/>
+        <item id="strawberrySeed" rsid="5323" name="Strawberry seed" value="114"/>
+        <item id="spiritWeedSeed" rsid="12176" name="Spirit weed seed" value="484"/>
+        <item id="marrentillSeed" rsid="5292" name="Marrentill seed" value="5"/>
+        <item id="limpwurtSeed" rsid="5100" name="Limpwurt seed" value="363"/>
+        <item id="fireRune" rsid="554" name="Fire rune" value="77"/>
+        <item id="cosmicRune" rsid="564" name="Cosmic rune" value="303"/>
+        <item id="chaosRune" rsid="562" name="Chaos rune" value="59"/>
+        <item id="airRune" rsid="556" name="Air rune" value="19"/>
+        <item id="ironOreN" rsid="440" name="Iron ore (noted)" value="350"/>
+        <item id="grimyRanarr" rsid="207" name="Grimy ranarr" value="2237"/>
+        <item id="grimyLantadyme" rsid="2485" name="Grimy lantadyme" value="3973"/>
+        <item id="grimyIrit" rsid="209" name="Grimy irit" value="2327"/>
+        <item id="grimyDwarfWeed" rsid="217" name="Grimy dwarf weed" value="3912"/>
+        <item id="grimyCadantine" rsid="215" name="Grimy cadantine" value="4769"/>
+        <item id="grimyAvantoe" rsid="211" name="Grimy avantoe" value="2663"/>
+        <item id="grimyTarromin" rsid="203" name="Grimy tarromin" value="36"/>
+        <item id="grimyMarrentill" rsid="201" name="Grimy marrentill" value="121"/>
+        <item id="grimyKwuarm" rsid="213" name="Grimy kwuarm" value="4723"/>
+        <item id="grimyHarralander" rsid="205" name="Grimy harralander" value="95"/>
+        <item id="grimyGuam" rsid="199" name="Grimy guam" value="103"/>
+        <item id="uncutSapphire" rsid="1623" name="Uncut sapphire" value="856"/>
+        <item id="coin" rsid="0" name="Coin" value="1"/>
+        <item id="bait" rsid="313" name="Fishing bait" value="5"/>
+        <item id="pike" rsid="351" name="Pike" value="25"/>
+        <item id="thinSnail" rsid="3363" name="Thin snail" value="424"/>
+        <item id="eyeOfNewt" rsid="221" name="Eye of newt" value="7"/>
+        <item id="mithrilArrow" rsid="888" name="Mithril arrow" value="22"/>
+        <item id="ironKiteshield" rsid="1191" name="Iron kiteshield" value="549"/>
+        <item id="darkMysticGloves" rsid="4105" name="Mystic gloves (dark)" value="6785"/>
+    </items>
     <archetypes>
         <archetype name="banshee" id="banshee"/>
     </archetypes>

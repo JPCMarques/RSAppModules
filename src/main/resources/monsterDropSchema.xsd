@@ -26,8 +26,8 @@
     <drops:element name="dropData">
         <drops:complexType>
             <drops:sequence>
-                <drops:element ref="items" minOccurs="0"/>
                 <drops:element ref="monsters" minOccurs="0"/>
+                <drops:element ref="items" minOccurs="0"/>
                 <drops:element ref="archetypes" minOccurs="0"/>
             </drops:sequence>
         </drops:complexType>
@@ -69,7 +69,6 @@
     <drops:element name="monster">
         <drops:complexType>
             <drops:sequence>
-                <drops:element ref="dropTable" minOccurs="0"/>
                 <drops:element ref="masters" minOccurs="1"/>
                 <drops:element name="charms" minOccurs="0">
                     <drops:complexType>
@@ -78,6 +77,7 @@
                         </drops:sequence>
                     </drops:complexType>
                 </drops:element>
+                <drops:element ref="dropTable" minOccurs="0" maxOccurs="2"/>
             </drops:sequence>
             <drops:attribute name="name" type="drops:string" use="required"/>
             <drops:attribute name="slayerExp" type="drops:float" use="required"/>
@@ -100,6 +100,7 @@
             <drops:sequence>
                 <drops:element ref="drop" minOccurs="1" maxOccurs="unbounded"/>
             </drops:sequence>
+            <drops:attribute name="type" type="drops:string" use="required"/>
         </drops:complexType>
     </drops:element>
 
