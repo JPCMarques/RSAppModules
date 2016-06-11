@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dropData xmlns="https://github.com/JPCMarques/RSAppModules">
+    <items>
+        <item id="coin" rsid="0" name="Coin" value="1"/>
+        <item id="bait" rsid="313" name="Fishing Bait" value="5"/>
+        <item id="pike" rsid="351" name="Pike" value="25"/>
+        <item id="thinSnail" rsid="3363" name="Thin Snail" value="424"/>
+        <item id="eyeOfNewt" rsid="221" name="Eye of newt" value="7"/>
+    </items>
+    <monsters>
+        <monster name="Banshee" slayerExp="15.5" hpExp="19.3" combatExp="58.5"  archetype="banshee">
+            <dropTable>
+                <drop itemID="coin" amount="950">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="bait" amount="11">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="pike" amount="1">
+                    <dropRates rarity="common"/>
+
+                </drop>
+                <drop itemID="thinSnail" amount="1.5">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="eyeOfNewt" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="mithrilArrow" amount="40">
+                    <dropRates rarity=""/>
+                </drop>
+            </dropTable>
+            <masters>
+                <master>Chaeldar</master>
+                <master>Sumona</master>
+                <master>Turael/Spria</master>
+                <master>Mazchna/Achtryn</master>
+                <master>Duradel/Lapalok</master>
+            </masters>
+            <charms>
+                <charmDropRate base="gold" rate="2.5"/>
+                <charmDropRate base="green" rate="7"/>
+                <charmDropRate base="blue" rate="0.35"/>
+                <charmDropRate base="crimson" rate="1"/>
+            </charms>
+        </monster>
+    </monsters>
+    <archetypes>
+        <archetype name="banshee" id="banshee"/>
+    </archetypes>
+</dropData>
