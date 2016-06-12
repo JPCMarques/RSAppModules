@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dropData xmlns="https://github.com/JPCMarques/RSAppModules">
-    <monsters>
+    <monsterList>
         <monster name="Banshee" slayerExp="15.5" hpExp="19.3" combatExp="58.5"  archetype="banshee">
             <masters>
                 <master>Chaeldar</master>
@@ -152,9 +152,9 @@
                 </drop>
             </dropTable>
         </monster>
-    </monsters>
-    <items>
-        
+    </monsterList>
+    <itemList>
+        <item id="ghostlyEssence" rsid="32341" name="Ghostly Essence" value="2191"/>
         <item id="ironMace" rsid="1420" name="Iron mace" value="112"/>
         <item id="staffOfAir" rsid="1381" name="Staff of air" value="898"/>
         <item id="bronzeClawOH" rsid="25933" name="Off-hand bronze claw" value="40"/>
@@ -198,8 +198,15 @@
         <item id="mithrilArrow" rsid="888" name="Mithril arrow" value="22"/>
         <item id="ironKiteshield" rsid="1191" name="Iron kiteshield" value="549"/>
         <item id="darkMysticGloves" rsid="4105" name="Mystic gloves (dark)" value="6785"/>
-    </items>
-    <archetypes>
-        <archetype name="banshee" id="banshee"/>
-    </archetypes>
+    </itemList>
+    <archetypeMonsterList>
+        <archetype archetypeID="banshee">
+            <archetypeMonster monsterID="Banshee"/>
+        </archetype>
+    </archetypeMonsterList>
+    <slayerMasterAssignments>
+        <slayerMaster name="Turael/Spria" totalWeight="355">
+            <assignment archetype="banshee" weight="30"/>
+        </slayerMaster>
+    </slayerMasterAssignments>
 </dropData>
