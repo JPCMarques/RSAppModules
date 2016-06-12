@@ -27,6 +27,13 @@
                 <version>2.2</version>
                 <executions>
                     <execution>
+                        <configuration>
+                            <sources>
+                                <source>${basedir}/src/main/resources/slayer/monsterDropSchema.xsd</source>
+                            </sources>
+                            <!-- The package of your generated sources -->
+                            <packageName>slayer</packageName>
+                        </configuration>
                         <phase>generate-sources</phase>
                         <id>xjc</id>
                         <goals>
@@ -34,13 +41,6 @@
                         </goals>
                     </execution>
                 </executions>
-                <configuration>
-                    <sources>
-                        <source>${basedir}/src/main/resources/monsterDropSchema.xsd</source>
-                    </sources>
-                    <!-- The package of your generated sources -->
-                    <packageName>slayer</packageName>
-                </configuration>
             </plugin>
 
         </plugins>
