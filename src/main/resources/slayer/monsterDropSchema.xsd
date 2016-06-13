@@ -70,14 +70,14 @@
     <drops:element name="monster">
         <drops:complexType>
             <drops:sequence>
-                <drops:element name="masters" minOccurs="1">
+                <drops:element name="masterList" minOccurs="1">
                     <drops:complexType>
                         <drops:sequence>
                             <drops:element name="master" type="slayerMaster" maxOccurs="unbounded"/>
                         </drops:sequence>
                     </drops:complexType>
                 </drops:element>
-                <drops:element name="charms" minOccurs="0">
+                <drops:element name="charmList" minOccurs="0">
                     <drops:complexType>
                         <drops:sequence>
                             <drops:element ref="charmDropRate" maxOccurs="unbounded" minOccurs="0"/>

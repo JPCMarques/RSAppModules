@@ -2,19 +2,19 @@
 <dropData xmlns="https://github.com/JPCMarques/RSAppModules">
     <monsterList>
         <monster name="Banshee" slayerExp="15.5" hpExp="19.3" combatExp="58.5"  archetype="banshee">
-            <masters>
+            <masterList>
                 <master>Chaeldar</master>
                 <master>Sumona</master>
                 <master>Turael/Spria</master>
                 <master>Mazchna/Achtryn</master>
                 <master>Duradel/Lapalok</master>
-            </masters>
-            <charms>
-                <charmDropRate base="gold" rate="2.5"/>
-                <charmDropRate base="green" rate="7"/>
-                <charmDropRate base="blue" rate="0.35"/>
-                <charmDropRate base="crimson" rate="1"/>
-            </charms>
+            </masterList>
+            <charmList>
+                <charmDropRate base="gold" rate="0.025"/>
+                <charmDropRate base="green" rate="0.07"/>
+                <charmDropRate base="blue" rate="0.0035"/>
+                <charmDropRate base="crimson" rate="0.01"/>
+            </charmList>
             <dropTable type="primary">
                 <drop itemID="coin" amount="950">
                     <dropRates rarity="common"/>

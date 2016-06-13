@@ -8,7 +8,6 @@ import java.util.HashMap;
  * Created by jpcmarques on 13-06-2016.
  */
 public abstract class ValueCalculator {
-    public static final float COMMON = 0.1f, UNCOMMON = 0.01f, RARE=0.001f, VERY_RARE = 0.0001f;
     private static HashMap<Rarity, Float> defaultValues;
 
     static{
@@ -28,8 +27,9 @@ public abstract class ValueCalculator {
 
         float odds;
         Rarity rarity = drop.getDropRates().getRarity();
-        if(rarity!=Rarity.OUTLIER) odds = defaultValues.get(rarity);
-        else odds = 1/drop.getDropRates().getValue().floatValue();
+        if(rarity == Rarity.OUTLIER) odds = 1/drop.getDropRates().getValue().floatValue();
+        else if(rarity == Rarity.ALWAYS) odds = 1;
+        else odds = defaultValues.get(rarity);
 
         return odds*avgPrice;
     }
