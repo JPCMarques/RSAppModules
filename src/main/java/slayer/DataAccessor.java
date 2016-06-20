@@ -5,6 +5,8 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 import java.io.File;
+import java.util.HashMap;
+import java.util.HashSet;
 
 /**
  * Created by jpcmarques on 12-06-2016.
@@ -49,5 +51,28 @@ public class DataAccessor {
 
     public boolean itemListExists(){
         return new File(ITEM_LIST_LOC).exists();
+    }
+
+    public static class ItemListStatus{
+        public int missingItems, additionalItems;
+    }
+
+    public ItemListStatus getStatus(ItemList itemList, DropData data){
+        ItemList dataItemList = data.getItemList();
+        HashMap<Integer, String> dataItemListInfo = new HashMap<>();
+        for(Item i: dataItemList.getItem())
+            dataItemListInfo.put(i.getRsid().intValue(), i.getId());
+        ItemListStatus status = new ItemListStatus();
+
+        for(Item i: itemList.getItem()){
+            int rsID = i.getRsid().intValue();
+            if(!dataItemListInfo.containsKey(rsID)
+                    || !dataItemListInfo.get(rsID).equals(i.getId())){
+                status.additionalItems++;
+                dataItemListInfo.remove(rsID);
+            }
+        }
+        status.missingItems = dataItemListInfo.keySet().size();
+        return status;
     }
 }
