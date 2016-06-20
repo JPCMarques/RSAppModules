@@ -12,6 +12,12 @@ import java.io.File;
 public class DataAccessor {
     private static final String DROP_DATA_RES_LOC = "slayer/monsterDropData.xml";
     private static final String ITEM_LIST_LOC = "itemList.xml";
+    private static DataAccessor instance;
+
+    public static DataAccessor getInstance(){
+        if(instance == null) instance = new DataAccessor();
+        return instance;
+    }
 
     public DropData unmarshallDropData() throws JAXBException {
         ClassLoader classLoader = getClass().getClassLoader();
@@ -24,11 +30,24 @@ public class DataAccessor {
     }
 
     public ItemList unmarshallItemList() throws JAXBException {
-        File dropDataFile = new File(ITEM_LIST_LOC);
+        File itemListFile = new File(ITEM_LIST_LOC);
 
         JAXBContext jaxbContext = JAXBContext.newInstance(ItemList.class);
         Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
 
-        return  (ItemList) unmarshaller.unmarshal(dropDataFile);
+        return  (ItemList) unmarshaller.unmarshal(itemListFile);
+    }
+
+    public void marshallItemList(ItemList itemList) throws JAXBException {
+        File itemListFile = new File(ITEM_LIST_LOC);
+        JAXBContext jaxbContext = JAXBContext.newInstance(ItemList.class);
+        Marshaller marshaller = jaxbContext.createMarshaller();
+        marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+
+        marshaller.marshal(itemList, itemListFile);
+    }
+
+    public boolean itemListExists(){
+        return new File(ITEM_LIST_LOC).exists();
     }
 }

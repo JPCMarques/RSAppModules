@@ -2,3 +2,4 @@
 RSAppModules.iml
 target/*
 src/main/java/slayer/Main.java
+itemList.xml
