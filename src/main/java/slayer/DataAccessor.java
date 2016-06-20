@@ -55,6 +55,10 @@ public class DataAccessor {
 
     public static class ItemListStatus{
         public int missingItems, additionalItems;
+
+        public String toString(){
+            return "Missing items: " + missingItems + "\nAdditionalItems: " + additionalItems;
+        }
     }
 
     public ItemListStatus getStatus(ItemList itemList, DropData data){
