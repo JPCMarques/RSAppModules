@@ -47,7 +47,7 @@
             <drops:attribute name="id" type="drops:ID" use="required"/>
             <drops:attribute name="rsid" type="drops:integer" use="required"/>
             <drops:attribute name="name" type="drops:string" use="required"/>
-            <drops:attribute name="value" type="drops:float" use="required"/>
+            <drops:attribute name="value" type="drops:double" use="required"/>
         </drops:complexType>
     </drops:element>
 

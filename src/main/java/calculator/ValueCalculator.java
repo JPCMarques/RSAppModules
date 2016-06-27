@@ -19,9 +19,9 @@ public abstract class ValueCalculator {
         defaultValues.put(Rarity.VERY_RARE, 0.0001f);
     }
 
-    public float calcDropValue(ItemList list, Drop drop) throws IncompleteItemListException {
+    public double calcDropValue(ItemList list, Drop drop) throws IncompleteItemListException {
         float avgAmount = drop.getAmount();
-        float unitPrice = ((Item) drop.getItemID()).getValue();
+        double unitPrice = ((Item) drop.getItemID()).getValue();
 
         if(list != null){
             for(Item i : list.getItem()){
@@ -34,7 +34,7 @@ public abstract class ValueCalculator {
 
         if(unitPrice == 0.0f)
             throw new IncompleteItemListException("The supplied item list has no information for the item in the drop.");
-        float avgPrice = avgAmount*unitPrice;
+        double avgPrice = avgAmount*unitPrice;
 
         float odds;
         Rarity rarity = drop.getDropRates().getRarity();
@@ -45,27 +45,27 @@ public abstract class ValueCalculator {
         return odds*avgPrice;
     }
 
-    public float calcDropTableValue(ItemList list, DropTable dropTable) throws IncompleteItemListException {
-        float dropTableValue = 0;
+    public double calcDropTableValue(ItemList list, DropTable dropTable) throws IncompleteItemListException {
+        double dropTableValue = 0;
         for(Drop drop: dropTable.getDrop()) dropTableValue += calcDropValue(list, drop);
         return dropTableValue;
     }
 
-    public float calcTaskValue(ItemList list, Monster monster, int killNumber) throws IncompleteItemListException {
+    public double calcTaskValue(ItemList list, Monster monster, int killNumber) throws IncompleteItemListException {
         float totalDropTableWorth = 0;
         for(DropTable dropTable: monster.getDropTable()) totalDropTableWorth += calcDropTableValue(list, dropTable);
         return totalDropTableWorth*killNumber;
     }
 
-    public float calcTaskValue(Monster monster, int killNumber) throws IncompleteItemListException {
+    public double calcTaskValue(Monster monster, int killNumber) throws IncompleteItemListException {
         return calcTaskValue(null, monster, killNumber);
     }
 
-    public float calcDropTableValue(DropTable dropTable) throws IncompleteItemListException {
+    public double calcDropTableValue(DropTable dropTable) throws IncompleteItemListException {
         return calcDropTableValue(null, dropTable);
     }
 
-    public float calcDropValue(Drop drop) throws IncompleteItemListException {
+    public double calcDropValue(Drop drop) throws IncompleteItemListException {
         return calcDropValue(null, drop);
     }
 }
