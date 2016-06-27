@@ -1,4 +1,4 @@
-package calculator;
+package slayer.calculator;
 
 import slayer.Charm;
 import slayer.CharmDropRate;

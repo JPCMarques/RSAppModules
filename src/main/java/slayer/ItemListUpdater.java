@@ -1,13 +1,11 @@
 package slayer;
 
 import converters.GPConverter;
-import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
 
@@ -36,11 +34,16 @@ public abstract class ItemListUpdater {
         return GPConverter.convert(rsPrice);
     }
 
-    public static void updateMonsterDropValue(Monster data) throws IOException {
+    public static void updateMonsterDropValue(Monster data, UpdateManager manager) throws IOException {
         for(DropTable dropTable : data.getDropTable()){
             for(Drop drops: dropTable.getDrop()){
                 Item item = (Item) drops.getItemID();
-                item.setValue(getItemPrice(item));
+
+                String itemName = item.getName();
+                if(manager.canUpdate(itemName)){
+                    item.setValue(getItemPrice(item));
+                    manager.updated(itemName);
+                }
             }
         }
     }
