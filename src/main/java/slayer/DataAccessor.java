@@ -2,6 +2,7 @@ package slayer;
 
 import javax.xml.bind.*;
 import java.io.File;
+import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -31,11 +32,16 @@ public class DataAccessor {
 
     public ItemList unmarshallItemList() throws JAXBException {
         File itemListFile = new File(ITEM_LIST_LOC);
+        return  (ItemList) getUnmarshaller().unmarshal(itemListFile);
+    }
 
+    public ItemList unmarshallItemList(InputStream inputStream) throws JAXBException {
+        return (ItemList) getUnmarshaller().unmarshal(inputStream);
+    }
+
+    private Unmarshaller getUnmarshaller() throws JAXBException {
         JAXBContext jaxbContext = JAXBContext.newInstance(ItemList.class);
-        Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
-
-        return  (ItemList) unmarshaller.unmarshal(itemListFile);
+        return jaxbContext.createUnmarshaller();
     }
 
     public void marshallItemList(ItemList itemList) throws JAXBException {
