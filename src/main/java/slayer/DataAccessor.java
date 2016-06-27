@@ -1,10 +1,8 @@
 package slayer;
 
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.JAXBException;
-import javax.xml.bind.Marshaller;
-import javax.xml.bind.Unmarshaller;
+import javax.xml.bind.*;
 import java.io.File;
+import java.io.OutputStream;
 import java.util.HashMap;
 import java.util.HashSet;
 
@@ -13,7 +11,7 @@ import java.util.HashSet;
  */
 public class DataAccessor {
     private static final String DROP_DATA_RES_LOC = "slayer/monsterDropData.xml";
-    private static final String ITEM_LIST_LOC = "itemList.xml";
+    public static final String ITEM_LIST_LOC = "itemList.xml";
     private static DataAccessor instance;
 
     public static DataAccessor getInstance(){
@@ -41,12 +39,25 @@ public class DataAccessor {
     }
 
     public void marshallItemList(ItemList itemList) throws JAXBException {
-        File itemListFile = new File(ITEM_LIST_LOC);
+        marshallItemList(itemList, new File(ITEM_LIST_LOC));
+    }
+
+    public void marshallItemList(ItemList itemList, OutputStream outputStream) throws JAXBException {
+        Marshaller marshaller = getItemListMarshaller();
+        marshaller.marshal(itemList, outputStream);
+    }
+
+    public void marshallItemList(ItemList itemList, File file) throws JAXBException {
+        Marshaller marshaller = getItemListMarshaller();
+        marshaller.marshal(itemList, file);
+    }
+
+    private Marshaller getItemListMarshaller() throws JAXBException {
         JAXBContext jaxbContext = JAXBContext.newInstance(ItemList.class);
         Marshaller marshaller = jaxbContext.createMarshaller();
         marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 
-        marshaller.marshal(itemList, itemListFile);
+        return marshaller;
     }
 
     public boolean itemListExists(){
@@ -59,6 +70,10 @@ public class DataAccessor {
         public String toString(){
             return "Missing items: " + missingItems + "\nAdditionalItems: " + additionalItems;
         }
+
+        public int issueCount(){
+            return missingItems+additionalItems;
+        }
     }
 
     public ItemListStatus getStatus(ItemList itemList, DropData data){
@@ -67,16 +82,18 @@ public class DataAccessor {
         for(Item i: dataItemList.getItem())
             dataItemListInfo.put(i.getRsid().intValue(), i.getId());
         ItemListStatus status = new ItemListStatus();
+        int initialSize = dataItemListInfo.keySet().size();
 
         for(Item i: itemList.getItem()){
             int rsID = i.getRsid().intValue();
             if(!dataItemListInfo.containsKey(rsID)
                     || !dataItemListInfo.get(rsID).equals(i.getId())){
+
                 status.additionalItems++;
                 dataItemListInfo.remove(rsID);
             }
         }
-        status.missingItems = dataItemListInfo.keySet().size();
+        status.missingItems = initialSize - dataItemListInfo.keySet().size();
         return status;
     }
 }
