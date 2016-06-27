@@ -19,18 +19,9 @@ public abstract class ValueCalculator {
         defaultValues.put(Rarity.VERY_RARE, 0.0001f);
     }
 
-    public double calcDropValue(ItemList list, Drop drop) throws IncompleteItemListException {
+    public double calcDropValue(Drop drop) throws IncompleteItemListException {
         float avgAmount = drop.getAmount();
         double unitPrice = ((Item) drop.getItemID()).getValue();
-
-        if(list != null){
-            for(Item i : list.getItem()){
-                if(i.equals(drop.getItemID())) {
-                    unitPrice = i.getValue();
-                    break;
-                }
-            }
-        }
 
         if(unitPrice == 0.0f)
             throw new IncompleteItemListException("The supplied item list has no information for the item in the drop.");
@@ -45,27 +36,15 @@ public abstract class ValueCalculator {
         return odds*avgPrice;
     }
 
-    public double calcDropTableValue(ItemList list, DropTable dropTable) throws IncompleteItemListException {
+    public double calcDropTableValue(DropTable dropTable) throws IncompleteItemListException {
         double dropTableValue = 0;
-        for(Drop drop: dropTable.getDrop()) dropTableValue += calcDropValue(list, drop);
+        for(Drop drop: dropTable.getDrop()) dropTableValue += calcDropValue(drop);
         return dropTableValue;
     }
 
-    public double calcTaskValue(ItemList list, Monster monster, int killNumber) throws IncompleteItemListException {
-        float totalDropTableWorth = 0;
-        for(DropTable dropTable: monster.getDropTable()) totalDropTableWorth += calcDropTableValue(list, dropTable);
-        return totalDropTableWorth*killNumber;
-    }
-
     public double calcTaskValue(Monster monster, int killNumber) throws IncompleteItemListException {
-        return calcTaskValue(null, monster, killNumber);
-    }
-
-    public double calcDropTableValue(DropTable dropTable) throws IncompleteItemListException {
-        return calcDropTableValue(null, dropTable);
-    }
-
-    public double calcDropValue(Drop drop) throws IncompleteItemListException {
-        return calcDropValue(null, drop);
+        float totalDropTableWorth = 0;
+        for(DropTable dropTable: monster.getDropTable()) totalDropTableWorth += calcDropTableValue(dropTable);
+        return totalDropTableWorth*killNumber;
     }
 }
