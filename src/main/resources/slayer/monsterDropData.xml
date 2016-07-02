@@ -7,15 +7,15 @@
                 <master>Sumona</master>
                 <master>Turael/Spria</master>
                 <master>Mazchna/Achtryn</master>
-                <master>Duradel/Lapalok</master>
+                <master>Sumona</master>
             </masterList>
-            <charmList>
+            <charmList id="bansheeCharms">
                 <charmDropRate base="gold" rate="0.025"/>
                 <charmDropRate base="green" rate="0.07"/>
                 <charmDropRate base="blue" rate="0.0035"/>
                 <charmDropRate base="crimson" rate="0.01"/>
             </charmList>
-            <dropTable type="primary">
+            <dropTable id="bansheeDrops" type="primary">
                 <drop itemID="coin" amount="950">
                     <dropRates rarity="common"/>
                 </drop>
@@ -146,14 +146,738 @@
                     <dropRates rarity="rare"/>
                 </drop>
             </dropTable>
-            <dropTable type="tertiary">
+            <dropTable type="tertiary" id="bansheeDropsTertiary">
                 <drop itemID="ghostlyEssence" amount="5.5">
                     <dropRates rarity="rare"/>
                 </drop>
             </dropTable>
         </monster>
+        <monster name="Mighty_Banshee" slayerExp="89.4" hpExp="113.6" combatExp="344.4" archetype="banshee">
+            <masterList>
+                <master>Vannaka</master>
+                <master>Chaeldar</master>
+                <master>Turael/Spria</master>
+                <master>Mazchna/Achtryn</master>
+                <master>Sumona</master>
+            </masterList>
+            <charmList id="mightyBansheeChrams">
+                <charmDropRate base="gold" rate="0.055"/>
+                <charmDropRate base="green" rate="0.17"/>
+                <charmDropRate base="crimson" rate="0.045"/>
+                <charmDropRate base="blue" rate="0.01"/>
+            </charmList>
+            <dropTable type="primary" id="mightyBansheeDrops">
+                <drop itemID="bloodRune" amount="10">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="fireRune" amount="70">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="runeArrow" amount="20">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="adamantKiteshield" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="darkMysticGloves" amount="1">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="airBattlestaff" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="adamantDagger" amount="1">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="grimyGuam" amount="1.5">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="grimyHarralander" amount="1.5">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="grimyMarrentill" amount="1.5">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="grimyTarromin" amount="1.5">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="grimyAvantoe" amount="1.5">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="grimyCadantine" amount="1.5">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="grimyIrit" amount="1.5">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="grimyKwuarm" amount="1.5">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="grimyLantadyme" amount="1.5">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="grimyRanarr" amount="1.5">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="grimyDwarfWeed" amount="1.5">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="avantoeSeed" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="fellstalkSeed" amount="2">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="iritSeed" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="toadflaxSeed" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="lantadymeSeed" amount="1">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="kwuarmSeed" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="coin" amount="3462">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="thinSnail" amount="2">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="ghostlyEssence" amount="7">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="uncutEmerald" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="adamantiteOre" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="swordfish" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+            </dropTable>
+        </monster>
+        <monster name="Bat" slayerExp="8" hpExp="10.5" combatExp="32.1" archetype="bat">
+            <masterList>
+                <master>Turael/Spria</master>
+                <master>Mazchna/Achtryn</master>
+            </masterList>
+            <charmList id="batCharms">
+                <charmDropRate base="blue" rate="0.0065"/>
+                <charmDropRate base="crimson" rate="0.005"/>
+                <charmDropRate base="gold" rate="0.16"/>
+                <charmDropRate base="green" rate="0.015"/>
+            </charmList>
+            <dropTable type="primary" id="batDrops" ref="albinoBatDrops"/>
+        </monster>
+        <monster name="Giant_Bat" slayerExp="18.8" hpExp="25" combatExp="76" archetype="bat">
+            <masterList>
+                <master>Turael/Spria</master>
+                <master>Mazchna/Achtryn</master>
+            </masterList>
+            <charmList id="giantBatCharms">
+                <charmDropRate base="blue" rate="0.003"/>
+                <charmDropRate base="crimson" rate="0.01"/>
+                <charmDropRate base="gold" rate="0.195"/>
+                <charmDropRate base="green" rate="0.005"/>
+            </charmList>
+            <dropTable type="primary" id="giantBatDrops" ref="albinoBatDrops"/>
+        </monster>
+        <monster name="Warped_Bat" slayerExp="8" hpExp="11.7" combatExp="35.7" archetype="bat">
+            <masterList>
+                <master>Turael/Spria</master>
+                <master>Mazchna/Achtryn</master>
+            </masterList>
+            <charmList id="warpedBatCharms" ref="noCharms">
+                <charmDropRate base="green" rate="0"/>
+                <charmDropRate base="blue" rate="0"/>
+                <charmDropRate base="crimson" rate="0"/>
+                <charmDropRate base="gold" rate="0"/>
+            </charmList>
+            <dropTable type="primary" id="warpedBatDrops">
+                <drop itemID="bones" amount="1">
+                    <dropRates rarity="always"/>
+                </drop>
+                <drop itemID="bronzeArrow" amount="25">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="bronzeMace" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="magicStaff" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="shortbow" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="staff" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="staffOfAir" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="leatherBody" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="leatherCowl" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="bronzeChainbody" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="bronzeSqShield" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="leatherBoots" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="leatherGloves" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="airRune" amount="12">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="earthRune" amount="6">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="fireRune" amount="6">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="mindRune" amount="33">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="waterRune" amount="6">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="bronzeBar" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="ironBar" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="copperOre" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="tinOre" amount="2">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="coin" amount="175">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="batwing" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="feather" amount="10">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="fishingBait" amount="50">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="goldAmulet" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="goldNecklace" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="goldRing" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="holySymbol" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="leather" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="thread" amount="42">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="amuletOfMagic" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="mindTalisman" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="airTalisman" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="earthTalisman" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="waterTalisman" amount="1">
+                    <dropRates rarity="rare"/>
+                </drop>
+            </dropTable>
+        </monster>
+        <monster name="Albino_Bat" slayerExp="18" hpExp="22.9" combatExp="69.6" archetype="bat">
+            <masterList>
+                <master>Turael/Spria</master>
+                <master>Mazchna/Achtryn</master>
+            </masterList>
+            <charmList id="albinoBatCharms" ref="noCharms"/>
+            <dropTable type="primary" id="albinoBatDrops">
+                <drop itemID="batBones" amount="1">
+                    <dropRates rarity="always"/>
+                </drop>
+                <drop itemID="batwing" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+            </dropTable>
+        </monster>
+        <monster name="Bear_Cub" slayerExp="7.6" hpExp="9.8" combatExp="29.7" archetype="bear">
+            <masterList>
+                <master>Turael/Spria</master>
+                <master>Mazchna/Achtryn</master>
+            </masterList>
+            <charmList id="bearCubCharms" ref="noCharms">
+                <charmDropRate base="blue" rate="0"/>
+                <charmDropRate base="crimson" rate="0"/>
+                <charmDropRate base="gold" rate="0"/>
+                <charmDropRate base="green" rate="0"/>
+            </charmList>
+            <dropTable type="primary" id="bearCubDrops" ref="onlyBones"/>
+        </monster>
+        <monster name="Grizzly_Bear_Cub" slayerExp="12" hpExp="15.3" combatExp="46.5" archetype="bear">
+            <masterList>
+                <master>Turael/Spria</master>
+                <master>Mazchna/Achtryn</master>
+            </masterList>
+            <charmList id="grizzlyBearCubCharms">
+                <charmDropRate base="blue" rate="0.012"/>
+                <charmDropRate base="crimson" rate="0.025"/>
+                <charmDropRate base="gold" rate="0.105"/>
+                <charmDropRate base="green" rate="0.02"/>
+            </charmList>
+            <dropTable type="primary" id="grizzlyBearCubDrops" ref="grizzlyBearDrops">
+                <drop itemID="bearFur" amount="1">
+                    <dropRates rarity="always"/>
+                </drop>
+                <drop itemID="bones" amount="1">
+                    <dropRates rarity="always"/>
+                </drop>
+                <drop itemID="rawBearMeat" amount="1">
+                    <dropRates rarity="always"/>
+                </drop>
+            </dropTable>
+        </monster>
+        <monster name="Black_Bear" slayerExp="10.2" hpExp="13" combatExp="39.6" archetype="bear">
+            <masterList>
+                <master>Turael/Spria</master>
+                <master>Mazchna/Achtryn</master>
+            </masterList>
+            <charmList id="blackBearCharms">
+                <charmDropRate base="green" rate="0.005"/>
+                <charmDropRate base="blue" rate="0.005"/>
+                <charmDropRate base="crimson" rate="0.007"/>
+                <charmDropRate base="gold" rate="0.17"/>
+            </charmList>
+            <dropTable type="primary" id="blackBearDrops" ref="grizzlyBearDrops">
+                <drop itemID="bearFur" amount="1">
+                    <dropRates rarity="always"/>
+                </drop>
+                <drop itemID="bones" amount="1">
+                    <dropRates rarity="always"/>
+                </drop>
+                <drop itemID="rawBearMeat" amount="1">
+                    <dropRates rarity="always"/>
+                </drop>
+            </dropTable>
+        </monster>
+        <monster name="Grizzly_Bear" slayerExp="13" hpExp="16.6" combatExp="50.4" archetype="bear">
+            <masterList>
+                <master>Mazchna/Achtryn</master>
+                <master>Turael/Spria</master>
+            </masterList>
+            <charmList id="grizzlyBearCharms">
+                <charmDropRate base="blue" rate="0.003"/>
+                <charmDropRate base="crimson" rate="0.02"/>
+                <charmDropRate base="green" rate="0.015"/>
+                <charmDropRate base="gold" rate="0.105"/>
+            </charmList>
+            <dropTable type="primary" id="grizzlyBearDrops">
+                <drop itemID="bearFur" amount="1">
+                    <dropRates rarity="always"/>
+                </drop>
+                <drop itemID="bones" amount="1">
+                    <dropRates rarity="always"/>
+                </drop>
+                <drop itemID="rawBearMeat" amount="1">
+                    <dropRates rarity="always"/>
+                </drop>
+            </dropTable>
+        </monster>
+        <monster name="Chicken" slayerExp="6.4" hpExp="8.2" combatExp="24.9" archetype="bird">
+            <masterList>
+                <master>Turael/Spria</master>
+            </masterList>
+            <charmList id="chickenCharms" ref="noCharms"/>
+            <dropTable type="primary" id="chickenDrops">
+                <drop itemID="bones" amount="1">
+                    <dropRates rarity="always"/>
+                </drop>
+                <drop itemID="feather" amount="10">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="rawChicken" amount="1">
+                    <dropRates rarity="always"/>
+                </drop>
+            </dropTable>
+        </monster>
+        <monster name="Terrorbird" slayerExp="17.2" hpExp="22" combatExp="66.9" archetype="bird">
+            <masterList>
+                <master>Turael/Spria</master>
+            </masterList>
+            <charmList id="terrorBirdCharms" ref="noCharms"/>
+            <dropTable type="primary" id="terrorbirdDrops" ref="onlyBones"/>
+        </monster>
+        <monster name="Bird" slayerExp="6.8" hpExp="8.8" combatExp="26.7" archetype="bird">
+            <masterList>
+                <master>Turael/Spria</master>
+            </masterList>
+            <charmList id="birdCharms" ref="noCharms"/>
+        </monster>
+        <monster name="Seagull" slayerExp="6.4" hpExp="8.2" combatExp="24.9" archetype="bird">
+            <masterList>
+                <master>Turael/Spria</master>
+            </masterList>
+            <charmList id="seagullCharms" ref="noCharms"/>
+            <dropTable type="primary" id="onlyBones">
+                <drop itemID="bones" amount="1">
+                    <dropRates rarity="always"/>
+                </drop>
+            </dropTable>
+        </monster>
+        <monster name="Cave_Bug_Level_8" slayerExp="7" hpExp="9.1" combatExp="27.6" archetype="caveBug">
+            <masterList>
+                <master>Turael/Spria</master>
+            </masterList>
+            <charmList id="caveBug8Charms" ref="noCharms"/>
+            <dropTable type="primary" id="caveBug8Drops">
+                <drop itemID="coin" amount="5.5">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="eyeOfNewt" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="limpwurtRoot" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="redSpiderEggs" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="snapeGrass" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="swampWeed" amount="4.5">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="tinderbox" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="unicornHornDust" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="candleLanternEmpty" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="bronzeGauntlets" amount="1">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="candle" amount="1">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="grimyGuam" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="grimyHarralander" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="grimyMarrentill" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="grimyTarromin" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="grimyAvantoe" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="grimyIrit" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="grimyKwuarm" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="grimyRanarr" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="grimyCadantine" amount="1">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="grimyDwarfWeed" amount="1">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="grimyLantadyme" amount="1">
+                    <dropRates rarity="rare"/>
+                </drop>
+            </dropTable>
+        </monster>
+        <monster name="Cave_Bug_Level_12" slayerExp="8" hpExp="10.1" combatExp="30.9" archetype="caveBug">
+            <masterList>
+                <master>Turael/Spria</master>
+            </masterList>
+            <charmList id="caveBug12Charms">
+                <charmDropRate base="blue" rate="0.0095"/>
+                <charmDropRate base="crimson" rate="0.035"/>
+                <charmDropRate base="gold" rate="0.065"/>
+                <charmDropRate base="green" rate="0.365"/>
+            </charmList>
+            <dropTable type="primary" id="caveBug12Drops">
+                <drop itemID="coin" amount="18.5">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="swampWeed" amount="4.5">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="bronzeGauntlets" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="grimyGuam" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="grimyHarralander" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="grimyMarrentill" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="grimyTarromin" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="grimyAvantoe" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="grimyCadantine" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="grimyIrit" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="grimyKwuarm" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="grimyRanarr" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="grimyDwarfWeed" amount="1">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="grimyLantadyme" amount="1">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="earthRune" amount="74">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="waterRune" amount="84">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="fireRune" amount="46">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="natureRune" amount="4.5">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="waterBattlestaff" amount="1">
+                    <dropRates rarity="rare"/>
+                </drop>
+            </dropTable>
+        </monster>
+        <monster name="Cave_Slime" slayerExp="11" hpExp="14" combatExp="42.6" archetype="caveSlime">
+            <masterList>
+                <master>Mazchna/Achtryn</master>
+                <master>Turael/Spria</master>
+            </masterList>
+            <charmList id="noCharms">
+                <charmDropRate base="blue" rate="0"/>
+                <charmDropRate base="crimson" rate="0"/>
+                <charmDropRate base="gold" rate="0"/>
+                <charmDropRate base="green" rate="0"/>
+            </charmList>
+            <dropTable type="primary" id="caveSlimeDrops">
+                <drop itemID="swampTar" amount="3.5">
+                    <dropRates rarity="always"/>
+                </drop>
+                <drop itemID="coin" amount="61">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="unlitTorch" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="oilLanternEmpty" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="oilLanternFrame" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="bronzeFullHelm" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="ironKiteshield" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="ironBoots" amount="1">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="goldBar" amount="1">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="waterRune" amount="15">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="earthRune" amount="5">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="bodyRune" amount="7">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="bronzeHatchet" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="ironSword" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+            </dropTable>
+        </monster>
+        <monster name="Cow" slayerExp="3.3" hpExp="8.4" combatExp="25.5" archetype="cow">
+            <masterList>
+                <master>Turael/Spria</master>
+            </masterList>
+            <charmList id="cowCharms">
+                <charmDropRate base="blue" rate="0.0005"/>
+                <charmDropRate base="crimson" rate="0.0025"/>
+                <charmDropRate base="gold" rate="0.04"/>
+                <charmDropRate base="green" rate="0.0085"/>
+            </charmList>
+            <dropTable type="primary" id="cowDrops">
+                <drop itemID="bones" amount="1">
+                    <dropRates rarity="always"/>
+                </drop>
+                <drop itemID="cowhide" amount="1">
+                    <dropRates rarity="always"/>
+                </drop>
+                <drop itemID="rawBeef" amount="1">
+                    <dropRates rarity="always"/>
+                </drop>
+                <drop itemID="chargebow" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="staffOfAir" amount="1">
+                    <dropRates rarity="rare"/>
+                </drop>
+            </dropTable>
+        </monster>
+        <monster name="Cow_Zanaris" slayerExp="6.4" hpExp="7.9" combatExp="24" archetype="cow">
+            <masterList>
+                <master>Turael/Spria</master>
+            </masterList>
+            <charmList id="cowZanarisCharms" ref="cowCharms"/>
+            <dropTable type="primary" id="cowZanarisDrops" ref="cowDrops"/>
+        </monster>
+        <monster name="Cow_Burthorpe" slayerExp="6.4" hpExp="1.6" combatExp="5" archetype="cow">
+            <masterList>
+                <master>Turael/Spria</master>
+            </masterList>
+            <charmList id="cowBurthorpe" ref="cowCharms"/>
+            <dropTable type="primary" id="cowBurthorpeDrops" ref="cowDrops"/>
+        </monster>
+        <monster name="Cow_Calf" slayerExp="3.2" hpExp="8.2" combatExp="24.9" archetype="cow">
+            <masterList>
+                <master>Turael/Spria</master>
+            </masterList>
+            <charmList id="cowCalfCharms">
+                <charmDropRate base="blue" rate="0.005"/>
+                <charmDropRate base="crimson" rate="0.012"/>
+                <charmDropRate base="gold" rate="0.03"/>
+                <charmDropRate base="green" rate="0.03"/>
+            </charmList>
+            <dropTable id="cowCalfDrops" type="primary" ref="cowDrops"/>
+        </monster>
     </monsterList>
     <itemList>
+        <item id="chargebow" rsid="19830" name="Chargebow" value="199"/>
+        <item id="cowhide" rsid="1739" name="Cowhide" value="141"/>
+        <item id="rawBeef" rsid="2132" name="Raw Beef" value="331"/>
+        <item id="ironSword" rsid="1279" name="Iron Sword" value="323"/>
+        <item id="bronzeHatchet" rsid="1351" name="Bronze Hatchet" value="153"/>
+        <item id="bodyRune" rsid="559" name="Body Rune" value="39"/>
+        <item id="goldBar" rsid="2357" name="Gold Bar" value="207"/>
+        <item id="ironBoots" rsid="4121" name="Iron Boots" value="2081"/>
+        <item id="bronzeFullHelm" rsid="1155" name="Bronze Full Helm" value="48"/>
+        <item id="oilLanternFrame" rsid="4540" name="Oil Lantern Frame" value="10"/>
+        <item id="oilLanternEmpty" rsid="4535" name="Oil Lantern (empty)" value="5"/>
+        <item id="unlitTorch" rsid="596" name="Unlit Torch" value="12"/>
+        <item id="swampTar" rsid="1939" name="Swamp Tar" value="214"/>
+        <item id="waterBattlestaff" rsid="1395" name="Water Battlestaff" value="8616"/>
+        <item id="natureRune" rsid="561" name="Nature Rune" value="380"/>
+        <item id="candle" rsid="36" name="Candle" value="250"/>
+        <item id="bronzeGauntlets" rsid="12985" name="Bronze Gauntlets" value="343"/>
+        <item id="unicornHornDust" rsid="235" name="Unicorn Horn Dust" value="327"/>
+        <item id="tinderbox" rsid="590" name="Tinderbox" value="153"/>
+        <item id="candleLanternEmpty" rsid="4527" name="Candle Lantern (empty)" value="44"/>
+        <item id="swampWeed" rsid="10978" name="Swamp Weed" value="390"/>
+        <item id="snapeGrass" rsid="231" name="Snape Grass" value="14"/>
+        <item id="redSpiderEggs" rsid="223" name="Red Spiders' Eggs" value="1675"/>
+        <item id="limpwurtRoot" rsid="225" name="Limpwurt Root" value="1117"/>
+        <item id="rawChicken" rsid="2138" name="Raw Chicken" value="429"/>
+        <item id="rawBearMeat" rsid="2136" name="Raw Bear Meat" value="261"/>
+        <item id="bearFur" rsid="948" name="Bear Fur" value="122"/>
+        <item id="bronzeMace" rsid="1422" name="Bronze Mace" value="58"/>
+        <item id="bronzeArrow" rsid="882" name="Bronze Arrow" value="14"/>
+        <item id="shortbow" rsid="841" name="Shortbow" value="272"/>
+        <item id="bones" rsid="529" name="Bones" value="183"/>
+        <item id="magicStaff" rsid="1389" name="Magic Staff" value="829"/>
+        <item id="staff" rsid="1379" name="Staff" value="669"/>
+        <item id="leatherCowl" rsid="1167" name="Leather Cowl" value="38"/>
+        <item id="leatherBody" rsid="1129" name="Leather Body" value="52"/>
+        <item id="bronzeChainbody" rsid="1103" name="Bronze Chainbody" value="84"/>
+        <item id="bronzeSqShield" rsid="1173" name="Bronze Sq Shield" value="197"/>
+        <item id="leatherGloves" rsid="1059" name="Leather Gloves" value="109"/>
+        <item id="leatherBoots" rsid="1061" name="Leather Boots" value="59"/>
+        <item id="earthRune" rsid="557" name="Earth Rune" value="10"/>
+        <item id="mindRune" rsid="558" name="Mind Rune" value="14"/>
+        <item id="waterRune" rsid="555" name="Water Rune" value="11"/>
+        <item id="bronzeBar" rsid="2349" name="Bronze Bar" value="190"/>
+        <item id="ironBar" rsid="2351" name="Iron Bar" value="495"/>
+        <item id="copperOre" rsid="436" name="Copper Ore" value="44"/>
+        <item id="tinOre" rsid="438" name="Tin Ore" value="65"/>
+        <item id="feather" rsid="314" name="Feather" value="45"/>
+        <item id="fishingBait" rsid="313" name="Fishing Bait" value="6"/>
+        <item id="goldAmulet" rsid="1692" name="Gold Amulet" value="223"/>
+        <item id="goldNecklace" rsid="1654" name="Gold Necklace" value="250"/>
+        <item id="goldRing" rsid="1635" name="Gold Ring" value="299"/>
+        <item id="holySymbol" rsid="1718" name="Holy Symbol" value="780"/>
+        <item id="leather" rsid="1741" name="Leather" value="232"/>
+        <item id="thread" rsid="1734" name="Thread" value="10"/>
+        <item id="amuletOfMagic" rsid="1727" name="Amulet Of Magic" value="1240"/>
+        <item id="earthTalisman" rsid="1440" name="Earth Talisman" value="1717"/>
+        <item id="airTalisman" rsid="1438" name="Air Talisman" value="159"/>
+        <item id="mindTalisman" rsid="1448" name="Mind Talisman" value="270"/>
+        <item id="waterTalisman" rsid="1444" name="Water Talisman" value="6843"/>
+        <item id="batwing" rsid="25549" name="Batwing" value="2883"/>
+        <item id="batBones" rsid="530" name="Bat Bones" value="433"/>
+        <item id="bloodRune" rsid="565" name="Blood rune" value="397"/>
+        <item id="runeArrow" rsid="892" name="Rune Arrow" value="151"/>
+        <item id="adamantKiteshield" rsid="1199" name="Adamant kiteshield" value="5958"/>
+        <item id="airBattlestaff" rsid="1397" name="Air Battlestaff" value="8390"/>
+        <item id="adamantDagger" rsid="1211" name="Adamant dagger" value="2314"/>
+        <item id="avantoeSeed" rsid="5298" name="Avantoe Seed" value="239"/>
+        <item id="fellstalkSeed" rsid="21621" name="Fellstalk Seed" value="381"/>
+        <item id="iritSeed" rsid="5297" name="Irit Seed" value="184"/>
+        <item id="toadflaxSeed" rsid="5296" name="Toadflax Seed" value="480"/>
+        <item id="swordfish" rsid="373" name="Swordfish" value="289"/>
+        <item id="adamantiteOre" rsid="449" name="Adamantite Ore" value="727"/>
+        <item id="uncutEmerald" rsid="1621" name="Uncut Emerald" value="2018"/>
+        <item id="kwuarmSeed" rsid="5299" name="Kwuarm Seed" value="2580"/>
         <item id="ghostlyEssence" rsid="32341" name="Ghostly Essence" value="2191"/>
         <item id="ironMace" rsid="1420" name="Iron mace" value="112"/>
         <item id="staffOfAir" rsid="1381" name="Staff of air" value="898"/>
@@ -202,11 +926,49 @@
     <archetypeMonsterList>
         <archetype archetypeID="banshee">
             <archetypeMonster monsterID="Banshee"/>
+            <archetypeMonster monsterID="Mighty_Banshee"/>
+        </archetype>
+        <archetype archetypeID="bat">
+            <archetypeMonster monsterID="Bat"/>
+            <archetypeMonster monsterID="Giant_Bat"/>
+            <archetypeMonster monsterID="Warped_Bat"/>
+            <archetypeMonster monsterID="Albino_Bat"/>
+        </archetype>
+        <archetype archetypeID="bear">
+            <archetypeMonster monsterID="Bear_Cub"/>
+            <archetypeMonster monsterID="Grizzly_Bear_Cub"/>
+            <archetypeMonster monsterID="Black_Bear"/>
+            <archetypeMonster monsterID="Grizzly_Bear"/>
+        </archetype>
+        <archetype archetypeID="bird">
+            <archetypeMonster monsterID="Chicken"/>
+            <archetypeMonster monsterID="Bird"/>
+            <archetypeMonster monsterID="Seagull"/>
+            <archetypeMonster monsterID="Terrorbird"/>
+        </archetype>
+        <archetype archetypeID="caveBug">
+            <archetypeMonster monsterID="Cave_Bug_Level_8"/>
+            <archetypeMonster monsterID="Cave_Bug_Level_12"/>
+        </archetype>
+        <archetype archetypeID="caveSlime">
+            <archetypeMonster monsterID="Cave_Slime"/>
+        </archetype>
+        <archetype archetypeID="cow">
+            <archetypeMonster monsterID="Cow_Zanaris"/>
+            <archetypeMonster monsterID="Cow"/>
+            <archetypeMonster monsterID="Cow_Calf"/>
+            <archetypeMonster monsterID="Cow_Burthorpe"/>
         </archetype>
     </archetypeMonsterList>
     <slayerMasterAssignments>
         <slayerMaster name="Turael/Spria" totalWeight="355">
             <assignment archetype="banshee" weight="30"/>
+            <assignment archetype="bat" weight="10"/>
+            <assignment archetype="bear" weight="10"/>
+            <assignment archetype="bird" weight="10"/>
+            <assignment archetype="caveBug" weight="10"/>
+            <assignment archetype="caveSlime" weight="30"/>
+            <assignment archetype="cow" weight="10"/>
         </slayerMaster>
     </slayerMasterAssignments>
 </dropData>

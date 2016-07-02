@@ -44,7 +44,10 @@ public abstract class ValueCalculator {
 
     public double calcTaskValue(Monster monster, int killNumber) throws IncompleteItemListException {
         float totalDropTableWorth = 0;
-        for(DropTable dropTable: monster.getDropTable()) totalDropTableWorth += calcDropTableValue(dropTable);
+        for(DropTable dropTable: monster.getDropTable()){
+            DropTable t = (dropTable.getRef() == null ? dropTable : (DropTable) dropTable.getRef());
+            totalDropTableWorth += calcDropTableValue(t);
+        }
         return totalDropTableWorth*killNumber;
     }
 }

@@ -80,11 +80,13 @@
                 <drops:element name="charmList" minOccurs="0">
                     <drops:complexType>
                         <drops:sequence>
-                            <drops:element ref="charmDropRate" maxOccurs="unbounded" minOccurs="0"/>
+                            <drops:element ref="charmDropRate" maxOccurs="4" minOccurs="0"/>
                         </drops:sequence>
+                        <drops:attribute name="id" type="drops:ID" use="required"/>
+                        <drops:attribute name="ref" type="drops:IDREF" use="optional"/>
                     </drops:complexType>
                 </drops:element>
-                <drops:element ref="dropTable" minOccurs="0" maxOccurs="2"/>
+                <drops:element ref="dropTable" minOccurs="0" maxOccurs="unbounded"/>
             </drops:sequence>
             <drops:attribute name="name" type="drops:ID" use="required"/>
             <drops:attribute name="slayerExp" type="drops:float" use="required"/>
@@ -97,8 +99,10 @@
     <drops:element name="dropTable">
         <drops:complexType>
             <drops:sequence>
-                <drops:element ref="drop" minOccurs="1" maxOccurs="unbounded"/>
+                <drops:element ref="drop" minOccurs="0" maxOccurs="unbounded"/>
             </drops:sequence>
+            <drops:attribute name="id" type="drops:ID" use="required"/>
+            <drops:attribute name="ref" type="drops:IDREF" use="optional"/>
             <drops:attribute name="type" type="drops:string" use="required"/>
         </drops:complexType>
     </drops:element>

@@ -16,7 +16,9 @@ public abstract class CharmsCalculator {
 
     public static CharmCount calcCharmCount (Monster monster, int killNumber){
         CharmCount charmCount = new CharmCount();
-        List<CharmDropRate> cdrs = monster.getCharmList().getCharmDropRate();
+        Monster.CharmList charmList = monster.getCharmList();
+        Monster.CharmList charmListRef = (Monster.CharmList) charmList.getRef();
+        List<CharmDropRate> cdrs = (charmListRef == null ? charmList.getCharmDropRate() : charmListRef.getCharmDropRate());
         for(CharmDropRate cdr : cdrs){
             Charm charm = cdr.getBase();
             float rate = cdr.getRate();
