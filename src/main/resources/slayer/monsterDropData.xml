@@ -37,7 +37,7 @@
                 <drop itemID="ironKiteshield" amount="1">
                     <dropRates rarity="rare"/>
                 </drop>
-                <drop itemID="darkMysticGloves" amount="1">
+                <drop itemID="mysticGlovesDark" amount="1">
                     <dropRates rarity="very rare"/>
                 </drop>
                 <drop itemID="uncutSapphire" amount="1">
@@ -179,7 +179,7 @@
                 <drop itemID="adamantKiteshield" amount="1">
                     <dropRates rarity="uncommon"/>
                 </drop>
-                <drop itemID="darkMysticGloves" amount="1">
+                <drop itemID="mysticGlovesDark" amount="1">
                     <dropRates rarity="rare"/>
                 </drop>
                 <drop itemID="airBattlestaff" amount="1">
@@ -802,83 +802,336 @@
             </charmList>
             <dropTable id="cowCalfDrops" type="primary" ref="cowDrops"/>
         </monster>
+        <monster name="Crawling_Hand_Level_11" slayerExp="7.6" hpExp="4.8" combatExp="14.8" archetype="crawlingHands">
+            <masterList>
+                <master>Turael/Spria</master>
+                <master>Mazchna/Achtryn</master>
+                <master>Chaeldar</master>
+            </masterList>
+            <charmList id="crawlingHand11Charms">
+                <charmDropRate base="blue" rate="0.0015"/>
+                <charmDropRate base="crimson" rate="0.0065"/>
+                <charmDropRate base="gold" rate="0.095"/>
+                <charmDropRate base="green" rate="0.0065"/>
+            </charmList>
+            <dropTable id="crawlingHand11Always" type="always" ref="onlyBones"/>
+            <dropTable id="crawlingHand11Drops" type="primary">
+                <drop itemID="leatherGloves" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="glovesGrey" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="glovesPurple" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="glovesRed" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="glovesTeal" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="glovesYellow" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="mysticGlovesDark" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="emeraldRing" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="goldRing" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="rubyRing" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="sapphireRing" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="coin" amount="207">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="ashes" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+            </dropTable>
+        </monster>
+        <monster name="Crawling_Hand_Level_18" slayerExp="9.2" hpExp="11.7" combatExp="35.7" archetype="crawlingHands">
+            <masterList>
+                <master>Turael/Spria</master>
+                <master>Mazchna/Achtryn</master>
+                <master>Chaeldar</master>
+            </masterList>
+            <charmList id="crawlingHand18Charms" ref="crawlingHand11Charms"/>
+            <dropTable id="crawlingHand18Always" type="always" ref="onlyBones"/>
+            <dropTable id="crawlingHand18Drops" type="primary" ref="crawlingHand11Drops"/>
+        </monster>
+        <monster name="Skeletal_Hand" slayerExp="60.6" hpExp="55" combatExp="166.8" archetype="crawlingHands" secondaryArchetype="skeletons">
+            <masterList>
+                <master>Turael/Spria</master>
+                <master>Chaeldar</master>
+                <master>Mazchna/Achtryn</master>
+            </masterList>
+            <charmList id="skeletalHandCharms">
+                <charmDropRate base="blue" rate="0.003"/>
+                <charmDropRate base="crimson" rate="0.0145"/>
+                <charmDropRate base="green" rate="0.025"/>
+                <charmDropRate base="gold" rate="0.23"/>
+            </charmList>
+            <dropTable id="skeletalHandAlways" type="always" ref="onlyBones"/>
+            <dropTable id="skeletalHandDrops" type="primary">
+                <drop itemID="blackKiteshield" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="blackSqShield" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="mysticGlovesDark" amount="1">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="steelScimitar" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="limpwurtSeed" amount="3">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="sweetcornSeed" amount="3">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="tomatoSeed" amount="3">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="jangerberrySeed" amount="3">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="poisonIvySeed" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="strawberrySeed" amount="3">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="whiteberrySeed" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="belladonnaSeed" amount="3">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="cosmicRune" amount="3">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="deathRune" amount="3">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="bloodRune" amount="1">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="dustRune" amount="3">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="mistRune" amount="3">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="smokeRune" amount="3">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="steamRune" amount="3">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="goldBracelet" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="sapphireBracelet" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="braceletOfClay" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="emeraldBracelet" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="rubyRing" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="diamondBracelet" amount="1">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="diamondRing" amount="1">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="forinthryBrace5" amount="1">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="rubyBracelet" amount="1">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="dragonBracelet" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="castleWarsBrace3" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="grimyKwuarm" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="grimyRanarr" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="grimyToadflax" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="grimyAvantoe" amount="1">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="grimyIrit" amount="1">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="grimyDwarfWeed" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="coin" amount="750">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="blackNails" amount="10">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="fishingBait" amount="10">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="steelNails" amount="20">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="mithrilBar" amount="1">
+                    <dropRates rarity="rare"/>
+                </drop>
+            </dropTable>
+        </monster>
+        <monster name="Zombie_Hand" slayerExp="73.2" hpExp="66.4" combatExp="201.3" archetype="crawlingHands">
+            <masterList>
+                <master>Turael/Spria</master>
+                <master>Mazchna/Achtryn</master>
+                <master>Chaeldar</master>
+            </masterList>
+            <charmList id="zombieHandCharms">
+                <charmDropRate base="blue" rate="0.0015"/>
+                <charmDropRate base="crimson" rate="0.016"/>
+                <charmDropRate base="green" rate="0.0135"/>
+                <charmDropRate base="gold" rate="0.215"/>
+            </charmList>
+            <dropTable id="zombieHandAlways" type="always" ref="onlyBones"/>
+            <dropTable id="zombieHandDrops" type="always" ref="skeletalHandDrops"/>
+        </monster>
     </monsterList>
     <itemList>
+        <item id="mithrilBar" rsid="2359" name="Mithril bar" value="1244"/>
+        <item id="steelNails" rsid="1539" name="Steel nails" value="23"/>
+        <item id="blackNails" rsid="4821" name="Black nails" value="111"/>
+        <item id="grimyToadflax" rsid="3049" name="Grimy toadflax" value="4842"/>
+        <item id="castleWarsBrace3" rsid="11079" name="Castle wars brace (3)" value="1618"/>
+        <item id="forinthryBrace5" rsid="11095" name="Forinthry brace (5)" value="3374"/>
+        <item id="diamondRing" rsid="1643" name="Diamond ring" value="2220"/>
+        <item id="braceletOfClay" rsid="11074" name="Bracelet of clay" value="938"/>
+        <item id="emeraldBracelet" rsid="11076" name="Emerald bracelet" value="874"/>
+        <item id="dragonBracelet" rsid="11115" name="Dragon bracelet" value="10359"/>
+        <item id="rubyBracelet" rsid="11085" name="Ruby bracelet" value="1886"/>
+        <item id="diamondBracelet" rsid="11092" name="Diamond bracelet" value="2403"/>
+        <item id="sapphireBracelet" rsid="11072" name="Sapphire bracelet" value="648"/>
+        <item id="goldBracelet" rsid="11069" name="Gold bracelet" value="238"/>
+        <item id="steamRune" rsid="4694" name="Steam rune" value="667"/>
+        <item id="smokeRune" rsid="4697" name="Steam rune" value="681"/>
+        <item id="mistRune" rsid="4695" name="Mist rune" value="849"/>
+        <item id="dustRune" rsid="4696" name="Dust rune" value="406"/>
+        <item id="deathRune" rsid="560" name="Death rune" value="180"/>
+        <item id="tomatoSeed" rsid="5322" name="Tomato seed" value="3"/>
+        <item id="poisonIvySeed" rsid="5106" name="Poison ivy seed" value="43"/>
+        <item id="sweetcornSeed" rsid="5320" name="Sweetcorn seed" value="14"/>
+        <item id="steelScimitar" rsid="1325" name="Steel scimitar" value="1203"/>
+        <item id="blackSqShield" rsid="1179" name="Black sq shield" value="1277"/>
+        <item id="blackKiteshield" rsid="1195" name="Black kiteshield" value="3454"/>
+        <item id="ashes" rsid="592" name="Ashes" value="192"/>
+        <item id="rubyRing" rsid="1641" name="Ruby ring" value="2571"/>
+        <item id="sapphireRing" rsid="1637" name="Sapphire ring" value="977"/>
+        <item id="emeraldRing" rsid="1639" name="Emerald ring" value="1514"/>
+        <item id="glovesYellow" rsid="2922" name="Gloves (yellow)" value="696"/>
+        <item id="glovesTeal" rsid="2932" name="Gloves (teal)" value="182"/>
+        <item id="glovesRed" rsid="2912" name="Gloves (red)" value="416"/>
+        <item id="glovesPurple" rsid="2942" name="Gloves (purple)" value="208"/>
+        <item id="glovesGrey" rsid="2902" name="Gloves (grey)" value="202"/>
         <item id="chargebow" rsid="19830" name="Chargebow" value="199"/>
         <item id="cowhide" rsid="1739" name="Cowhide" value="141"/>
-        <item id="rawBeef" rsid="2132" name="Raw Beef" value="331"/>
-        <item id="ironSword" rsid="1279" name="Iron Sword" value="323"/>
-        <item id="bronzeHatchet" rsid="1351" name="Bronze Hatchet" value="153"/>
-        <item id="bodyRune" rsid="559" name="Body Rune" value="39"/>
-        <item id="goldBar" rsid="2357" name="Gold Bar" value="207"/>
-        <item id="ironBoots" rsid="4121" name="Iron Boots" value="2081"/>
-        <item id="bronzeFullHelm" rsid="1155" name="Bronze Full Helm" value="48"/>
-        <item id="oilLanternFrame" rsid="4540" name="Oil Lantern Frame" value="10"/>
-        <item id="oilLanternEmpty" rsid="4535" name="Oil Lantern (empty)" value="5"/>
-        <item id="unlitTorch" rsid="596" name="Unlit Torch" value="12"/>
-        <item id="swampTar" rsid="1939" name="Swamp Tar" value="214"/>
-        <item id="waterBattlestaff" rsid="1395" name="Water Battlestaff" value="8616"/>
-        <item id="natureRune" rsid="561" name="Nature Rune" value="380"/>
+        <item id="rawBeef" rsid="2132" name="Raw beef" value="331"/>
+        <item id="ironSword" rsid="1279" name="Iron sword" value="323"/>
+        <item id="bronzeHatchet" rsid="1351" name="Bronze hatchet" value="153"/>
+        <item id="bodyRune" rsid="559" name="Body rune" value="39"/>
+        <item id="goldBar" rsid="2357" name="Gold bar" value="207"/>
+        <item id="ironBoots" rsid="4121" name="Iron boots" value="2081"/>
+        <item id="bronzeFullHelm" rsid="1155" name="Bronze full helm" value="48"/>
+        <item id="oilLanternFrame" rsid="4540" name="Oil lantern frame" value="10"/>
+        <item id="oilLanternEmpty" rsid="4535" name="Oil lantern (empty)" value="5"/>
+        <item id="unlitTorch" rsid="596" name="Unlit torch" value="12"/>
+        <item id="swampTar" rsid="1939" name="Swamp tar" value="214"/>
+        <item id="waterBattlestaff" rsid="1395" name="Water battlestaff" value="8616"/>
+        <item id="natureRune" rsid="561" name="Nature rune" value="380"/>
         <item id="candle" rsid="36" name="Candle" value="250"/>
-        <item id="bronzeGauntlets" rsid="12985" name="Bronze Gauntlets" value="343"/>
-        <item id="unicornHornDust" rsid="235" name="Unicorn Horn Dust" value="327"/>
+        <item id="bronzeGauntlets" rsid="12985" name="Bronze gauntlets" value="343"/>
+        <item id="unicornHornDust" rsid="235" name="Unicorn horn dust" value="327"/>
         <item id="tinderbox" rsid="590" name="Tinderbox" value="153"/>
-        <item id="candleLanternEmpty" rsid="4527" name="Candle Lantern (empty)" value="44"/>
-        <item id="swampWeed" rsid="10978" name="Swamp Weed" value="390"/>
-        <item id="snapeGrass" rsid="231" name="Snape Grass" value="14"/>
-        <item id="redSpiderEggs" rsid="223" name="Red Spiders' Eggs" value="1675"/>
-        <item id="limpwurtRoot" rsid="225" name="Limpwurt Root" value="1117"/>
-        <item id="rawChicken" rsid="2138" name="Raw Chicken" value="429"/>
-        <item id="rawBearMeat" rsid="2136" name="Raw Bear Meat" value="261"/>
-        <item id="bearFur" rsid="948" name="Bear Fur" value="122"/>
-        <item id="bronzeMace" rsid="1422" name="Bronze Mace" value="58"/>
-        <item id="bronzeArrow" rsid="882" name="Bronze Arrow" value="14"/>
+        <item id="candleLanternEmpty" rsid="4527" name="Candle lantern (empty)" value="44"/>
+        <item id="swampWeed" rsid="10978" name="Swamp weed" value="390"/>
+        <item id="snapeGrass" rsid="231" name="Snape grass" value="14"/>
+        <item id="redSpiderEggs" rsid="223" name="Red spiders' eggs" value="1675"/>
+        <item id="limpwurtRoot" rsid="225" name="Limpwurt root" value="1117"/>
+        <item id="rawChicken" rsid="2138" name="Raw chicken" value="429"/>
+        <item id="rawBearMeat" rsid="2136" name="Raw bear meat" value="261"/>
+        <item id="bearFur" rsid="948" name="Bear fur" value="122"/>
+        <item id="bronzeMace" rsid="1422" name="Bronze mace" value="58"/>
+        <item id="bronzeArrow" rsid="882" name="Bronze arrow" value="14"/>
         <item id="shortbow" rsid="841" name="Shortbow" value="272"/>
         <item id="bones" rsid="529" name="Bones" value="183"/>
-        <item id="magicStaff" rsid="1389" name="Magic Staff" value="829"/>
+        <item id="magicStaff" rsid="1389" name="Magic staff" value="829"/>
         <item id="staff" rsid="1379" name="Staff" value="669"/>
-        <item id="leatherCowl" rsid="1167" name="Leather Cowl" value="38"/>
-        <item id="leatherBody" rsid="1129" name="Leather Body" value="52"/>
-        <item id="bronzeChainbody" rsid="1103" name="Bronze Chainbody" value="84"/>
-        <item id="bronzeSqShield" rsid="1173" name="Bronze Sq Shield" value="197"/>
-        <item id="leatherGloves" rsid="1059" name="Leather Gloves" value="109"/>
-        <item id="leatherBoots" rsid="1061" name="Leather Boots" value="59"/>
-        <item id="earthRune" rsid="557" name="Earth Rune" value="10"/>
-        <item id="mindRune" rsid="558" name="Mind Rune" value="14"/>
-        <item id="waterRune" rsid="555" name="Water Rune" value="11"/>
-        <item id="bronzeBar" rsid="2349" name="Bronze Bar" value="190"/>
-        <item id="ironBar" rsid="2351" name="Iron Bar" value="495"/>
-        <item id="copperOre" rsid="436" name="Copper Ore" value="44"/>
-        <item id="tinOre" rsid="438" name="Tin Ore" value="65"/>
+        <item id="leatherCowl" rsid="1167" name="Leather cowl" value="38"/>
+        <item id="leatherBody" rsid="1129" name="Leather body" value="52"/>
+        <item id="bronzeChainbody" rsid="1103" name="Bronze chainbody" value="84"/>
+        <item id="bronzeSqShield" rsid="1173" name="Bronze sq shield" value="197"/>
+        <item id="leatherGloves" rsid="1059" name="Leather gloves" value="109"/>
+        <item id="leatherBoots" rsid="1061" name="Leather boots" value="59"/>
+        <item id="earthRune" rsid="557" name="Earth rune" value="10"/>
+        <item id="mindRune" rsid="558" name="Mind rune" value="14"/>
+        <item id="waterRune" rsid="555" name="Water rune" value="11"/>
+        <item id="bronzeBar" rsid="2349" name="Bronze bar" value="190"/>
+        <item id="ironBar" rsid="2351" name="Iron bar" value="495"/>
+        <item id="copperOre" rsid="436" name="Copper ore" value="44"/>
+        <item id="tinOre" rsid="438" name="Tin ore" value="65"/>
         <item id="feather" rsid="314" name="Feather" value="45"/>
-        <item id="fishingBait" rsid="313" name="Fishing Bait" value="6"/>
-        <item id="goldAmulet" rsid="1692" name="Gold Amulet" value="223"/>
-        <item id="goldNecklace" rsid="1654" name="Gold Necklace" value="250"/>
-        <item id="goldRing" rsid="1635" name="Gold Ring" value="299"/>
-        <item id="holySymbol" rsid="1718" name="Holy Symbol" value="780"/>
+        <item id="fishingBait" rsid="313" name="Fishing bait" value="6"/>
+        <item id="goldAmulet" rsid="1692" name="Gold amulet" value="223"/>
+        <item id="goldNecklace" rsid="1654" name="Gold mecklace" value="250"/>
+        <item id="goldRing" rsid="1635" name="Gold ring" value="299"/>
+        <item id="holySymbol" rsid="1718" name="Holy symbol" value="780"/>
         <item id="leather" rsid="1741" name="Leather" value="232"/>
         <item id="thread" rsid="1734" name="Thread" value="10"/>
-        <item id="amuletOfMagic" rsid="1727" name="Amulet Of Magic" value="1240"/>
-        <item id="earthTalisman" rsid="1440" name="Earth Talisman" value="1717"/>
-        <item id="airTalisman" rsid="1438" name="Air Talisman" value="159"/>
-        <item id="mindTalisman" rsid="1448" name="Mind Talisman" value="270"/>
-        <item id="waterTalisman" rsid="1444" name="Water Talisman" value="6843"/>
+        <item id="amuletOfMagic" rsid="1727" name="Amulet of magic" value="1240"/>
+        <item id="earthTalisman" rsid="1440" name="Earth talisman" value="1717"/>
+        <item id="airTalisman" rsid="1438" name="Air talisman" value="159"/>
+        <item id="mindTalisman" rsid="1448" name="Mind talisman" value="270"/>
+        <item id="waterTalisman" rsid="1444" name="Water talisman" value="6843"/>
         <item id="batwing" rsid="25549" name="Batwing" value="2883"/>
-        <item id="batBones" rsid="530" name="Bat Bones" value="433"/>
+        <item id="batBones" rsid="530" name="Bat bones" value="433"/>
         <item id="bloodRune" rsid="565" name="Blood rune" value="397"/>
-        <item id="runeArrow" rsid="892" name="Rune Arrow" value="151"/>
+        <item id="runeArrow" rsid="892" name="Rune arrow" value="151"/>
         <item id="adamantKiteshield" rsid="1199" name="Adamant kiteshield" value="5958"/>
-        <item id="airBattlestaff" rsid="1397" name="Air Battlestaff" value="8390"/>
+        <item id="airBattlestaff" rsid="1397" name="Air battlestaff" value="8390"/>
         <item id="adamantDagger" rsid="1211" name="Adamant dagger" value="2314"/>
-        <item id="avantoeSeed" rsid="5298" name="Avantoe Seed" value="239"/>
-        <item id="fellstalkSeed" rsid="21621" name="Fellstalk Seed" value="381"/>
-        <item id="iritSeed" rsid="5297" name="Irit Seed" value="184"/>
-        <item id="toadflaxSeed" rsid="5296" name="Toadflax Seed" value="480"/>
+        <item id="avantoeSeed" rsid="5298" name="Avantoe seed" value="239"/>
+        <item id="fellstalkSeed" rsid="21621" name="Fellstalk seed" value="381"/>
+        <item id="iritSeed" rsid="5297" name="Irit seed" value="184"/>
+        <item id="toadflaxSeed" rsid="5296" name="Toadflax seed" value="480"/>
         <item id="swordfish" rsid="373" name="Swordfish" value="289"/>
-        <item id="adamantiteOre" rsid="449" name="Adamantite Ore" value="727"/>
-        <item id="uncutEmerald" rsid="1621" name="Uncut Emerald" value="2018"/>
-        <item id="kwuarmSeed" rsid="5299" name="Kwuarm Seed" value="2580"/>
-        <item id="ghostlyEssence" rsid="32341" name="Ghostly Essence" value="2191"/>
+        <item id="adamantiteOre" rsid="449" name="Adamantite ore" value="727"/>
+        <item id="uncutEmerald" rsid="1621" name="Uncut emerald" value="2018"/>
+        <item id="kwuarmSeed" rsid="5299" name="Kwuarm seed" value="2580"/>
+        <item id="ghostlyEssence" rsid="32341" name="Ghostly essence" value="2191"/>
         <item id="ironMace" rsid="1420" name="Iron mace" value="112"/>
         <item id="staffOfAir" rsid="1381" name="Staff of air" value="898"/>
         <item id="bronzeClawOH" rsid="25933" name="Off-hand bronze claw" value="40"/>
@@ -921,7 +1174,7 @@
         <item id="eyeOfNewt" rsid="221" name="Eye of newt" value="7"/>
         <item id="mithrilArrow" rsid="888" name="Mithril arrow" value="22"/>
         <item id="ironKiteshield" rsid="1191" name="Iron kiteshield" value="549"/>
-        <item id="darkMysticGloves" rsid="4105" name="Mystic gloves (dark)" value="6785"/>
+        <item id="mysticGlovesDark" rsid="4105" name="Mystic gloves (dark)" value="6785"/>
     </itemList>
     <archetypeMonsterList>
         <archetype archetypeID="banshee">
@@ -959,6 +1212,15 @@
             <archetypeMonster monsterID="Cow_Calf"/>
             <archetypeMonster monsterID="Cow_Burthorpe"/>
         </archetype>
+        <archetype archetypeID="crawlingHands">
+            <archetypeMonster monsterID="Crawling_Hand_Level_11"/>
+            <archetypeMonster monsterID="Crawling_Hand_Level_18"/>
+            <archetypeMonster monsterID="Skeletal_Hand"/>
+            <archetypeMonster monsterID="Zombie_Hand"/>
+        </archetype>
+        <archetype archetypeID="skeletons"><!-- WIP -->
+            <archetypeMonster monsterID="Skeletal_Hand"/>
+        </archetype>
     </archetypeMonsterList>
     <slayerMasterAssignments>
         <slayerMaster name="Turael/Spria" totalWeight="355">
@@ -969,6 +1231,7 @@
             <assignment archetype="caveBug" weight="10"/>
             <assignment archetype="caveSlime" weight="30"/>
             <assignment archetype="cow" weight="10"/>
+            <assignment archetype="crawlingHands" weight="30"/>
         </slayerMaster>
     </slayerMasterAssignments>
 </dropData>
