@@ -1021,8 +1021,173 @@
             <dropTable id="zombieHandAlways" type="always" ref="onlyBones"/>
             <dropTable id="zombieHandDrops" type="always" ref="skeletalHandDrops"/>
         </monster>
+        <monster archetype="desertLizard" combatExp="132" hpExp="43.5" name="Desert_Lizard_Level_63" slayerExp="34.2">
+            <masterList>
+                <master>Turael/Spria</master>
+                <master>Mazchna/Achtryn</master>
+                <master>Vannaka</master>
+            </masterList>
+            <charmList id="desertLizard63Charms" ref="noCharms"/>
+            <dropTable id="desertLizard63Always" type="always" ref="onlyBones"/>
+            <dropTable id="desertLizard63Drops" type="primary">
+                <drop itemID="silverBar" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="copperOre" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="ironOreN" amount="1.5">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="tinOre" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="coalN" amount="1.5">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="silverOre" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="mithrilOre" amount="1">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="cabbageSeed" amount="3">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="onionSeed" amount="4">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="tomatoSeed" amount="3">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="potatoSeed" amount="4">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="strawberrySeed" amount="3">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="watermelonSeed" amount="1">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="sweetcornSeed" amount="2.5">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="grimyGuam" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="grimyHarralander" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="grimyMarrentill" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="grimyTarromin" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="grimyAvantoe" amount="1">
+                    <dropRates rarity="outlier"/>
+                </drop>
+                <drop itemID="grimyIrit" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="grimyRanarr" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="grimyCadantine" amount="1">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="grimyDwarfWeed" amount="1">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="grimyKwuarm" amount="1">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="grimyLantadyme" amount="1">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="kebab" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="knife" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="waterskin0" amount="2">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="mysticGlovesLight" amount="1">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="waterskin4" amount="2">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="fireRune" amount="23.5">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="natureRune" amount="5">
+                    <dropRates rarity="common"/>
+                </drop>
+            </dropTable>
+        </monster>
+        <monster name="Desert_Lizard_Level_49" slayerExp="21.6" hpExp="27.4" combatExp="83.1" archetype="desertLizard">
+            <masterList>
+                <master>Turael/Spria</master>
+                <master>Mazchna/Achtryn</master>
+                <master>Vannaka</master>
+            </masterList>
+            <charmList id="desertLizard49Charms" ref="noCharms"/>
+            <dropTable id="desertLizard49Always" type="always" ref="onlyBones"/>
+            <dropTable id="desertLizard49Drops" type="primary" ref="desertLizard63Drops"/>
+        </monster>
+        <monster name="Desert_Lizard_Level_35" slayerExp="14" hpExp="18.4" combatExp="56" archetype="desertLizard">
+            <masterList>
+                <master>Turael/Spria</master>
+                <master>Mazchna/Achtryn</master>
+                <master>Vannaka</master>
+            </masterList>
+            <charmList id="desertLizard35Charms" ref="noCharms"/>
+            <dropTable id="desertLizard35Always" type="always" ref="onlyBones"/>
+            <dropTable id="desertLizard35Drops" type="primary" ref="desertLizard63Drops"/>
+        </monster>
+        <monster name="Small_Lizard" slayerExp="9.6" hpExp="12.2" combatExp="37.2" archetype="desertLizard">
+            <masterList>
+                <master>Turael/Spria</master>
+                <master>Mazchna/Achtryn</master>
+                <master>Vannaka</master>
+            </masterList>
+            <charmList id="smallLizardCharms" ref="noCharms"/>
+            <dropTable id="smallLizardAlways" type="always" ref="onlyBones"/>
+            <dropTable id="smallLizardDrops" type="primary" ref="desertLizard63Drops"/>
+        </monster>
+        <monster name="Lizard" slayerExp="54.8" hpExp="69.7" combatExp="211.5" archetype="desertLizard">
+            <masterList>
+                <master>Turael/Spria</master>
+                <master>Mazchna/Achtryn</master>
+                <master>Vannaka</master>
+            </masterList>
+            <charmList id="lizardCharms" ref="noCharms"/>
+            <dropTable id="onlyBigBones" type="always">
+                <drop itemID="bigBones" amount="1">
+                    <dropRates rarity="always"/>
+                </drop>
+            </dropTable>
+            <dropTable id="lizardDrops" type="primary" ref="desertLizard63Drops"/>
+        </monster>
+
     </monsterList>
     <itemList>
+        <item id="bigBones" name="Big bones" rsid="532" value="342"/>
+        <item id="waterskin4" rsid="1823" name="Waterskin (4)" value="198"/>
+        <item id="waterskin0" rsid="1831" name="Waterskin (0)" value="53"/>
+        <item id="knife" rsid="946" name="Knife" value="140"/>
+        <item id="kebab" rsid="1971" name="Kebab" value="281"/>
+        <item id="potatoSeed" rsid="5318" name="Potato seed" value="10"/>
+        <item id="onionSeed" rsid="5319" name="Onion seed" value="5"/>
+        <item id="cabbageSeed" rsid="5324" name="Cabbage seed" value="3"/>
+        <item id="mithrilOre" rsid="447" name="Mithril ore" value="218"/>
+        <item id="silverOre" rsid="442" name="Silver ore" value="68"/>
+        <item id="coalN" rsid="453" name="Coal (noted)" value="194"/>
+        <item id="silverBar" rsid="2355" name="Silver bar" value="155"/>
+        <item id="mysticGlovesLight" rsid="4115" name="Mystic gloves (light)" value="1165210"/>
         <item id="mithrilBar" rsid="2359" name="Mithril bar" value="1244"/>
         <item id="steelNails" rsid="1539" name="Steel nails" value="23"/>
         <item id="blackNails" rsid="4821" name="Black nails" value="111"/>
@@ -1220,6 +1385,13 @@
         </archetype>
         <archetype archetypeID="skeletons"><!-- WIP -->
             <archetypeMonster monsterID="Skeletal_Hand"/>
+        </archetype>
+        <archetype archetypeID="desertLizard">
+            <archetypeMonster monsterID="Lizard"/>
+            <archetypeMonster monsterID="Small_Lizard"/>
+            <archetypeMonster monsterID="Desert_Lizard_Level_63"/>
+            <archetypeMonster monsterID="Desert_Lizard_Level_49"/>
+            <archetypeMonster monsterID="Desert_Lizard_Level_35"/>
         </archetype>
     </archetypeMonsterList>
     <slayerMasterAssignments>
