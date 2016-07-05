@@ -1356,8 +1356,8 @@
             <masterList>
                 <master>Turael/Spria</master>
             </masterList>
-            <dropTable id="dwarfGangMemberAlways" type="always" ref="onlyBones"/>
             <charmList id="dwarfGangMemberCharms" ref="noCharms"/>
+            <dropTable id="dwarfGangMemberAlways" type="always" ref="onlyBones"/>
         </monster>
         <monster name="Chaos_Dwarf" slayerExp="20.6" hpExp="26.3" combatExp="79.8" archetype="dwarf">
             <masterList>
@@ -1514,8 +1514,84 @@
                 </drop>
             </dropTable>
         </monster>
+        <monster name="Gelatinous_Abomination" slayerExp="6.6" hpExp="9.9" combatExp="30"
+                 archetype="gelatinousAbomination">
+            <masterList>
+                <master>Turael/Spria</master>
+            </masterList>
+            <charmList id="gelatinousAbominationCharms">
+                <charmDropRate base="blue" rate="0"/>
+                <charmDropRate base="crimson" rate="0.0005"/>
+                <charmDropRate base="green" rate="0.0005"/>
+                <charmDropRate base="gold" rate="0.4"/>
+            </charmList>
+            <dropTable id="gelatinousAbominationDrops" type="primary">
+                <drop itemID="shieldbow" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="leatherCowl" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="bronzeFullHelm" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="grimyGuam" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="grimyTarromin" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="grimyMarrentill" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="coin" amount="3">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="bakedPotato" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="cookedChicken" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="cookedRabbit" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="crayfish" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="poorlyCookedBirdMeat" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="poorlyCookedBeastMeat" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="rabbitSandwich" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="bread" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="cookedMeat" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="rawPotato" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+            </dropTable>
+        </monster>
     </monsterList>
     <itemList>
+        <item id="rawPotato" rsid="1942" name="Raw potato" value="290"/>
+        <item id="cookedMeat" rsid="2142" name="Cooked meat" value="174"/>
+        <item id="bread" rsid="2309" name="Bread" value="446"/>
+        <item id="rabbitSandwich" rsid="23065" name="Rabbit sandwich" value="305"/>
+        <item id="poorlyCookedBeastMeat" rsid="23062" name="Poorly-cooked beast meat" value="86"/>
+        <item id="poorlyCookedBirdMeat" rsid="23060" name="Poorly-cooked bird meat" value="54"/>
+        <item id="crayfish" rsid="13433" name="Crayfish" value="13"/>
+        <item id="cookedRabbit" rsid="3228" name="Cooked rabbit" value="156"/>
+        <item id="cookedChicken" rsid="2140" name="Cooked chicken" value="178"/>
+        <item id="bakedPotato" rsid="6701" name="Baked potato" value="309"/>
+        <item id="shieldbow" rsid="839" name="Shieldbow" value="65"/>
         <item id="handCannonShot" rsid="15243" name="Hand cannon shot" value="149"/>
         <item id="handCannon" rsid="15241" name="Hand cannon" value="504252"/>
         <item id="dragonPickaxe" rsid="15259" name="Dragon pickaxe" value="8664846"/>
@@ -1772,6 +1848,9 @@
             <archetypeMonster monsterID="Chaos_Dwarf_Battlefield"/>
             <archetypeMonster monsterID="Chaos_Dwarf_Hand_Cannoneer"/>
         </archetype>
+        <archetype archetypeID="gelatinousAbomination">
+            <archetypeMonster monsterID="Gelatinous_Abomination"/>
+        </archetype>
     </archetypeMonsterList>
     <slayerMasterAssignments>
         <slayerMaster name="Turael/Spria" totalWeight="355">
@@ -1786,6 +1865,7 @@
             <assignment archetype="desertLizard" weight="30"/>
             <assignment archetype="dog" weight="15"/>
             <assignment archetype="dwarf" weight="10"/>
+            <assignment archetype="gelatinousAbomination" weight="10"/>
         </slayerMaster>
     </slayerMasterAssignments>
 </dropData>
