@@ -76,7 +76,7 @@
                 <drop itemID="grimyRanarr" amount="1">
                     <dropRates rarity="uncommon"/>
                 </drop>
-                <drop itemID="ironOreN" amount="1">
+                <drop itemID="ironOre" amount="1">
                     <dropRates rarity="common"/>
                 </drop>
                 <drop itemID="airRune" amount="3">
@@ -1036,13 +1036,13 @@
                 <drop itemID="copperOre" amount="1">
                     <dropRates rarity="common"/>
                 </drop>
-                <drop itemID="ironOreN" amount="1.5">
+                <drop itemID="ironOre" amount="1.5">
                     <dropRates rarity="common"/>
                 </drop>
                 <drop itemID="tinOre" amount="1">
                     <dropRates rarity="common"/>
                 </drop>
-                <drop itemID="coalN" amount="1.5">
+                <drop itemID="coal" amount="1.5">
                     <dropRates rarity="uncommon"/>
                 </drop>
                 <drop itemID="silverOre" amount="1">
@@ -1180,7 +1180,7 @@
             <charmList id="jackalCharms" ref="noCharms"/>
             <dropTable id="jackalAlways" type="always" ref="onlyBones"/>
         </monster>
-        <monster name="WildDog" slayerExp="14" hpExp="17.8" combatExp="54" archetype="dog">
+        <monster name="Wild_Dog" slayerExp="14" hpExp="17.8" combatExp="54" archetype="dog">
             <masterList>
                 <master>Mazchna/Achtryn</master>
                 <master>Turael/Spria</master>
@@ -1193,8 +1193,351 @@
             </charmList>
             <dropTable id="wildDogAlways" type="always" ref="onlyBones"/>
         </monster>
+        <monster name="Dwarf_Level_9" slayerExp="7.2" hpExp="9.3" combatExp="28.2" archetype="dwarf">
+            <masterList>
+                <master>Turael/Spria</master>
+            </masterList>
+            <charmList id="dwarf9Charms">
+                <charmDropRate base="blue" rate="0.006"/>
+                <charmDropRate base="crimson" rate="0.03"/>
+                <charmDropRate base="gold" rate="0.04"/>
+                <charmDropRate base="green" rate="0.02"/>
+            </charmList>
+            <dropTable id="dwarf9Always" type="always" ref="onlyBones"/>
+            <dropTable id="dwarf9Drops" type="primary">
+                <drop itemID="bronzeBar" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="ironBar" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="copperOre" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="ironOre" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="tinOre" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="coal" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="bronzePickaxe" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="ironPickaxe" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="chaosRune" amount="2">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="natureRune" amount="2">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="bronzeBolts" amount="6.5">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="bronzeHelm" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="bronzeBattleaxe" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="ironBattleaxe" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="coin" amount="14.6">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="dwarvenStout" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="hammer" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+            </dropTable>
+        </monster>
+        <monster name="Dwarf_Level_20" slayerExp="8.2" hpExp="10.8" combatExp="33" archetype="dwarf">
+            <masterList>
+                <master>Turael/Spria</master>
+            </masterList>
+            <charmList id="dwarf20Charms" ref="dwarf9Charms"/>
+            <dropTable id="dwarf20Always" type="always" ref="onlyBones"/>
+            <dropTable id="dwarf20Drops" type="primary" ref="dwarf9Drops"/>
+        </monster>
+        <monster name="Dwarf_Level_56" slayerExp="15.8" hpExp="21.4" combatExp="65" archetype="dwarf">
+            <masterList>
+                <master>Turael/Spria</master>
+            </masterList>
+            <charmList id="dwarf56Charms" ref="dwarf9Charms"/>
+            <dropTable id="dwarf56Always" type="always" ref="onlyBones"/>
+            <dropTable id="dwarf56Drops" type="primary" ref="dwarf9Drops"/>
+        </monster>
+        <monster name="Dwarf_Level_64" slayerExp="19" hpExp="25" combatExp="76" archetype="dwarf">
+            <masterList>
+                <master>Turael/Spria</master>
+            </masterList>
+            <charmList id="dwarf64Charms" ref="dwarf9Charms"/>
+            <dropTable id="dwarf64Always" type="always" ref="onlyBones"/>
+            <dropTable id="dwarf64Drops" type="primary" ref="dwarf9Drops"/>
+        </monster>
+        <monster name="Black_Guard_Level_47" slayerExp="20.6" hpExp="26.3" combatExp="79.8" archetype="dwarf">
+            <masterList>
+                <master>Turael/Spria</master>
+            </masterList>
+            <charmList id="blackGuard47Charms">
+                <charmDropRate base="blue" rate="0.11"/>
+                <charmDropRate base="crimson" rate="0.02"/>
+                <charmDropRate base="gold" rate="0.05"/>
+                <charmDropRate base="green" rate="0.095"/>
+            </charmList>
+            <dropTable id="blackGuard47Always" type="always" ref="onlyBones"/>
+            <dropTable id="blackGuard47Drops" type="primary">
+                <drop itemID="coin" amount="23">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="hammer" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="kegOfBeer" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="bronzeBolts" amount="6">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="bronzeHelm" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="bronzeBar" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="ironBar" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="coal" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="copperOre" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="chaosRune" amount="2">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="natureRune" amount="2">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="bronzePickaxe" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="blackWarhammer" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="bronzeBattleaxe" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="bronzeWarhammer" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="ironBattleaxe" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+            </dropTable>
+        </monster>
+        <monster name="Black_Guard_Level_42" slayerExp="17" hpExp="22" combatExp="66.9" archetype="dwarf">
+            <masterList>
+                <master>Turael/Spria</master>
+            </masterList>
+            <charmList id="blackGuard42Charms" ref="blackGuard47Charms"/>
+            <dropTable id="blackGuard42Always" type="always" ref="onlyBones"/>
+            <dropTable id="blackGuard42Drops" type="primary" ref="blackGuard47Drops"/>
+        </monster>
+        <monster name="Dwarf_Gang_Member" slayerExp="14" hpExp="18.1" combatExp="55" archetype="dwarf">
+            <masterList>
+                <master>Turael/Spria</master>
+            </masterList>
+            <dropTable id="dwarfGangMemberAlways" type="always" ref="onlyBones"/>
+            <charmList id="dwarfGangMemberCharms" ref="noCharms"/>
+        </monster>
+        <monster name="Chaos_Dwarf" slayerExp="20.6" hpExp="26.3" combatExp="79.8" archetype="dwarf">
+            <masterList>
+                <master>Turael/Spria</master>
+            </masterList>
+            <charmList id="chaosDwarfCharms">
+                <charmDropRate base="blue" rate="0.025"/>
+                <charmDropRate base="crimson" rate="0.025"/>
+                <charmDropRate base="gold" rate="0.095"/>
+                <charmDropRate base="green" rate="0.045"/>
+            </charmList>
+            <dropTable id="chaosDwarfAlways" type="always" ref="onlyBones"/>
+            <dropTable id="chaosDwarfDrops" type="primary">
+                <drop itemID="coin" amount="132.8">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="cheese" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="muddyKey" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="tomato" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="mithrilSqShield" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="steelFullHelm" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="blackFullHelm" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="mithrilBar" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="grimyRanarr" amount="1">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="coal" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="airRune" amount="18">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="cosmicRune" amount="4.5">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="mindRune" amount="37">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="waterRune" amount="10">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="chaosRune" amount="23.5">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="lawRune" amount="4.5">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="natureRune" amount="13.5">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="deathRune" amount="4.5">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="mithrilLongsword" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+            </dropTable>
+        </monster>
+        <monster name="Chaos_Dwarf_Battlefield" slayerExp="11.4" hpExp="36.4" combatExp="110.5" archetype="dwarf">
+            <masterList>
+                <master>Turael/Spria</master>
+            </masterList>
+            <charmList id="chaosDwarfBattlefieldCharms" ref="chaosDwarfCharms"/>
+            <dropTable id="chaosDwarfBattlefieldAlways" type="always" ref="onlyBones"/>
+            <dropTable id="chaosDwarfBattlefieldDrops" type="primary" ref="chaosDwarfDrops"/>
+            <dropTable id="chaosDwarfBattlefieldRares" type="rares">
+                <drop itemID="dragonPickaxe" amount="1">
+                    <dropRates rarity="outlier" value="5000"/>
+                </drop>
+            </dropTable>
+        </monster>
+        <monster name="Chaos_Dwarf_Hand_Cannoneer" slayerExp="43.2" hpExp="54.7" combatExp="166" archetype="dwarf">
+            <masterList>
+                <master>Turael/Spria</master>
+            </masterList>
+            <charmList id="chaosDwarfHandCannoneerCharms">
+                <charmDropRate base="blue" rate="0.035"/>
+                <charmDropRate base="crimson" rate="0.065"/>
+                <charmDropRate base="gold" rate="0.28"/>
+                <charmDropRate base="green" rate="0.11"/>
+            </charmList>
+            <dropTable id="chaosDwarfHandCannoneerAlways" type="always" ref="onlyBones"/>
+            <dropTable id="chaosDwarfHandCannoneerDrops" type="primary">
+                <drop itemID="coin" amount="132.8">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="muddyKey" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="cheese" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="handCannonShot" amount="100">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="tomato" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="handCannon" amount="1">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="mithrilSqShield" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="steelFullHelm" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="mithrilBar" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="airRune" amount="24">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="chaosRune" amount="15">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="cosmicRune" amount="3">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="mindRune" amount="37">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="waterRune" amount="10">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="deathRune" amount="3">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="lawRune" amount="16.5">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="natureRune" amount="9">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="mithrilLongsword" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="dragonPickaxe" amount="1">
+                    <dropRates rarity="outlier" value="5000"/>
+                </drop>
+            </dropTable>
+        </monster>
     </monsterList>
     <itemList>
+        <item id="handCannonShot" rsid="15243" name="Hand cannon shot" value="149"/>
+        <item id="handCannon" rsid="15241" name="Hand cannon" value="504252"/>
+        <item id="dragonPickaxe" rsid="15259" name="Dragon pickaxe" value="8664846"/>
+        <item id="mithrilLongsword" rsid="1299" name="Mithril longsword" value="2050"/>
+        <item id="lawRune" rsid="563" name="Law rune" value="208"/>
+        <item id="blackFullHelm" rsid="1165" name="Black full helm" value="880"/>
+        <item id="steelFullHelm" rsid="1157" name="Steel full helm" value="312"/>
+        <item id="mithrilSqShield" rsid="1181" name="Mithril sq shield" value="1937"/>
+        <item id="muddyKey" rsid="991" name="Muddy key" value="2798"/>
+        <item id="tomato" rsid="1982" name="Tomato" value="72"/>
+        <item id="cheese" rsid="1985" name="Cheese" value="117"/>
+        <item id="bronzeWarhammer" rsid="1337" name="Bronze warhammer" value="43"/>
+        <item id="blackWarhammer" rsid="1341" name="Black warhammer" value="1120"/>
+        <item id="kegOfBeer" rsid="3801" name="Keg of beer" value="1262"/>
+        <item id="hammer" rsid="2347" name="Hammer" value="92"/>
+        <item id="dwarvenStout" rsid="1913" name="Dwarven Stout" value="571"/>
+        <item id="ironBattleaxe" rsid="1363" name="Iron Battleaxe" value="544"/>
+        <item id="bronzeBattleaxe" rsid="1375" name="Bronze battleaxe" value="65"/>
+        <item id="bronzeHelm" rsid="1139" name="Bronze helm" value="75"/>
+        <item id="bronzeBolts" rsid="877" name="Bronze bolts" value="21"/>
+        <item id="ironPickaxe" rsid="1267" name="Iron pickaxe" value="1315"/>
+        <item id="bronzePickaxe" rsid="1265" name="Bronze pickaxe" value="200"/>
         <item id="bigBones" name="Big bones" rsid="532" value="342"/>
         <item id="waterskin4" rsid="1823" name="Waterskin (4)" value="198"/>
         <item id="waterskin0" rsid="1831" name="Waterskin (0)" value="53"/>
@@ -1205,7 +1548,7 @@
         <item id="cabbageSeed" rsid="5324" name="Cabbage seed" value="3"/>
         <item id="mithrilOre" rsid="447" name="Mithril ore" value="218"/>
         <item id="silverOre" rsid="442" name="Silver ore" value="68"/>
-        <item id="coalN" rsid="453" name="Coal (noted)" value="194"/>
+        <item id="coal" rsid="453" name="Coal (noted)" value="194"/>
         <item id="silverBar" rsid="2355" name="Silver bar" value="155"/>
         <item id="mysticGlovesLight" rsid="4115" name="Mystic gloves (light)" value="1165210"/>
         <item id="mithrilBar" rsid="2359" name="Mithril bar" value="1244"/>
@@ -1339,7 +1682,7 @@
         <item id="cosmicRune" rsid="564" name="Cosmic rune" value="303"/>
         <item id="chaosRune" rsid="562" name="Chaos rune" value="59"/>
         <item id="airRune" rsid="556" name="Air rune" value="19"/>
-        <item id="ironOreN" rsid="440" name="Iron ore (noted)" value="350"/>
+        <item id="ironOre" rsid="440" name="Iron ore (noted)" value="350"/>
         <item id="grimyRanarr" rsid="207" name="Grimy ranarr" value="2237"/>
         <item id="grimyLantadyme" rsid="2485" name="Grimy lantadyme" value="3973"/>
         <item id="grimyIrit" rsid="209" name="Grimy irit" value="2327"/>
@@ -1415,6 +1758,19 @@
         </archetype>
         <archetype archetypeID="dog">
             <archetypeMonster monsterID="Jackal"/>
+            <archetypeMonster monsterID="Wild_Dog"/>
+        </archetype>
+        <archetype archetypeID="dwarf">
+            <archetypeMonster monsterID="Dwarf_Level_9"/>
+            <archetypeMonster monsterID="Dwarf_Level_20"/>
+            <archetypeMonster monsterID="Dwarf_Level_56"/>
+            <archetypeMonster monsterID="Dwarf_Level_64"/>
+            <archetypeMonster monsterID="Black_Guard_Level_47"/>
+            <archetypeMonster monsterID="Black_Guard_Level_42"/>
+            <archetypeMonster monsterID="Dwarf_Gang_Member"/>
+            <archetypeMonster monsterID="Chaos_Dwarf"/>
+            <archetypeMonster monsterID="Chaos_Dwarf_Battlefield"/>
+            <archetypeMonster monsterID="Chaos_Dwarf_Hand_Cannoneer"/>
         </archetype>
     </archetypeMonsterList>
     <slayerMasterAssignments>
@@ -1429,6 +1785,7 @@
             <assignment archetype="crawlingHand" weight="30"/>
             <assignment archetype="desertLizard" weight="30"/>
             <assignment archetype="dog" weight="15"/>
+            <assignment archetype="dwarf" weight="10"/>
         </slayerMaster>
     </slayerMasterAssignments>
 </dropData>
