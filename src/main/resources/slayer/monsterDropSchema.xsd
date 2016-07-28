@@ -70,14 +70,14 @@
     <drops:element name="monster">
         <drops:complexType>
             <drops:sequence>
-                <drops:element name="masterList" minOccurs="1">
+                <drops:element name="masterList" minOccurs="0" maxOccurs="1">
                     <drops:complexType>
                         <drops:sequence>
                             <drops:element name="master" type="slayerMaster" maxOccurs="unbounded"/>
                         </drops:sequence>
                     </drops:complexType>
                 </drops:element>
-                <drops:element name="charmList" minOccurs="0">
+                <drops:element name="charmList" minOccurs="0" maxOccurs="1">
                     <drops:complexType>
                         <drops:sequence>
                             <drops:element ref="charmDropRate" maxOccurs="4" minOccurs="0"/>
@@ -104,17 +104,18 @@
             </drops:sequence>
             <drops:attribute name="id" type="drops:ID" use="required"/>
             <drops:attribute name="ref" type="drops:IDREF" use="optional"/>
-            <drops:attribute name="type" type="drops:string" use="required"/>
+            <drops:attribute name="type" type="drops:string" use="optional"/>
+            <drops:attribute name="defaultRarity" type="rarity" use="optional"/>
         </drops:complexType>
     </drops:element>
 
     <drops:element name="drop">
         <drops:complexType>
             <drops:sequence>
-                <drops:element ref="dropRates" minOccurs="1"/>
+                <drops:element ref="dropRates" minOccurs="0"/>
             </drops:sequence>
             <drops:attribute name="itemID" type="drops:IDREF" use="required"/>
-            <drops:attribute name="amount" type="drops:float" use="required"/>
+            <drops:attribute name="amount" type="drops:float" use="optional"/>
         </drops:complexType>
     </drops:element>
 
@@ -173,6 +174,7 @@
                         </drops:sequence>
                         <drops:attribute name="totalWeight" type="drops:integer" use="required"/>
                         <drops:attribute name="name" type="slayerMaster" use="required"/>
+                        <drops:attribute name="processed" type="drops:boolean" use="optional"/>
                     </drops:complexType>
                 </drops:element>
             </drops:sequence>

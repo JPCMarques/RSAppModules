@@ -19,8 +19,9 @@ public abstract class ValueCalculator {
         defaultValues.put(Rarity.VERY_RARE, 0.0001f);
     }
 
-    public double calcDropValue(Drop drop) throws IncompleteItemListException {
+    public double calcDropValue(Drop drop, Rarity assumedRarity) throws IncompleteItemListException {
         float avgAmount = drop.getAmount();
+        if(avgAmount == 0) avgAmount=1;
         double unitPrice = ((Item) drop.getItemID()).getValue();
 
         if(unitPrice == 0.0f)
@@ -28,7 +29,7 @@ public abstract class ValueCalculator {
         double avgPrice = avgAmount*unitPrice;
 
         float odds;
-        Rarity rarity = drop.getDropRates().getRarity();
+        Rarity rarity = assumedRarity == null ? drop.getDropRates().getRarity() : assumedRarity;
         if(rarity == Rarity.OUTLIER) odds = 1/drop.getDropRates().getValue().floatValue();
         else if(rarity == Rarity.ALWAYS) odds = 1;
         else odds = defaultValues.get(rarity);
@@ -38,7 +39,7 @@ public abstract class ValueCalculator {
 
     public double calcDropTableValue(DropTable dropTable) throws IncompleteItemListException {
         double dropTableValue = 0;
-        for(Drop drop: dropTable.getDrop()) dropTableValue += calcDropValue(drop);
+        for(Drop drop: dropTable.getDrop()) dropTableValue += calcDropValue(drop, dropTable.getDefaultRarity());
         return dropTableValue;
     }
 

@@ -6,6 +6,9 @@ import javax.xml.bind.JAXBException;
 import java.io.File;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
 
 /**
  * Created by jpcmarques on 27-06-2016.
@@ -40,5 +43,25 @@ public abstract class Loader {
         DataAccessor accessor = DataAccessor.getInstance();
         if (outputStream == null) accessor.marshallItemList(itemList);
         else accessor.marshallItemList(itemList, outputStream);
+    }
+
+    public static void processSlayerAssignments(DropData source){
+        SlayerMasterAssignments assignments = source.getSlayerMasterAssignments();
+        for(SlayerMasterAssignments.SlayerMaster master : assignments.getSlayerMaster()){
+            for(SlayerMasterAssignments.SlayerMaster.Assignment assignment: master.getAssignment()){
+                ArchetypeMonsterList.Archetype archetype = (ArchetypeMonsterList.Archetype) assignment.getArchetype();
+                for (ArchetypeMonsterList.Archetype.ArchetypeMonster archetypeMonster : archetype.getArchetypeMonster()){
+                    Monster monster = (Monster) archetypeMonster.getMonsterID();
+                    List<SlayerMaster> masterList = monster.getMasterList().getMaster();
+                    boolean add = true;
+                    for(SlayerMaster sm : masterList)
+                        if(sm.equals(master.getName())) {
+                            add = false;
+                            break;
+                        }
+                    if(!add) masterList.add(master.getName());
+                }
+            }
+        }
     }
 }

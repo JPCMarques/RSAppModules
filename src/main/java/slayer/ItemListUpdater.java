@@ -18,7 +18,7 @@ public abstract class ItemListUpdater {
 
     public static double getItemPrice(Item item) throws IOException {
         int rsID = item.getRsid().intValue();
-        if(rsID == 0) return 1;
+        if(rsID == 0) return item.getValue();
         String priceLookup = itemQuery + rsID;
 
         URL geAPI = new URL(priceLookup);

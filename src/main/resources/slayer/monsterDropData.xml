@@ -1579,8 +1579,1186 @@
                 </drop>
             </dropTable>
         </monster>
+        <monster name="Ghost" slayerExp="10.6" hpExp="13.4" combatExp="40.7" archetype="ghost">
+            <masterList>
+                <master>Mazchna/Achtryn</master>
+                <master>Turael/Spria</master>
+            </masterList>
+            <charmList id="ghostCharms" ref="noCharms"/>
+            <dropTable id="noDrops" type="primary"/>
+        </monster>
+        <monster name="Ghost_Scorpius_Shrine" slayerExp="11.4" hpExp="14.6" combatExp="44.4" archetype="ghost">
+            <masterList>
+                <master>Mazchna/Achtryn</master>
+                <master>Turael/Spria</master>
+            </masterList>
+            <charmList id="ghostScorpiusShrineCharms" ref="noCharms"/>
+            <dropTable id="ghostScorpiusShrineDrops" type="primary" ref="noDrops"/>
+        </monster>
+        <monster name="Ghost_Level_42" slayerExp="80" hpExp="22" combatExp="66.9" archetype="ghost">
+            <masterList>
+                <master>Turael/Spria</master>
+                <master>Mazchna/Achtryn</master>
+            </masterList>
+            <charmList id="ghostLevel42Charms" ref="noCharms"/>
+            <dropTable id="ghostLevel42Drops" type="primary" ref="noDrops"/>
+        </monster>
+        <monster name="Ghost_Level_46" slayerExp="80" hpExp="25" combatExp="76" archetype="ghost">
+            <masterList>
+                <master>Turael/Spria</master>
+                <master>Mazchna/Achtryn</master>
+            </masterList>
+            <charmList id="ghostLevel46Charms" ref="noCharms"/>
+            <dropTable id="ghostLevel46Drops" type="primary" ref="noDrops"/>
+        </monster>
+        <monster name="Ghost_Level_47" slayerExp="80" hpExp="26" combatExp="79" archetype="ghost">
+            <masterList>
+                <master>Turael/Spria</master>
+                <master>Mazchna/Achtryn</master>
+            </masterList>
+            <charmList id="ghostLevel47Charms" ref="noCharms"/>
+            <dropTable id="ghostLevel47Drops" type="primary" ref="noDrops"/>
+        </monster>
+        <monster name="Ghost_Level_48" slayerExp="80" hpExp="26.4" combatExp="80" archetype="ghost">
+            <masterList>
+                <master>Turael/Spria</master>
+                <master>Mazchna/Achtryn</master>
+            </masterList>
+            <charmList id="ghostLevel48Charms" ref="noCharms"/>
+            <dropTable id="ghostLevel48Drops" type="primary" ref="noDrops"/>
+        </monster>
+        <monster name="Ghost_Forgotten_Cemetery" slayerExp="20" hpExp="36.3" combatExp="110" archetype="ghost">
+            <masterList>
+                <master>Mazchna/Achtryn</master>
+                <master>Turael/Spria</master>
+            </masterList>
+            <charmList id="ghostForgottenCemeteryCharms" ref="noCharms"/>
+            <dropTable id="ghostForgottenCemeteryDrops" type="primary" ref="noDrops"/>
+        </monster>
+        <monster name="Tortured_Soul" slayerExp="40.4" hpExp="31.4" combatExp="95.4" archetype="ghost">
+            <masterList>
+                <master>Turael/Spria</master>
+                <master>Mazchna/Achtryn</master>
+            </masterList>
+            <charmList id="torturedSoulCharms" ref="noCharms"/>
+            <dropTable id="torturedSoulDrops" type="primary">
+                <drop itemID="watermelonSeed" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="harralanderSeed" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="iritSeed" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="jangerberrySeed" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="limpwurtSeed" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="marrentillSeed" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="poisonIvySeed" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="spiritWeedSeed" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="strawberrySeed" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="tarrominSeed" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="toadflaxSeed" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="whiteberrySeed" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="wildbloodSeed" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="avantoeSeed" amount="1">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="bittercapMushroomSpore" amount="1">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="cactusSeed" amount="1">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="kwuarmSeed" amount="1">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="ranarrSeed" amount="1">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="snapdragonSeed" amount="1">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="torstolSeed" amount="1">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="grimyHarralander" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="grimyMarrentill" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="grimyTarromin" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="grimyGuam" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="grimyRanarr" amount="1">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="bodyRune" amount="7">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="waterRune" amount="6">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="lawRune" amount="2">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="coin" amount="6.6">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="limpwurtRoot" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="vialOfWater" amount="1">
+                    <dropRates rarity="rare"/>
+                </drop>
+            </dropTable>
+        </monster>
+        <monster name="Tormented_Wraith" slayerExp="52" hpExp="44.1" combatExp="133.8" archetype="ghost">
+            <masterList>
+                <master>Mazchna/Achtryn</master>
+                <master>Turael/Spria</master>
+            </masterList>
+            <charmList id="tormentedWraithCharms">
+                <charmDropRate base="blue" rate="0.22"/>
+                <charmDropRate base="crimson" rate="0.125"/>
+                <charmDropRate base="gold" rate="0.125"/>
+                <charmDropRate base="green" rate="0.05"/>
+            </charmList>
+            <dropTable id="tormentedWraithDrops" type="primary">
+                <drop itemID="blackChainbody" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="blackFullHelm" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="blackHelm" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="blackKiteshield" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="blackPlatelegs" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="blackPlatebody" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="blackLongsword" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="mithrilDart" amount="23">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="blackLongswordOH" amount="1">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="bloodRune" amount="7">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="chaosRune" amount="15">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="deathRune" amount="10">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="grimyGuam" amount="1.5">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="grimyHarralander" amount="1.5">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="grimyIrit" amount="1.5">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="grimyMarrentill" amount="1.5">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="grimyRanarr" amount="1.5">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="grimyTarromin" amount="1.5">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="grimyAvantoe" amount="1.5">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="grimyAvantoe" amount="1.5">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="grimyCadantine" amount="1.5">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="grimyDwarfWeed" amount="1.5">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="grimyKwuarm" amount="1.5">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="grimyLantadyme" amount="1.5">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="coin" amount="466.5">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="bigBones" amount="5">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="ghostlyEssence" amount="2.5">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="oakPlank" amount="80">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="holyElixir" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="spiritShield" amount="1">
+                    <dropRates rarity="outlier" value="113"/>
+                </drop>
+                <drop itemID="adamantBar" amount="3">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="ironOre" amount="50">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="prayerPotion3" amount="2">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+            </dropTable>
+        </monster>
+        <monster name="Ghostly_Warrior" slayerExp="44" hpExp="41.4" combatExp="125.7" archetype="ghost">
+            <masterList>
+                <master>Mazchna/Achtryn</master>
+                <master>Turael/Spria</master>
+            </masterList>
+            <charmList id="ghostlyWarriorCharms" ref="noCharms"/>
+            <dropTable id="ghostlyWarriorDrops" type="primary">
+                <drop itemID="chaosRune" amount="15">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="cosmicRune" amount="15">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="mindRune" amount="25">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="soulRune" amount="3">
+                    <dropRates rarity="uncommon"/>
+                </drop>
+                <drop itemID="steelFullHelm" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="steelPlatebody" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="steelPlatelegs" amount="1">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="spiritShield" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="coin" amount="55.5">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="ghostlyEssence" amount="1.5">
+                    <dropRates rarity="rare"/>
+                </drop>
+            </dropTable>
+        </monster>
+        <monster name="Revenant_Imp" slayerExp="10" hpExp="21.1" combatExp="64.2" archetype="ghost">
+            <masterList>
+                <master>Mazchna/Achtryn</master>
+                <master>Turael/Spria</master>
+            </masterList>
+            <charmList id="revenantImpCharms" ref="noCharms"/>
+            <dropTable id="revenantImpDrops" type="primary">
+                <drop itemID="corruptMorrigansThrowingAxe" amount="22.5">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="corruptMorrigansJavelin" amount="22.5">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="corruptStatiusWarhammer" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="corruptVestasLongsword" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="corruptVestasSpear" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="corruptZurielsStaff" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="morrigansThrowingAxe" amount="22.5">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="morrigansJavelin" amount="22.5">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="statiusWarhammer" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="vestasLongsword" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="vestasSpear" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="zurielsStaff" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="corruptMorrigansCoif" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="corruptMorrigansLeatherBody" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="corruptMorrigansLeatherChaps" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="corruptZurielsHood" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="corruptZurielsRobeBottom" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="corruptZurielsRobeTop" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="morrigansCoif" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="morrigansLeatherBody" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="morrigansLeatherChaps" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="zurielsHood" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="zurielsRobeBottom" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="zurielsRobeTop" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="corruptStatiusFullHelm" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="corruptStatiusPlatebody" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="corruptStatiusPlatelegs" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="corruptVestasChainbody" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="corruptVestasPlateskirt" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="statiusFullHelm" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="statiusPlatebody" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="statiusPlatelegs" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="vestasChainbody" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="vestasPlateskirt" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="ancientPsalteryBridge" amount="1">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="brokenStatueHeaddress" amount="1">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="thirdAgeCarafe" amount="1">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="ancientStatuette" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="armadylStatuette" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="armadylTotem" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="bandosScrimshaw" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="bandosStatuette" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="guthixianBrazier" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="rubyChalice" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="saradominAmphora" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="saradominCarving" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="saradominStatuette" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="serenStatuette" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="zamorakMedallion" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="zamorakStatuette" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="bronzedDragonClaw" amount="1">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="corruptDragonBattleaxe" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="corruptDragonDagger" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="corruptDragonLongsword" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="corruptDragonMace" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="corruptDragonScimitar" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="corruptDragonSpear" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="corruptDragonChainbody" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="corruptDragonHelm" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="corruptDragonPlatelegs" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="corruptDragonPlateskirt" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="corruptDragonSqShield" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+            </dropTable>
+            <dropTable id="revenantImpCoinDrops" type="secondary">
+                <drop itemID="coin" amount="91">
+                    <dropRates rarity="common"/>
+                </drop>
+            </dropTable>
+        </monster>
+        <monster name="Revenant_Goblin_Level_16" slayerExp="22" hpExp="23.5" combatExp="71.4" archetype="ghost">
+            <masterList>
+                <master>Turael/Spria</master>
+                <master>Mazchna/Achtryn</master>
+            </masterList>
+            <charmList id="revenantGoblin16Charms" ref="noCharms"/>
+            <dropTable id="revenantGoblin16Drops" type="primary" ref="revenantImpDrops"/>
+            <dropTable id="revenantGoblin16CoinDrops" type="secondary">
+                <drop itemID="coin" amount="92.8">
+                    <dropRates rarity="common"/>
+                </drop>
+            </dropTable>
+        </monster>
+        <monster name="Revenant_Goblin_Level_19" slayerExp="22" hpExp="24.1" combatExp="73.2" archetype="ghost">
+            <masterList>
+                <master>Mazchna/Achtryn</master>
+                <master>Turael/Spria</master>
+            </masterList>
+            <charmList id="revenantGoblin19Charms" ref="noCharms"/>
+            <dropTable id="revenantGoblin19Drops" type="primary" ref="revenantImpDrops"/>
+            <dropTable id="revenantGoblin19CoinDrops" type="secondary" ref="revenantGoblin16CoinDrops"/>
+        </monster>
+        <monster name="Revenant_Goblin_Level_22" slayerExp="22" hpExp="25.1" combatExp="76.2" archetype="ghost">
+            <masterList>
+                <master>Mazchna/Achtryn</master>
+                <master>Turael/Spria</master>
+            </masterList>
+            <charmList id="revenantGoblin22Charms" ref="noCharms"/>
+            <dropTable id="revenantGoblin22Drops" type="primary" ref="revenantImpDrops"/>
+            <dropTable id="revenantGoblin22CoinDrops" type="secondary" ref="revenantGoblin16CoinDrops"/>
+        </monster>
+        <monster name="Revenant_Goblin_Level_28" slayerExp="22" hpExp="29.3" combatExp="88.8" archetype="ghost">
+            <masterList>
+                <master>Mazchna/Achtryn</master>
+                <master>Turael/Spria</master>
+            </masterList>
+            <charmList id="revenantGoblin28Charms" ref="noCharms"/>
+            <dropTable id="revenantGoblin28Drops" type="primary" ref="revenantImpDrops"/>
+            <dropTable id="revenantGoblin28CoinDrops" type="secondary" ref="revenantGoblin16CoinDrops"/>
+        </monster>
+        <monster name="Revenant_Icefiend" slayerExp="45.6" hpExp="38.6" combatExp="117" archetype="ghost" secondaryArchetype="icefiend">
+            <masterList>
+                <master>Turael/Spria</master>
+            </masterList>
+            <charmList id="revenantIcefiendCharms" ref="noCharms"/>
+            <dropTable id="revenantIcefiendDrops" type="primary" ref="revenantImpDrops"/>
+            <dropTable id="revenantIcefiendMisc" type="secondary">
+                <drop itemID="ironPlatebody" amount="1">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="coin" amount="170">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="chocIce" amount="22.5">
+                    <dropRates rarity="rare"/>
+                </drop>
+            </dropTable>
+        </monster>
+        <monster name="Revenant_Pyrefiend" slayerExp="50.2" hpExp="42.5" combatExp="129" archetype="ghost" secondaryArchetype="pyrefiend">
+            <masterList>
+                <master>Vannaka</master>
+                <master>Mazchna/Achtryn</master>
+                <master>Turael/Spria</master>
+            </masterList>
+            <charmList id="revenantPyrefiendCharms" ref="noCharms"/>
+            <dropTable id="revenantPyrefiendDrops" type="primary" ref="revenantImpDrops"/>
+            <dropTable id="revenantPyrefiendMisc" type="secondary">
+                <drop itemID="coin" amount="216">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="fireOrb" amount="1">
+                    <dropRates rarity="rare"/>
+                </drop>
+            </dropTable>
+        </monster>
+        <monster name="Revenant_Hobgoblin" slayerExp="72" hpExp="47.9" combatExp="145.2" archetype="ghost">
+            <masterList>
+                <master>Turael/Spria</master>
+            </masterList>
+            <charmList id="revenantHobgoblinCharms" ref="noCharms"/>
+            <dropTable id="rareCorruptDragon" type="primary">
+                <drop itemID="corruptDragonBattleaxe" amount="1">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="corruptDragonDagger" amount="1">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="corruptDragonLongsword" amount="1">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="corruptDragonMace" amount="1">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="corruptDragonScimitar" amount="1">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="corruptDragonSpear" amount="1">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="corruptDragonChainbody" amount="1">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="corruptDragonHelm" amount="1">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="corruptDragonPlatelegs" amount="1">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="corruptDragonPlateskirt" amount="1">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="corruptDragonSqShield" amount="1">
+                    <dropRates rarity="rare"/>
+                </drop>
+            </dropTable>
+            <dropTable id="vrCorruptAWWeapons" type="primary">
+                <drop itemID="corruptMorrigansThrowingAxe" amount="32.5">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="corruptMorrigansJavelin" amount="32.5">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="corruptStatiusWarhammer" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="corruptVestasLongsword" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="corruptVestasSpear" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="corruptZurielsStaff" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+            </dropTable>
+            <dropTable id="vrAWWeapons" type="primary">
+                <drop itemID="morrigansThrowingAxe" amount="32.5">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="morrigansJavelin" amount="32.5">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="statiusWarhammer" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="vestasLongsword" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="vestasSpear" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="zurielsStaff" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+            </dropTable>
+            <dropTable id="vrCorruptAWArmour" type="primary">
+                <drop itemID="corruptMorrigansCoif" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="corruptMorrigansLeatherChaps" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="corruptMorrigansLeatherBody" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="corruptZurielsHood" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="corruptZurielsRobeBottom" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="corruptZurielsRobeTop" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="corruptVestasPlateskirt" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="corruptVestasChainbody" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="corruptStatiusFullHelm" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="corruptStatiusPlatebody" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+                <drop itemID="corruptStatiusPlatelegs" amount="1">
+                    <dropRates rarity="very rare"/>
+                </drop>
+            </dropTable>
+            <dropTable id="vrAWArmour" type="primary" defaultRarity="very rare">
+                <drop itemID="statiusPlatelegs" amount="1"/>
+                <drop itemID="statiusPlatebody" amount="1"/>
+                <drop itemID="statiusFullHelm" amount="1"/>
+                <drop itemID="vestasPlateskirt" amount="1"/>
+                <drop itemID="vestasChainbody" amount="1"/>
+                <drop itemID="zurielsRobeTop" amount="1"/>
+                <drop itemID="zurielsRobeBottom" amount="1"/>
+                <drop itemID="zurielsHood" amount="1"/>
+                <drop itemID="morrigansLeatherChaps" amount="1"/>
+                <drop itemID="morrigansLeatherBody" amount="1"/>
+                <drop itemID="morrigansCoif" amount="1"/>
+            </dropTable>
+            <dropTable id="rareSub200kRevMisc" type="primary" defaultRarity="rare">
+                <drop itemID="ancientPsalteryBridge" amount="1"/>
+                <drop itemID="armadylTotem" amount="1"/>
+                <drop itemID="bandosScrimshaw" amount="1"/>
+                <drop itemID="brokenStatueHeaddress" amount="1"/>
+                <drop itemID="guthixianBrazier" amount="1"/>
+                <drop itemID="saradominAmphora" amount="1"/>
+                <drop itemID="saradominCarving" amount="1"/>
+                <drop itemID="thirdAgeCarafe" amount="1"/>
+                <drop itemID="zamorakMedallion" amount="1"/>
+                <drop itemID="bronzedDragonClaw" amount="1"/>
+            </dropTable>
+            <dropTable id="vrPast200kRevMisc" type="primary" defaultRarity="very rare">
+                <drop itemID="ancientStatuette" amount="1"/>
+                <drop itemID="armadylStatuette" amount="1"/>
+                <drop itemID="bandosStatuette" amount="1"/>
+                <drop itemID="rubyChalice" amount="1"/>
+                <drop itemID="saradominStatuette" amount="1"/>
+                <drop itemID="serenStatuette" amount="1"/>
+                <drop itemID="zamorakStatuette" amount="1"/>
+            </dropTable>
+            <dropTable id="revenantHobgoblinMisc" type="primary">
+                <drop itemID="coin" amount="200">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="limpwurtSeed" amount="1.5">
+                    <dropRates rarity="rare"/>
+                </drop>
+            </dropTable>
+        </monster>
+        <monster name="Revenant_Vampyre" slayerExp="60" hpExp="52.6" combatExp="159.6" archetype="ghost">
+            <masterList>
+                <master>Turael/Spria</master>
+            </masterList>
+            <dropTable id="vrCorruptDragonWeapons" type="primary" defaultRarity="very rare">
+                <drop itemID="corruptDragonDagger" amount="1"/>
+                <drop itemID="corruptDragonBattleaxe" amount="1"/>
+                <drop itemID="corruptDragonLongsword" amount="1"/>
+                <drop itemID="corruptDragonMace" amount="1"/>
+                <drop itemID="corruptDragonScimitar" amount="1"/>
+                <drop itemID="corruptDragonSpear" amount="1"/>
+            </dropTable>
+            <dropTable id="rv1" type="primary" ref="vrCorruptAWWeapons"/>
+            <dropTable id="rv2" type="primary" ref="vrAWWeapons"/>
+            <dropTable id="rv3" type="primary" ref="vrCorruptAWArmour"/>
+            <dropTable id="rv4" type="primary" ref="vrAWArmour"/>
+            <dropTable id="rareCorruptDragonArmour" type="primary" defaultRarity="rare">
+                <drop itemID="corruptDragonChainbody" amount="1"/>
+                <drop itemID="corruptDragonHelm" amount="1"/>
+                <drop itemID="corruptDragonPlatelegs" amount="1"/>
+                <drop itemID="corruptDragonPlateskirt"/>
+                <drop itemID="corruptDragonSqShield"/>
+            </dropTable>
+            <dropTable id="rv5" type="primary" ref="rareSub200kRevMisc"/>
+            <dropTable id="rv6" type="primary" ref="vrPast200kRevMisc"/>
+            <dropTable id="revenantVampyreMisc" type="primary">
+                <drop itemID="coin" amount="252.5">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="vampyreDust">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="bloodRune" amount="5">
+                    <dropRates rarity="rare"/>
+                </drop>
+            </dropTable>
+        </monster>
+        <monster name="Revenant_Werewolf" slayerExp="65" hpExp="62.9" combatExp="190.8" archetype="ghost">
+            <masterList>
+                <master>Mazchna/Achtryn</master>
+                <master>Vannaka</master>
+                <master>Turael/Spria</master>
+            </masterList>
+            <dropTable id="rw1" type="primary" ref="rareCorruptDragon"/>
+            <dropTable id="rw2" type="primary" ref="vrCorruptAWWeapons"/>
+            <dropTable id="rw3" type="primary" ref="vrAWWeapons"/>
+            <dropTable id="rareCorruptAWArmour" type="primary" defaultRarity="rare">
+                <drop itemID="corruptMorrigansCoif"/>
+                <drop itemID="corruptMorrigansLeatherChaps"/>
+                <drop itemID="corruptMorrigansLeatherBody"/>
+                <drop itemID="corruptZurielsHood"/>
+                <drop itemID="corruptZurielsRobeBottom"/>
+                <drop itemID="corruptZurielsRobeBottom"/>
+                <drop itemID="corruptVestasChainbody"/>
+                <drop itemID="corruptVestasPlateskirt"/>
+                <drop itemID="corruptStatiusPlatebody"/>
+                <drop itemID="corruptStatiusPlatelegs"/>
+                <drop itemID="corruptStatiusFullHelm"/>
+            </dropTable>
+            <dropTable id="rw4" type="primary" ref="vrAWArmour"/>
+            <dropTable id="rareSub500kRevMisc" type="primary" defaultRarity="rare">
+                <drop itemID="ancientPsalteryBridge"/>
+                <drop itemID="armadylTotem"/>
+                <drop itemID="bandosScrimshaw"/>
+                <drop itemID="bandosStatuette"/>
+                <drop itemID="brokenStatueHeaddress"/>
+                <drop itemID="guthixianBrazier"/>
+                <drop itemID="rubyChalice"/>
+                <drop itemID="saradominAmphora"/>
+                <drop itemID="saradominCarving"/>
+                <drop itemID="thirdAgeCarafe"/>
+                <drop itemID="zamorakMedallion"/>
+                <drop itemID="bronzedDragonClaw"/>
+            </dropTable>
+            <dropTable id="vrPast500kRevMisc" type="primary" defaultRarity="very rare">
+                <drop itemID="ancientStatuette"/>
+                <drop itemID="armadylStatuette"/>
+                <drop itemID="saradominStatuette"/>
+                <drop itemID="serenStatuette"/>
+                <drop itemID="zamorakStatuette"/>
+            </dropTable>
+            <dropTable id="revenantWerewolfMiscDrops" type="primary">
+                <drop itemID="coin" amount="106.5">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="shark" amount="4">
+                    <dropRates rarity="rare"/>
+                </drop>
+            </dropTable>
+        </monster>
+        <monster name="Revenant_Cyclops" slayerExp="110" hpExp="79" combatExp="239.4" archetype="ghost">
+            <masterList>
+                <master>Mazchna/Achtryn</master>
+                <master>Turael/Spria</master>
+            </masterList>
+            <dropTable id="rareCorruptMor" type="primary" defaultRarity="rare">
+                <drop itemID="corruptMorrigansJavelin" amount="25"/>
+                <drop itemID="corruptMorrigansThrowingAxe" amount="24.5"/>
+                <drop itemID="corruptMorrigansCoif"/>
+                <drop itemID="corruptMorrigansLeatherBody"/>
+                <drop itemID="corruptMorrigansLeatherChaps"/>
+            </dropTable>
+            <dropTable id="rareCorruptZur" type="primary" defaultRarity="rare">
+                <drop itemID="corruptZurielsRobeBottom"/>
+                <drop itemID="corruptZurielsRobeTop"/>
+                <drop itemID="corruptZurielsHood"/>
+                <drop itemID="corruptZurielsStaff"/>
+            </dropTable>
+            <dropTable id="vrCorruptVesta" type="primary" defaultRarity="very rare">
+                <drop itemID="corruptVestasChainbody"/>
+                <drop itemID="corruptVestasPlateskirt"/>
+                <drop itemID="corruptVestasSpear"/>
+                <drop itemID="corruptVestasLongsword"/>
+            </dropTable>
+            <dropTable id="vrCorruptStatius" type="primary" defaultRarity="very rare">
+                <drop itemID="corruptStatiusWarhammer"/>
+                <drop itemID="corruptStatiusPlatelegs"/>
+                <drop itemID="corruptStatiusPlatebody"/>
+                <drop itemID="corruptStatiusFullHelm"/>
+            </dropTable>
+            <dropTable id="revenantCyclopsMisc">
+                <drop itemID="runeDagger">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="coin" amount="205">
+                    <dropRates rarity="common"/>
+                </drop>
+            </dropTable>
+            <dropTable id="rc1" ref="vrAWArmour"/>
+            <dropTable id="rc2" ref="vrAWWeapons"/>
+            <dropTable id="rc3" ref="rareSub500kRevMisc"/>
+            <dropTable id="rc4" ref="vrPast500kRevMisc"/>
+        </monster>
+        <monster name="Revenant_Hellhound" slayerExp="80" hpExp="82.5" combatExp="250.2" archetype="ghost" secondaryArchetype="hellhound">
+            <dropTable id="rh1" ref="rareCorruptDragon"/>
+            <dropTable id="rhMisc">
+                <drop itemID="corruptMorrigansThrowingAxe" amount="22.5">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="corruptMorrigansJavelin">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="corruptZurielsStaff">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="coin" amount="250">
+                    <dropRates rarity="common"/>
+                </drop>
+            </dropTable>
+            <dropTable id="rh2" ref="rareSub500kRevMisc"/>
+            <dropTable id="rh3" ref="vrPast500kRevMisc"/>
+            <dropTable id="rh4" ref="vrAWWeapons"/>
+            <dropTable id="rh5" ref="vrAWArmour"/>
+            <dropTable id="rh6" ref="vrCorruptStatius"/>
+            <dropTable id="rh7" ref="vrCorruptVesta"/>
+            <dropTable id="vrCorruptMorArmour" defaultRarity="very rare">
+                <drop itemID="corruptMorrigansCoif"/>
+                <drop itemID="corruptMorrigansLeatherChaps"/>
+                <drop itemID="corruptMorrigansLeatherBody"/>
+            </dropTable>
+            <dropTable id="vrCorruptZurArmour" defaultRarity="very rare">
+                <drop itemID="corruptZurielsHood"/>
+                <drop itemID="corruptZurielsRobeBottom"/>
+                <drop itemID="corruptZurielsRobeTop"/>
+            </dropTable>
+        </monster>
+        <monster name="Revenant_Demon" slayerExp="80" hpExp="133.3" combatExp="404.1" archetype="ghost">
+            <dropTable id="vrShVls" defaultRarity="very rare">
+                <drop itemID="statiusWarhammer"/>
+                <drop itemID="vestasLongsword"/>
+            </dropTable>
+            <dropTable id="rdMisc">
+                <drop itemID="runeLongsword">
+                    <dropRates rarity="rare"/>
+                </drop>
+            </dropTable>
+            <dropTable id="rd1" ref="rareCorruptDragon"/>
+            <dropTable id="rd2" ref="rareCorruptAWArmour"/>
+            <dropTable id="rd3" ref="rareSub500kRevMisc"/>
+            <dropTable id="rd4" ref="vrPast500kRevMisc"/>
+            <dropTable id="rareCorruptAWWeapons" defaultRarity="rare">
+                <drop itemID="corruptVestasSpear"/>
+                <drop itemID="corruptVestasLongsword"/>
+                <drop itemID="corruptZurielsStaff"/>
+                <drop itemID="corruptStatiusWarhammer"/>
+                <drop itemID="corruptMorrigansThrowingAxe" amount="22.5"/>
+                <drop itemID="corruptMorrigansJavelin" amount="22.5"/>
+            </dropTable>
+            <dropTable id="rareAWWeaponsNoShVls" defaultRarity="rare">
+                <drop itemID="morrigansJavelin" amount="22.5"/>
+                <drop itemID="morrigansThrowingAxe" amount="22.5"/>
+                <drop itemID="vestasSpear"/>
+                <drop itemID="zurielsStaff"/>
+            </dropTable>
+            <dropTable id="rareAWArmour" defaultRarity="rare">
+                <drop itemID="morrigansCoif"/>
+                <drop itemID="morrigansLeatherBody"/>
+                <drop itemID="morrigansLeatherChaps"/>
+                <drop itemID="zurielsHood"/>
+                <drop itemID="zurielsRobeBottom"/>
+                <drop itemID="zurielsRobeTop"/>
+                <drop itemID="statiusFullHelm"/>
+                <drop itemID="statiusPlatebody"/>
+                <drop itemID="statiusPlatelegs"/>
+                <drop itemID="vestasChainbody"/>
+                <drop itemID="vestasPlateskirt"/>
+            </dropTable>
+        </monster>
+        <monster name="Revenant_Ork" slayerExp="105" hpExp="218.1" combatExp="661" archetype="ghost">
+            <dropTable id="roMisc">
+                <drop itemID="dragonDagger">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="coin" amount="430">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="zurielsStaff">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="statiusWarhammer">
+                    <dropRates rarity="rare"/>
+                </drop>
+            </dropTable>
+            <dropTable id="ro1" ref="rareCorruptDragon"/>
+            <dropTable id="ro2" ref="rareCorruptAWArmour"/>
+            <dropTable id="ro3" ref="rareCorruptAWWeapons"/>
+            <dropTable id="ro4" ref="rareSub500kRevMisc"/>
+            <dropTable id="ro5" ref="vrPast500kRevMisc"/>
+            <dropTable id="vrVesta" defaultRarity="very rare">
+                <drop itemID="vestasLongsword"/>
+                <drop itemID="vestasSpear"/>
+                <drop itemID="vestasChainbody"/>
+                <drop itemID="vestasPlateskirt"/>
+            </dropTable>
+            <dropTable id="vrMorrigan" defaultRarity="very rare">
+                <drop itemID="morrigansThrowingAxe" amount="22.5"/>
+                <drop itemID="morrigansJavelin" amount="22.5"/>
+                <drop itemID="morrigansCoif"/>
+                <drop itemID="morrigansLeatherBody"/>
+                <drop itemID="morrigansLeatherChaps"/>
+            </dropTable>
+            <dropTable id="vrZurArmour" defaultRarity="very rare">
+                <drop itemID="zurielsHood"/>
+                <drop itemID="zurielsRobeBottom"/>
+                <drop itemID="zurielsRobeTop"/>
+            </dropTable>
+            <dropTable id="vrStatArmour" defaultRarity="very rare">
+                <drop itemID="statiusFullHelm"/>
+                <drop itemID="statiusPlatelegs"/>
+                <drop itemID="statiusPlatebody"/>
+            </dropTable>
+        </monster>
+        <monster name="Revenant_Dark_Beast" slayerExp="256" hpExp="358.1" combatExp="1085.4" archetype="ghost" secondaryArchetype="darkBeast">
+            <dropTable id="rdb1" ref="rareCorruptAWArmour"/>
+            <dropTable id="rdb2" ref="rareCorruptAWWeapons"/>
+            <dropTable id="rdb3" ref="rareCorruptDragon"/>
+            <dropTable id="rdb4" ref="rareAWArmour"/>
+            <dropTable id="rareAWWeapons" defaultRarity="rare">
+                <drop itemID="statiusWarhammer"/>
+                <drop itemID="morrigansJavelin" amount="22.5"/>
+                <drop itemID="morrigansThrowingAxe" amount="22.5"/>
+                <drop itemID="zurielsStaff"/>
+                <drop itemID="vestasLongsword"/>
+                <drop itemID="vestasSpear"/>
+            </dropTable>
+            <dropTable id="rareSub1mRevMisc" defaultRarity="rare">
+                <drop itemID="ancientPsalteryBridge"/>
+                <drop itemID="armadylStatuette"/>
+                <drop itemID="armadylTotem"/>
+                <drop itemID="bandosStatuette"/>
+                <drop itemID="brokenStatueHeaddress"/>
+                <drop itemID="guthixianBrazier"/>
+                <drop itemID="rubyChalice"/>
+                <drop itemID="saradominAmphora"/>
+                <drop itemID="saradominCarving"/>
+                <drop itemID="saradominStatuette"/>
+                <drop itemID="thirdAgeCarafe"/>
+                <drop itemID="zamorakMedallion"/>
+                <drop itemID="zamorakStatuette"/>
+                <drop itemID="bronzedDragonClaw"/>
+            </dropTable>
+            <dropTable id="vrPast1mRevMisc" defaultRarity="very rare">
+                <drop itemID="serenStatuette"/>
+                <drop itemID="ancientStatuette"/>
+            </dropTable>
+            <dropTable id="rdbMisc">
+                <drop itemID="deathRune" amount="70">
+                    <dropRates rarity="rare"/>
+                </drop>
+                <drop itemID="coin" amount="426">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="adamantiteOre" amount="4">
+                    <dropRates rarity="rare"/>
+                </drop>
+            </dropTable>
+        </monster>
+        <monster name="Revenant_Knight" slayerExp="552.8" hpExp="459.5" combatExp="1392.7" archetype="ghost">
+            <dropTable id="rk1" ref="rareCorruptAWArmour"/>
+            <dropTable id="rk2" ref="rareCorruptAWWeapons"/>
+            <dropTable id="rk3" ref="rareCorruptDragon"/>
+            <dropTable id="rk4" ref="rareAWArmour"/>
+            <dropTable id="rk5" ref="rareAWWeapons"/>
+            <dropTable id="rk6" ref="rareSub1mRevMisc"/>
+            <dropTable id="rk7" ref="vrPast1mRevMisc"/>
+            <dropTable id="rkMisc">
+                <drop itemID="coin" amount="286">
+                    <dropRates rarity="common"/>
+                </drop>
+                <drop itemID="amuletOfGlory">
+                    <dropRates rarity="rare"/>
+                </drop>
+            </dropTable>
+        </monster>
+        <monster name="Revenant_Dragon" slayerExp="155" hpExp="589.8" combatExp="1787.4" archetype="ghost">
+            <dropTable id="rdr1" ref="rareCorruptAWArmour"/>
+            <dropTable id="rdr2" ref="rareCorruptAWWeapons"/>
+            <dropTable id="rdr3" ref="rareCorruptDragon"/>
+            <dropTable id="rdr4" ref="rareAWArmour"/>
+            <dropTable id="rdr5" ref="rareAWWeapons"/>
+            <dropTable id="rareRevMisc" defaultRarity="rare">
+                <drop itemID="ancientPsalteryBridge"/>
+                <drop itemID="ancientStatuette"/>
+                <drop itemID="armadylStatuette"/>
+                <drop itemID="armadylTotem"/>
+                <drop itemID="bandosStatuette"/>
+                <drop itemID="brokenStatueHeaddress"/>
+                <drop itemID="guthixianBrazier"/>
+                <drop itemID="rubyChalice"/>
+                <drop itemID="saradominAmphora"/>
+                <drop itemID="saradominCarving"/>
+                <drop itemID="saradominStatuette"/>
+                <drop itemID="serenStatuette"/>
+                <drop itemID="thirdAgeCarafe"/>
+                <drop itemID="zamorakMedallion"/>
+                <drop itemID="zamorakStatuette"/>
+                <drop itemID="bronzedDragonClaw"/>
+            </dropTable>
+            <dropTable id="rdrMisc">
+                <drop itemID="coin" amount="472.5">
+                    <dropRates rarity="common"/>
+                </drop>
+            </dropTable>
+        </monster>
     </monsterList>
     <itemList>
+        <item id="amuletOfGlory" rsid="1704" name="Amulet of glory" value="10712"/>
+        <item id="dragonDagger" rsid="1215" name="Dragon dagger" value="17649"/>
+        <item id="runeLongsword" rsid="1303" name="Rune longsword" value="17959"/>
+        <item id="runeDagger" rsid="1213" name="Rune dagger" value="4064"/>
+        <item id="shark" rsid="385" name="Shark" value="940"/>
+        <item id="vampyreDust" rsid="3325" name="Vampyre dust" value="393"/>
+        <item id="fireOrb" rsid="569" name="Fire orb" value="2677"/>
+        <item id="ironPlatebody" rsid="1115" name="Iron platebody" value="1798"/>
+        <item id="chocIce" rsid="6794" name="Choc-ice" value="901"/>
+        <item id="corruptDragonSqShield" rsid="13964" name="Corrupt dragon sq shield" value="78508"/>
+        <item id="corruptDragonPlateskirt" rsid="13967" name="Corrupt dragon plateskirt" value="71740"/>
+        <item id="corruptDragonPlatelegs" rsid="13970" name="Corrupt dragon platelegs" value="114568"/>
+        <item id="corruptDragonHelm" rsid="13961" name="Corrupt dragon helm" value="167766"/>
+        <item id="corruptDragonChainbody" rsid="13958" name="Corrupt dragon chainbody" value="398734"/>
+        <item id="corruptDragonSpear" rsid="13988" name="CorruptDragonSpear" value="6093194"/>
+        <item id="corruptDragonScimitar" rsid="13979" name="Corrupt dragon scimitar" value="452618"/>
+        <item id="corruptDragonMace" rsid="13985" name="Corrupt dragon mace" value="152481"/>
+        <item id="corruptDragonLongsword" rsid="13982" name="Corrupt dragon longsword" value="257103"/>
+        <item id="corruptDragonDagger" rsid="13976" name="Corrupt dragon dagger" value="139810"/>
+        <item id="corruptDragonBattleaxe" rsid="13973" name="Corrupt dragon battleaxe" value="430910"/>
+        <item id="morrigansThrowingAxe" rsid="13883" name="Morrigan's throwing axe" value="9686"/>
+        <item id="morrigansJavelin" rsid="13879" name="Morrigan's javelin" value="11365"/>
+        <item id="morrigansCoif" rsid="13876" name="Morrigan's coif" value="320695"/>
+        <item id="morrigansLeatherBody" rsid="13870" name="Morrigan's leather body" value="1783115"/>
+        <item id="morrigansLeatherChaps" rsid="13873" name="Morrigan's leather chaps" value="1099641"/>
+        <item id="corruptMorrigansLeatherChaps" rsid="13947" name="Corrupt Morrigan's leather chaps" value="73477"/>
+        <item id="corruptMorrigansLeatherBody" rsid="13944" name="Corrupt Morrigan's leather body" value="219851"/>
+        <item id="corruptMorrigansCoif" rsid="13950" name="Corrupt Morrigan's coif" value="53632"/>
+        <item id="corruptMorrigansJavelin" rsid="13953" name="Corrupt Morrigan's javelin" value="4440"/>
+        <item id="corruptMorrigansThrowingAxe" rsid="13957" name="C. Morrigan's throwing axe" value="2770"/>
+        <item id="corruptZurielsStaff" rsid="13941" name="Corrupt Zuriel's staff" value="124000"/>
+        <item id="corruptZurielsRobeBottom" rsid="13935" name="Corrupt Zuriel's robe bottom" value="188542"/>
+        <item id="corruptZurielsRobeTop" rsid="13932" name="Corrupt Zuriel's robe top" value="238449"/>
+        <item id="corruptZurielsHood" rsid="13938" name="Corrupt Zuriel's hood" value="44065"/>
+        <item id="zurielsHood" rsid="13864" name="Zuriel's hood" value="309370"/>
+        <item id="zurielsRobeTop" rsid="13858" name="Zuriel's robe top" value="1519686"/>
+        <item id="zurielsRobeBottom" rsid="13861" name="Zuriel's robe bottom" value="1253980"/>
+        <item id="zurielsStaff" rsid="13867" name="Zuriel's staff" value="4073391"/>
+        <item id="statiusWarhammer" rsid="13902" name="Statius's warhammer" value="32189068"/>
+        <item id="corruptStatiusWarhammer" rsid="13926" name="Corrupt Statius's warhammeer" value="188571"/>
+        <item id="corruptStatiusPlatebody" rsid="13908" name="Corrupt Statius's plarebody" value="1488938"/>
+        <item id="corruptStatiusPlatelegs" rsid="13914" name="Corrupt Statius's platelegs" value="738585"/>
+        <item id="corruptStatiusFullHelm" rsid="13920" name="Corrupt Statius's full helm" value="895178"/>
+        <item id="statiusFullHelm" rsid="13896" name="Statius's full helm" value="2153005"/>
+        <item id="statiusPlatebody" rsid="13884" name="Statius's platebody" value="2454685"/>
+        <item id="statiusPlatelegs" rsid="13890" name="Statius's platelegs" value="2501953"/>
+        <item id="corruptVestasSpear" rsid="13929" name="Corrupt Vesta's spear" value="69853"/>
+        <item id="corruptVestasLongsword" rsid="13923" name="Corrupt Vesta's longsword" value="893688"/>
+        <item id="vestasLongsword" rsid="13899" name="Vesta's longsword" value="8659639"/>
+        <item id="vestasSpear" rsid="13905" name="Vesta's spear" value="3365012"/>
+        <item id="corruptVestasPlateskirt" rsid="13917" name="Corrupt Vesta's plateskirt" value="1890706"/>
+        <item id="corruptVestasChainbody" rsid="13911" name="Corrupt Vesta's chainbody" value="1514925"/>
+        <item id="vestasChainbody" rsid="13887" name="Vesta's chainbody" value="3354676"/>
+        <item id="vestasPlateskirt" rsid="13893" name="Vesta's plateskirt" value="3051328"/>
+        <item id="ancientPsalteryBridge" rsid="0" name="Ancient psaltery bridge" value="30000"/>
+        <item id="brokenStatueHeaddress" rsid="0" name="Broken statue headdress" value="5000"/>
+        <item id="thirdAgeCarafe" rsid="0" name="Third age carafe" value="10000"/>
+        <item id="ancientStatuette" rsid="0" name="Ancient statuette" value="5000000"/>
+        <item id="armadylStatuette" rsid="0" name="Armadyl statuette" value="750000"/>
+        <item id="armadylTotem" rsid="0" name="Armadyl totem" value="150000"/>
+        <item id="bandosScrimshaw" rsid="0" name="Bandos scrimshaw" value="50000"/>
+        <item id="bandosStatuette" rsid="0" name="Bandos statuette" value="300000"/>
+        <item id="guthixianBrazier" rsid="0" name="Guthixian brazier" value="200000"/>
+        <item id="rubyChalice" rsid="0" name="Ruby chalice" value="250000"/>
+        <item id="saradominAmphora" rsid="0" name="Saradomin Amphora" value="40000"/>
+        <item id="saradominCarving" rsid="0" name="Saradomin Carving" value="75000"/>
+        <item id="saradominStatuette" rsid="0" name="Saradomin statuette" value="400000"/>
+        <item id="serenStatuette" rsid="0" name="Seren statuette" value="1000000"/>
+        <item id="zamorakMedallion" rsid="0" name="Zamorak medallion" value="10000"/>
+        <item id="zamorakStatuette" rsid="0" name="Zamorak statuette" value="500000"/>
+        <item id="bronzedDragonClaw" rsid="0" name="Bronzed dragon claw" value="20000"/>
+        <item id="steelPlatelegs" rsid="1069" name="Steel platelegs" value="825"/>
+        <item id="steelPlatebody" rsid="1119" name="Steel platebody" value="2368"/>
+        <item id="soulRune" rsid="566" name="Soul rune" value="313"/>
+        <item id="prayerPotion3" rsid="139" name="Prayer potion" value="2256"/>
+        <item id="adamantBar" rsid="2361" name="Adamant bar" value="2606"/>
+        <item id="spiritShield" rsid="13734" name="Spirit shield" value="39080"/>
+        <item id="holyElixir" rsid="13754" name="Holy elixir" value="736707"/>
+        <item id="oakPlank" rsid="8778" name="Oak plank" value="485"/>
+        <item id="mithrilDart" rsid="809" name="Mithril dart" value="58"/>
+        <item id="blackLongswordOH" rsid="25731" name="Off-hand black longsword" value="432"/>
+        <item id="blackLongsword" rsid="1297" name="Black longsword" value="1993"/>
+        <item id="blackPlatebody" rsid="1125" name="Black platebody" value="1779"/>
+        <item id="blackPlatelegs" rsid="1077" name="Black platelegs" value="2832"/>
+        <item id="blackHelm" rsid="1151" name="Black helm" value="663"/>
+        <item id="blackChainbody" rsid="1107" name="Black chainbody" value="1257"/>
+        <item id="vialOfWater" rsid="227" name="Vial of water" value="54"/>
+        <item id="torstolSeed" rsid="5304" name="Torstol seed" value="3023"/>
+        <item id="snapdragonSeed" rsid="5300" name="Snapdragon seed" value="532"/>
+        <item id="bittercapMushroomSpore" rsid="5282" name="Bittercap mushroom spore" value="20"/>
+        <item id="harralanderSeed" rsid="5294" name="Harralander seed" value="21"/>
         <item id="rawPotato" rsid="1942" name="Raw potato" value="290"/>
         <item id="cookedMeat" rsid="2142" name="Cooked meat" value="174"/>
         <item id="bread" rsid="2309" name="Bread" value="446"/>
@@ -1851,6 +3029,51 @@
         <archetype archetypeID="gelatinousAbomination">
             <archetypeMonster monsterID="Gelatinous_Abomination"/>
         </archetype>
+        <archetype archetypeID="ghost">
+            <archetypeMonster monsterID="Ghost"/>
+            <archetypeMonster monsterID="Ghost_Scorpius_Shrine"/>
+            <archetypeMonster monsterID="Ghost_Level_42"/>
+            <archetypeMonster monsterID="Ghost_Level_46"/>
+            <archetypeMonster monsterID="Ghost_Level_47"/>
+            <archetypeMonster monsterID="Ghost_Level_48"/>
+            <archetypeMonster monsterID="Ghost_Forgotten_Cemetery"/>
+            <archetypeMonster monsterID="Tortured_Soul"/>
+            <archetypeMonster monsterID="Ghostly_Warrior"/>
+            <archetypeMonster monsterID="Tormented_Wraith"/>
+            <archetypeMonster monsterID="Revenant_Imp"/>
+            <archetypeMonster monsterID="Revenant_Goblin_Level_16"/>
+            <archetypeMonster monsterID="Revenant_Goblin_Level_19"/>
+            <archetypeMonster monsterID="Revenant_Goblin_Level_22"/>
+            <archetypeMonster monsterID="Revenant_Goblin_Level_28"/>
+            <archetypeMonster monsterID="Revenant_Cyclops"/>
+            <archetypeMonster monsterID="Revenant_Dark_Beast"/>
+            <archetypeMonster monsterID="Revenant_Pyrefiend"/>
+            <archetypeMonster monsterID="Revenant_Ork"/>
+            <archetypeMonster monsterID="Revenant_Demon"/>
+            <archetypeMonster monsterID="Revenant_Icefiend"/>
+            <archetypeMonster monsterID="Revenant_Knight"/>
+            <archetypeMonster monsterID="Revenant_Vampyre"/>
+            <archetypeMonster monsterID="Revenant_Dragon"/>
+            <archetypeMonster monsterID="Revenant_Hellhound"/>
+            <archetypeMonster monsterID="Revenant_Hobgoblin"/>
+            <archetypeMonster monsterID="Revenant_Werewolf"/>
+        </archetype>
+        <archetype archetypeID="pyrefiend">
+            <archetypeMonster monsterID="Revenant_Pyrefiend"/>
+            <!-- TODO finish-->
+        </archetype>
+        <archetype archetypeID="icefiend">
+            <archetypeMonster monsterID="Revenant_Icefiend"/>
+            <!-- TODO finish-->
+        </archetype>
+        <archetype archetypeID="hellhound">
+            <archetypeMonster monsterID="Revenant_Hellhound"/>
+            <!-- TODO finish-->
+        </archetype>
+        <archetype archetypeID="darkBeast">
+            <archetypeMonster monsterID="Revenant_Dark_Beast"/>
+            <!-- TODO finish-->
+        </archetype>
     </archetypeMonsterList>
     <slayerMasterAssignments>
         <slayerMaster name="Turael/Spria" totalWeight="355">
@@ -1866,6 +3089,7 @@
             <assignment archetype="dog" weight="15"/>
             <assignment archetype="dwarf" weight="10"/>
             <assignment archetype="gelatinousAbomination" weight="10"/>
+            <assignment archetype="ghost" weight="15"/>
         </slayerMaster>
     </slayerMasterAssignments>
 </dropData>
