@@ -2666,8 +2666,240 @@
                 </drop>
             </dropTable>
         </monster>
+        <monster name="Goblin_Level_1" slayerExp="6" hpExp="8.2" combatExp="25" archetype="goblin">
+            <charmList id="goblinCharms">
+                <charmDropRate base="blue" rate="0.0015"/>
+                <charmDropRate base="crimson" rate="0.0095"/>
+                <charmDropRate base="green" rate="0.0035"/>
+                <charmDropRate base="gold" rate="0.095"/>
+            </charmList>
+            <dropTable id="goblinAlwaysDrops" ignored="true" defaultRarity="always">
+                <drop itemID="bones"/>
+            </dropTable>
+            <dropTable id="goblinCommonDrops" ignored="true" defaultRarity="common">
+                <drop itemID="bronzeArrow" amount="16"/>
+                <drop itemID="bronzeBolts" amount="8"/>
+                <drop itemID="bronzeHelm"/>
+                <drop itemID="bronzeSqShield"/>
+                <drop itemID="bronzeSpear"/>
+                <drop itemID="chargebow"/>
+                <drop itemID="ironDagger"/>
+                <drop itemID="breadDough"/>
+                <drop itemID="cabbage"/>
+                <drop itemID="airRune" amount="6"/>
+                <drop itemID="bodyRune" amount="4.5"/>
+                <drop itemID="waterRune" amount="6"/>
+                <drop itemID="coin" amount="12.5"/>
+                <drop itemID="chefsHat"/>
+                <drop itemID="goblinMail"/>
+                <drop itemID="airTalisman"/>
+            </dropTable>
+            <dropTable id="goblinUncommonDrops" ignored="true" defaultRarity="uncommon">
+                <drop itemID="brassNecklace"/>
+                <drop itemID="ironArrow" amount="4.5"/>
+                <drop itemID="bronzeChainbody"/>
+                <drop itemID="bronzeFullHelm"/>
+                <drop itemID="bronzeKiteshield"/>
+                <drop itemID="bronzeLongsword"/>
+                <drop itemID="bronzeSword"/>
+                <drop itemID="beer"/>
+                <drop itemID="rawChicken"/>
+                <drop itemID="earthRune" amount="4"/>
+                <drop itemID="mindRune" amount="10.5"/>
+                <drop itemID="grimyGuam"/>
+                <drop itemID="grimyHarralander"/>
+                <drop itemID="grimyMarrentill"/>
+                <drop itemID="grimyTarromin"/>
+                <drop itemID="grapes" amount="2"/>
+                <drop itemID="earthTalisman"/>
+                <drop itemID="fireTalisman"/>
+            </dropTable>
+            <dropTable id="goblinRareDrops" ignored="true" defaultRarity="rare">
+                <drop itemID="bronzeGauntlets"/>
+                <drop itemID="capeRed"/>
+                <drop itemID="ironFullHelm"/>
+                <drop itemID="steelHelm"/>
+                <drop itemID="bronzeHatchet"/>
+                <drop itemID="bronzeJavelin" amount="5"/>
+                <drop itemID="bronzeScimitar"/>
+                <drop itemID="staffOfAir"/>
+                <drop itemID="bloodRune"/>
+                <drop itemID="chaosRune"/>
+                <drop itemID="natureRune"/>
+                <drop itemID="grimyAvantoe"/>
+                <drop itemID="grimyCadantine"/>
+                <drop itemID="grimyDwarfWeed"/>
+                <drop itemID="grimyIrit"/>
+                <drop itemID="grimyKwuarm"/>
+                <drop itemID="grimyLantadyme"/>
+                <drop itemID="grimyRanarr"/>
+                <drop itemID="knife"/>
+                <drop itemID="tinOre"/>
+                <drop itemID="mindTalisman"/>
+            </dropTable>
+            <dropTable id="goblinVRDrops" ignored="true" defaultRarity="very rare">
+                <drop itemID="leatherBody"/>
+            </dropTable>
+            <dropTable id="goblinDrops">
+                <composite>
+                    <dtref ref="goblinAlwaysDrops"/>
+                    <dtref ref="goblinCommonDrops"/>
+                    <dtref ref="goblinUncommonDrops"/>
+                    <dtref ref="goblinRareDrops"/>
+                    <dtref ref="goblinVRDrops"/>
+                </composite>
+            </dropTable>
+        </monster>
+        <monster name="Goblin_Level_2" slayerExp="6" hpExp="8.2" combatExp="24.9" archetype="goblin">
+            <charmList id="goblin2Charms" ref="goblinCharms"/>
+            <dropTable id="goblin2Drops" ref="goblinDrops"/>
+        </monster>
+        <monster name="Goblin_Level_3" slayerExp="6" hpExp="8.5" combatExp="26" archetype="goblin">
+            <charmList id="goblin3Charms" ref="goblinCharms"/>
+            <dropTable id="goblin3Drops" ref="goblinDrops"/>
+        </monster>
+        <monster name="Goblin_Level_4" slayerExp="6" hpExp="8.2" combatExp="24.9" archetype="goblin">
+            <charmList id="goblin4Charms" ref="goblinCharms"/>
+            <dropTable id="goblin4Drops" ref="goblinDrops"/>
+        </monster>
+        <monster name="Goblin_Level_5" slayerExp="6.6" hpExp="8.4" combatExp="25.5" archetype="goblin">
+            <charmList id="goblin5Charms" ref="goblinCharms"/>
+            <dropTable id="goblin5Drops" ref="goblinDrops"/>
+        </monster>
+        <monster name="Goblin_Level_6" slayerExp="6" hpExp="8.4" combatExp="25.5" archetype="goblin">
+            <charmList id="goblin6Charms" ref="goblinCharms"/>
+            <dropTable id="goblin6Drops" ref="goblinDrops"/>
+        </monster>
+        <monster name="Goblin_Level_7" slayerExp="5" hpExp="8.5" combatExp="25.8" archetype="goblin">
+            <charmList id="goblin7Charms" ref="goblinCharms"/>
+            <dropTable id="goblin7Drops" ref="goblinDrops"/>
+        </monster>
+        <monster name="Goblin_Level_10" slayerExp="5" hpExp="8.2" combatExp="25" archetype="goblin">
+            <charmList id="goblin10Charms" ref="goblinCharms"/>
+            <dropTable id="goblin10Drops" ref="goblinDrops"/>
+        </monster>
+        <monster name="Goblin_Level_11" slayerExp="5" hpExp="9.3" combatExp="28.2" archetype="goblin">
+            <charmList id="goblin11Charms" ref="goblinCharms"/>
+            <dropTable id="goblin11Drops" ref="goblinDrops"/>
+        </monster>
+        <monster name="Goblin_Godwars_Dungeon" slayerExp="5" hpExp="127.1" combatExp="385.2" archetype="goblin">
+            <charmList id="goblinGWDCharms" ref="goblinCharms"/>
+            <dropTable id="goblinGWDDrops" ref="goblinDrops"/>
+        </monster>
+        <monster name="Goblin_Goblin_Village" slayerExp="5" hpExp="8.4" combatExp="25.5" archetype="goblin">
+            <charmList id="goblinGVCharms" ref="goblinCharms"/>
+            <dropTable id="goblinGVDrops" ref="goblinDrops"/>
+        </monster>
+        <monster name="Goblin_Stronghold_of_Security" slayerExp="5" hpExp="8.4" combatExp="25.5" archetype="goblin">
+            <charmList id="goblinSSCharms" ref="goblinCharms"/>
+            <dropTable id="goblinSSDrops" ref="goblinDrops"/>
+        </monster>
+        <monster name="Cave_Goblin" slayerExp="9.6" hpExp="12.2" combatExp="37.2" archetype="goblin">
+            <dropTable id="caveGoblinAlwaysDrops" defaultRarity="always">
+                <drop itemID="bones"/>
+            </dropTable>
+            <dropTable id="caveGoblinCommonDrops" defaultRarity="common">
+                <drop itemID="ironFullHelm"/>
+                <drop itemID="coin" amount="12"/>
+            </dropTable>
+            <dropTable id="caveGoblinUncommonDrops" defaultRarity="uncommon">
+                <drop itemID="boneClub"/>
+                <drop itemID="boneSpear"/>
+            </dropTable>
+            <dropTable id="caveGoblinRareDrops" defaultRarity="rare">
+                <drop itemID="ironChainbody"/>
+                <drop itemID="miningHelmet"/>
+                <drop itemID="oilLanternEmpty"/>
+            </dropTable>
+            <dropTable id="caveGoblinVRDrops" defaultRarity="very rare">
+                <drop itemID="tinderbox"/>
+            </dropTable>
+        </monster>
+        <monster name="Sergeant_Strongstack" slayerExp="128" hpExp="168.5" combatExp="510.9" archetype="goblin">
+            <dropTable id="vrBandosArmour" ignored="true" defaultRarity="very rare">
+                <drop itemID="bandosChestplate"/>
+                <drop itemID="bandosTassets"/>
+                <drop itemID="bandosBoots"/>
+                <drop itemID="bandosGloves"/>
+                <drop itemID="bandosHelmet"/>
+                <drop itemID="bandosWarshield"/>
+            </dropTable>
+            <dropTable id="godswordShards" ignored="true" defaultRarity="rare">
+                <drop itemID="godswordShard1"/>
+                <drop itemID="godswordShard2"/>
+                <drop itemID="godswordShard3"/>
+            </dropTable>
+            <dropTable id="bandosSergeantCommonDrops" ignored="true" defaultRarity="common">
+                <drop itemID="steelArrow" amount="97.5"/>
+                <drop itemID="steelDart" amount="97.5"/>
+                <drop itemID="coin" amount="1375"/>
+                <drop itemID="chilliPotato" amount="3"/>
+                <drop itemID="eyePatch"/>
+                <drop itemID="kebab"/>
+                <drop itemID="shark" amount="2"/>
+                <drop itemID="combatPotion3"/>
+                <drop itemID="beer"/>
+            </dropTable>
+            <dropTable id="bandosSergeantUncommonDrops" ignored="true" defaultRarity="uncommon">
+                <drop itemID="grimySnapdragon"/>
+                <drop itemID="coal" amount="17"/>
+            </dropTable>
+            <dropTable id="bandosSergeantDrops">
+                <composite>
+                    <dtref ref="onlyBones"/>
+                    <dtref ref="vrBandosArmour"/>
+                    <dtref ref="godswordShards"/>
+                    <dtref ref="bandosSergeantCommonDrops"/>
+                    <dtref ref="bandosSergeantUncommonDrops"/>
+                </composite>
+            </dropTable>
+        </monster>
+        <monster name="Sergeant_Grimspike" slayerExp="128" hpExp="168.5" combatExp="510.9" archetype="goblin">
+            <dropTable id="sergeantGrimspikeDrops" ref="bandosSergeantDrops"/>
+        </monster>
+        <monster name="Sergeant_Steelwill" slayerExp="128" hpExp="168.5" combatExp="510.9" archetype="goblin">
+            <dropTable id="sergeantSteelwillDrops" ref="bandosSergeantDrops"/>
+        </monster>
     </monsterList>
     <itemList>
+        <item id="grimySnapdragon" rsid="3051" name="Grimy snapdragon" value="3830"/>
+        <item id="combatPotion3" rsid="9741" name="Combat potion (3)" value="240"/>
+        <item id="eyePatch" rsid="1025" name="Eye patch" value="362"/>
+        <item id="chilliPotato" rsid="7054" name="Chilli potato" value="172"/>
+        <item id="steelDart" rsid="808" name="Steel dart" value="25"/>
+        <item id="steelArrow" rsid="886" name="Steel arrow" value="14"/>
+        <item id="godswordShard3" rsid="11714" name="Godsword shard 3" value="148601"/>
+        <item id="godswordShard2" rsid="11712" name="Godsword shard 2" value="147913"/>
+        <item id="godswordShard1" rsid="11710" name="Godsword shard 1" value="147498"/>
+        <item id="bandosWarshield" rsid="25019" name="Bandos warshield" value="101367"/>
+        <item id="bandosHelmet" rsid="25022" name="Bandos helmet" value="208937"/>
+        <item id="bandosGloves" rsid="25025" name="Bandos gloves" value="277253"/>
+        <item id="bandosBoots" rsid="11728" name="Bandos boots" value="484080"/>
+        <item id="bandosTassets" rsid="11726" name="Bandos tassets" value="1790674"/>
+        <item id="bandosChestplate" rsid="11724" name="Bandos chestplate" value="3326856"/>
+        <item id="miningHelmet" rsid="5014" name="Mining helmet" value="555"/>
+        <item id="ironChainbody" rsid="1101" name="Iron chainbody" value="254"/>
+        <item id="boneSpear" rsid="5016" name="Bone spear" value="425"/>
+        <item id="boneClub" rsid="5018" name="Bone club" value="932"/>
+        <item id="bronzeScimitar" rsid="1321" name="Bronze scimitar" value="226"/>
+        <item id="bronzeJavelin" rsid="825" name="Bronze javelin" value="17"/>
+        <item id="steelHelm" rsid="1141" name="Steel helm" value="699"/>
+        <item id="ironFullHelm" rsid="1153" name="Iron full helm" value="72"/>
+        <item id="capeRed" rsid="1007" name="Cape (red)" value="182"/>
+        <item id="fireTalisman" rsid="1442" name="Fire talisman" value="1973"/>
+        <item id="grapes" rsid="1987" name="Grapes" value="1903"/>
+        <item id="beer" rsid="1917" name="Beer" value="378"/>
+        <item id="bronzeSword" rsid="1277" name="Bronze sword" value="171"/>
+        <item id="bronzeLongsword" rsid="1291" name="Bronze longsword" value="156"/>
+        <item id="bronzeKiteshield" rsid="1189" name="Bronze kiteshield" value="219"/>
+        <item id="ironArrow" rsid="884" name="Iron arrow" value="15"/>
+        <item id="brassNecklace" rsid="1009" name="Brass necklace" value="217"/>
+        <item id="goblinMail" rsid="288" name="Goblin mail" value="615"/>
+        <item id="chefsHat" rsid="1949" name="Chef's hat" value="378"/>
+        <item id="cabbage" rsid="1965" name="Cabbage" value="121"/>
+        <item id="breadDough" rsid="2307" name="Bread dough" value="312"/>
+        <item id="ironDagger" rsid="1203" name="Iron dagger" value="287"/>
+        <item id="bronzeSpear" rsid="1237" name="Bronze spear" value="955"/>
         <item id="amuletOfGlory" rsid="1704" name="Amulet of glory" value="10712"/>
         <item id="dragonDagger" rsid="1215" name="Dragon dagger" value="17649"/>
         <item id="runeLongsword" rsid="1303" name="Rune longsword" value="17959"/>
@@ -3074,6 +3306,24 @@
             <archetypeMonster monsterID="Revenant_Dark_Beast"/>
             <!-- TODO finish-->
         </archetype>
+        <archetype archetypeID="goblin">
+            <archetypeMonster monsterID="Goblin_Level_1"/>
+            <archetypeMonster monsterID="Goblin_Level_2"/>
+            <archetypeMonster monsterID="Goblin_Level_3"/>
+            <archetypeMonster monsterID="Goblin_Level_4"/>
+            <archetypeMonster monsterID="Goblin_Level_5"/>
+            <archetypeMonster monsterID="Goblin_Level_6"/>
+            <archetypeMonster monsterID="Goblin_Level_7"/>
+            <archetypeMonster monsterID="Goblin_Level_10"/>
+            <archetypeMonster monsterID="Goblin_Level_11"/>
+            <archetypeMonster monsterID="Goblin_Godwars_Dungeon"/>
+            <archetypeMonster monsterID="Goblin_Goblin_Village"/>
+            <archetypeMonster monsterID="Goblin_Stronghold_of_Security"/>
+            <archetypeMonster monsterID="Cave_Goblin"/>
+            <archetypeMonster monsterID="Sergeant_Strongstack"/>
+            <archetypeMonster monsterID="Sergeant_Steelwill"/>
+            <archetypeMonster monsterID="Sergeant_Grimspike"/>
+        </archetype>
     </archetypeMonsterList>
     <slayerMasterAssignments>
         <slayerMaster name="Turael/Spria" totalWeight="355">
@@ -3090,6 +3340,7 @@
             <assignment archetype="dwarf" weight="10"/>
             <assignment archetype="gelatinousAbomination" weight="10"/>
             <assignment archetype="ghost" weight="15"/>
+            <assignment archetype="goblin" weight="10"/>
         </slayerMaster>
     </slayerMasterAssignments>
 </dropData>

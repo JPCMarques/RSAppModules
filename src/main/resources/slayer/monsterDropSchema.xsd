@@ -100,9 +100,21 @@
     <drops:element name="dropTable">
         <drops:complexType>
             <drops:sequence>
+                <drops:element name="composite" minOccurs="0" maxOccurs="1">
+                    <drops:complexType>
+                        <drops:sequence>
+                            <drops:element name="dtref" minOccurs="1" maxOccurs="unbounded">
+                                <drops:complexType>
+                                    <drops:attribute name="ref" type="drops:IDREF" use="required"/>
+                                </drops:complexType>
+                            </drops:element>
+                        </drops:sequence>
+                    </drops:complexType>
+                </drops:element>
                 <drops:element ref="drop" minOccurs="0" maxOccurs="unbounded"/>
             </drops:sequence>
             <drops:attribute name="id" type="drops:ID" use="required"/>
+            <drops:attribute name="ignored" type="drops:boolean" use="optional"/>
             <drops:attribute name="ref" type="drops:IDREF" use="optional"/>
             <drops:attribute name="type" type="drops:string" use="optional"/>
             <drops:attribute name="defaultRarity" type="rarity" use="optional"/>

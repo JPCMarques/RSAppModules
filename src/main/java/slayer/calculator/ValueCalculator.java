@@ -37,17 +37,31 @@ public abstract class ValueCalculator {
         return odds*avgPrice;
     }
 
-    public double calcDropTableValue(DropTable dropTable) throws IncompleteItemListException {
+    public double calcDropTableValue(DropTable dropTable, boolean bypassIgnore) throws IncompleteItemListException {
         double dropTableValue = 0;
-        for(Drop drop: dropTable.getDrop()) dropTableValue += calcDropValue(drop, dropTable.getDefaultRarity());
+        for(Drop drop: dropTable.getDrop()){
+            if(!dropTable.isIgnored() || bypassIgnore) dropTableValue += calcDropValue(drop, dropTable.getDefaultRarity());
+        }
+        for(DropTable.Composite.Dtref dtRef: dropTable.getComposite().getDtref())
+            dropTableValue += calcDropTableValue((DropTable) dtRef.getRef(), true);
         return dropTableValue;
+    }
+
+    public double calcDropTableValue(DropTable dropTable) throws IncompleteItemListException {
+        return calcDropTableValue(dropTable, false);
     }
 
     public double calcTaskValue(Monster monster, int killNumber) throws IncompleteItemListException {
         float totalDropTableWorth = 0;
         for(DropTable dropTable: monster.getDropTable()){
-            DropTable t = (dropTable.getRef() == null ? dropTable : (DropTable) dropTable.getRef());
-            totalDropTableWorth += calcDropTableValue(t);
+            boolean bypass = false;
+            DropTable t;
+            if(dropTable.getRef() == null) t = dropTable;
+            else{
+                bypass = true;
+                t = (DropTable) dropTable.getRef();
+            }
+            totalDropTableWorth += calcDropTableValue(t, bypass);
         }
         return totalDropTableWorth*killNumber;
     }
