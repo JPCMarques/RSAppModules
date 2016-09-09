@@ -2860,8 +2860,103 @@
         <monster name="Sergeant_Steelwill" slayerExp="128" hpExp="168.5" combatExp="510.9" archetype="goblin">
             <dropTable id="sergeantSteelwillDrops" ref="bandosSergeantDrops"/>
         </monster>
+        <monster name="Young_Grotworm" slayerExp="11.4" hpExp="14.6" combatExp="44.4" archetype="grotworm">
+            <charmList id="youngGrotwormCharms">
+                <charmDropRate base="green" rate="0.02"/>
+                <charmDropRate base="gold" rate="0.045"/>
+                <charmDropRate base="crimson" rate="0.009"/>
+                <charmDropRate base="blue" rate="0.003"/>
+            </charmList>
+            <dropTable id="youngGrotwormAlways" ref="onlyBones"/>
+            <dropTable id="youngGrotwormCommon" defaultRarity="common">
+                <drop itemID="royalCape"/>
+                <drop itemID="bronzeSpear"/>
+                <drop itemID="natureRune"/>
+                <drop itemID="coal"/>
+                <drop itemID="coin" amount="100"/>
+            </dropTable>
+            <dropTable id="youngGrotwormUncommon" defaultRarity="uncommon">
+                <drop itemID="flax" amount="4"/>
+                <drop itemID="ironOre"/>
+                <drop itemID="silverOre"/>
+                <drop itemID="cod"/>
+                <drop itemID="mackerel"/>
+                <drop itemID="earthRune" amount="8"/>
+                <drop itemID="waterRune" amount="8"/>
+                <drop itemID="mindRune" amount="8"/>
+            </dropTable>
+            <dropTable id="youngGrotwormRare" defaultRarity="rare">
+                <drop itemID="attackPotion1"/>
+                <drop itemID="strengthPotion1"/>
+            </dropTable>
+        </monster>
+        <monster name="Giant_Worm" slayerExp="117.4" hpExp="90.5" combatExp="274.5" archetype="grotworm">
+            <dropTable id="gw1" ref="onlyBones"/>
+        </monster>
+        <monster name="Grotworm" slayerExp="102.8" hpExp="87.1" combatExp="264" archetype="grotworm">
+            <charmList id="grotCharms">
+                <charmDropRate base="gold" rate="0.03"/>
+                <charmDropRate base="green" rate="0.015"/>
+                <charmDropRate base="crimson" rate="0.035"/>
+                <charmDropRate base="blue" rate="0.007"/>
+            </charmList>
+            <dropTable id="grotAlways" ref="onlyBones"/>
+            <dropTable id="grotCommons" defaultRarity="common">
+                <drop itemID="coin" amount="2000"/>
+                <drop itemID="flax" amount="32.5"/>
+                <drop itemID="mithrilSqShield"/>
+                <drop itemID="adamantiteOre"/>
+                <drop itemID="coal" amount="4"/>
+                <drop itemID="mithrilOre" amount="3"/>
+                <drop itemID="superStrength2"/>
+                <drop itemID="rainbowFish" amount="2"/>
+            </dropTable>
+            <dropTable id="grotUncommons" defaultRarity="uncommon">
+                <drop itemID="poisonIvySeed"/>
+                <drop itemID="morchellaMushroomSpore"/>
+                <drop itemID="natureRune" amount="7.5"/>
+                <drop itemID="lawRune" amount="10"/>
+                <drop itemID="deathRune" amount="10"/>
+                <drop itemID="bloodRune" amount="15"/>
+                <drop itemID="runiteOre"/>
+                <drop itemID="teakLogs" amount="4"/>
+                <drop itemID="mahoganylogs" amount="3"/>
+                <drop itemID="grimyLantadyme"/>
+                <drop itemID="grimyGuam"/>
+                <drop itemID="royalCape"/>
+                <drop itemID="adamantSqShield"/>
+                <drop itemID="royalBolts" amount="25"/>
+                <drop itemID="royalDragonhide"/>
+                <drop itemID="limpwurtRoot"/>
+                <drop itemID="bass"/>
+            </dropTable>
+            <dropTable id="grotRares" defaultRarity="rare">
+                <drop itemID="cod"/>
+                <drop itemID="onyxBoltTips"/>
+                <drop itemID="grimyAvantoe"/>
+                <drop itemID="grimyCadantine"/>
+                <drop itemID="grimyHarralander"/>
+                <drop itemID="grimyIrit"/>
+                <drop itemID="grimyKwuarm"/>
+                <drop itemID="grimyMarrentill"/>
+                <drop itemID="grimyRanarr"/>
+                <drop itemID="grimyTarromin"/>
+                <drop itemID="cadantineSeed"/>
+                <drop itemID="dwarfWeedSeed"/>
+                <drop itemID="kwuarmSeed"/>
+            </dropTable>
+            <dropTable id="grotVeryRares" defaultRarity="veryRare">
+                
+            </dropTable>
+        </monster>
     </monsterList>
     <itemList>
+        <item id="strengthPotion1" rsid="119" name="Strength potion (1)" value="196"/>
+        <item id="attackPotion1" rsid="125" name="Attack potion (1)" value="98"/>
+        <item id="mackerel" rsid="355" name="Mackerel" value="43"/>
+        <item id="cod" rsid="339" name="Cod" value="36"/>
+        <item id="flax" rsid="1779" name="Flax" value="13"/>
+        <item id="royalCape" rsid="24315" name="Royal cape" value="635"/>
         <item id="grimySnapdragon" rsid="3051" name="Grimy snapdragon" value="3830"/>
         <item id="combatPotion3" rsid="9741" name="Combat potion (3)" value="240"/>
         <item id="eyePatch" rsid="1025" name="Eye patch" value="362"/>
@@ -3324,6 +3419,12 @@
             <archetypeMonster monsterID="Sergeant_Steelwill"/>
             <archetypeMonster monsterID="Sergeant_Grimspike"/>
         </archetype>
+        <archetype archetypeID="grotworm">
+            <archetypeMonster monsterID="Young_Grotworm"/>
+            <archetypeMonster monsterID="Giant_Worm"/>
+            <archetypeMonster monsterID="Grotworm"/>
+            <archetypeMonster monsterID="Mature_Grotworm"/>
+        </archetype>
     </archetypeMonsterList>
     <slayerMasterAssignments>
         <slayerMaster name="Turael/Spria" totalWeight="355">
@@ -3341,6 +3442,7 @@
             <assignment archetype="gelatinousAbomination" weight="10"/>
             <assignment archetype="ghost" weight="15"/>
             <assignment archetype="goblin" weight="10"/>
+            <assignment archetype="grotworm" weight="15"/>
         </slayerMaster>
     </slayerMasterAssignments>
 </dropData>

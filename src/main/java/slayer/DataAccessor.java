@@ -66,6 +66,19 @@ public class DataAccessor {
         return marshaller;
     }
 
+    private Marshaller getDropTableMarshaller() throws JAXBException {
+        JAXBContext jaxbContext = JAXBContext.newInstance(DropTable.class);
+        Marshaller marshaller = jaxbContext.createMarshaller();
+        marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+
+        return marshaller;
+    }
+
+    public void marshallDropTable(DropTable dropTable, OutputStream outputStream) throws JAXBException {
+        Marshaller marshaller = getDropTableMarshaller();
+        marshaller.marshal(dropTable, outputStream);
+    }
+
     public boolean itemListExists(){
         return new File(ITEM_LIST_LOC).exists();
     }
