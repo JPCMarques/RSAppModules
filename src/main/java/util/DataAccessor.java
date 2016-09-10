@@ -1,11 +1,15 @@
-package slayer;
+package util;
+
+import slayer.DropData;
+import slayer.DropTable;
+import slayer.Item;
+import slayer.ItemList;
 
 import javax.xml.bind.*;
 import java.io.File;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.HashMap;
-import java.util.HashSet;
 
 /**
  * Created by jpcmarques on 12-06-2016.

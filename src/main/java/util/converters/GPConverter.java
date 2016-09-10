@@ -1,4 +1,4 @@
-package converters;
+package util.converters;
 
 /**
  * Created by jpcmarques on 27-06-2016.

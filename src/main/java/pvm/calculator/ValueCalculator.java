@@ -1,7 +1,6 @@
-package slayer.calculator;
+package pvm.calculator;
 
 import slayer.*;
-import slayer.exceptions.IncompleteItemListException;
 
 import java.util.HashMap;
 
@@ -19,13 +18,11 @@ public abstract class ValueCalculator {
         defaultValues.put(Rarity.VERY_RARE, 0.0001f);
     }
 
-    public double calcDropValue(Drop drop, Rarity assumedRarity) throws IncompleteItemListException {
+    public double calcDropValue(Drop drop, Rarity assumedRarity) {
         float avgAmount = drop.getAmount();
         if(avgAmount == 0) avgAmount=1;
         double unitPrice = ((Item) drop.getItemID()).getValue();
 
-        if(unitPrice == 0.0f)
-            throw new IncompleteItemListException("The supplied item list has no information for the item in the drop.");
         double avgPrice = avgAmount*unitPrice;
 
         float odds;
@@ -37,7 +34,7 @@ public abstract class ValueCalculator {
         return odds*avgPrice;
     }
 
-    public double calcDropTableValue(DropTable dropTable, boolean bypassIgnore) throws IncompleteItemListException {
+    public double calcDropTableValue(DropTable dropTable, boolean bypassIgnore) {
         double dropTableValue = 0;
         for(Drop drop: dropTable.getDrop()){
             if(!dropTable.isIgnored() || bypassIgnore) dropTableValue += calcDropValue(drop, dropTable.getDefaultRarity());
@@ -47,11 +44,11 @@ public abstract class ValueCalculator {
         return dropTableValue;
     }
 
-    public double calcDropTableValue(DropTable dropTable) throws IncompleteItemListException {
+    public double calcDropTableValue(DropTable dropTable)  {
         return calcDropTableValue(dropTable, false);
     }
 
-    public double calcTaskValue(Monster monster, int killNumber) throws IncompleteItemListException {
+    public double calcTaskValue(Monster monster, int killNumber)  {
         float totalDropTableWorth = 0;
         for(DropTable dropTable: monster.getDropTable()){
             boolean bypass = false;

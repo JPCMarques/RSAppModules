@@ -1,10 +1,13 @@
-package util;
+package pvm;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import slayer.*;
+import util.DataMiner;
+import util.IDLogger;
+import util.converters.NumberConverter;
 import util.exceptions.dataMiner.*;
 
 import java.io.IOException;
@@ -26,7 +29,7 @@ public class DropTableExtractor extends DataMiner<String, Elements, Element, Lin
         super(input);
         this.itemList = itemList;
         monsterID = input.substring(input.lastIndexOf("/") + 1);
-        logger = new IDLogger(DropTableExtractor.class, DropTableExtractor.class.getName());
+        logger = new IDLogger(DropTableExtractor.class);
 
     }
 
@@ -82,7 +85,6 @@ public class DropTableExtractor extends DataMiner<String, Elements, Element, Lin
 
         for(int i = 1; i < lines.size(); i++){
             Element line = lines.get(i);
-            System.out.println(line.toString());
             Drop drop = new Drop();
             DropRates dropRates = new DropRates();
             String initialPrice = line.child(4).text();
@@ -93,10 +95,9 @@ public class DropTableExtractor extends DataMiner<String, Elements, Element, Lin
             }
 
             String amount = line.child(2).text();
-            System.out.println(amount);
             if(amount.contains("\u00a0(noted)")) amount = amount.replace("\u00a0(noted)", "");
             String rarity = line.child(3).text();
-            if(rarity.contains("[")) rarity = "outlier";
+            if(rarity.contains("[")) rarity = "Outlier";
 
             logger.i("Found item " + itemName
                     + " x" + amount

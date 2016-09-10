@@ -15,6 +15,10 @@ public class IDLogger {
         logger = LogManager.getLogger(name);
     }
 
+    public IDLogger(Class<?> name){
+        this(name, "");
+    }
+
     public void i(String message){
         logger.info(loggingID + ": " + message);
     }

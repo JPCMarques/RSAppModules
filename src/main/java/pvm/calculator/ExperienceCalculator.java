@@ -1,4 +1,4 @@
-package slayer.calculator;
+package pvm.calculator;
 
 import slayer.Monster;
 
