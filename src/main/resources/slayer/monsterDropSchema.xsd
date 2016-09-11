@@ -88,7 +88,9 @@
                 </drops:element>
                 <drops:element ref="dropTable" minOccurs="0" maxOccurs="unbounded"/>
             </drops:sequence>
-            <drops:attribute name="name" type="drops:ID" use="required"/>
+            <drops:attribute name="name" type="drops:string" use="required"/>
+            <drops:attribute name="examine" type="drops:string" use="required"/>
+            <drops:attribute name="monsterID" type="drops:ID" use="required"/>
             <drops:attribute name="slayerExp" type="drops:float" use="required"/>
             <drops:attribute name="hpExp" type="drops:float" use="required"/>
             <drops:attribute name="combatExp" type="drops:float" use="required"/>

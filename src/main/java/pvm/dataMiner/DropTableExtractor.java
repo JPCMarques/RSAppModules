@@ -1,4 +1,4 @@
-package pvm;
+package pvm.dataMiner;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -19,60 +19,24 @@ import java.util.List;
 /**
  * Created by jpcmarques on 08-09-2016.
  */
-public class DropTableExtractor extends DataMiner<String, Elements, Element, LinkedList<DropTable>> {
-    private Document document;
-    private static final String classFilter = "item-drops";
+public class DropTableExtractor extends MonsterDataExtractor<LinkedList<DropTable>> {
     private String monsterID;
     private ItemList itemList;
 
-    public DropTableExtractor(String input, ItemList itemList) {
-        super(input);
+    public DropTableExtractor(String input, Monster monster, ItemList itemList) {
+        super(input, "item-drops", monster);
         this.itemList = itemList;
-        monsterID = input.substring(input.lastIndexOf("/") + 1);
-        logger = new IDLogger(DropTableExtractor.class);
-
     }
 
     @Override
     protected void init() {
+        monsterID = monster.getMonsterID();
+        logger = new IDLogger(DropTableExtractor.class);
         unifiedData = new LinkedList<>();
     }
 
     private String getDTID(int index){
-        return monsterID + "DropsN" + index;
-    }
-
-    @Override
-    protected void validateInput() throws InvalidInputException {
-        try {
-            document = Jsoup.connect(input).get();
-        } catch (IOException e) {
-            logger.e("caught exception during input validation: " + e.getMessage());
-            throw new InvalidInputException();
-        }
-    }
-
-    @Override
-    protected void chunkData() throws InvalidChunkingException {
-        logger.i("selecting all tables from document...");
-        chunkedData = document.select("table");
-    }
-
-    @Override
-    protected void validateDataChunk(Element chunk, int index) throws InvalidDataChunkException {
-        boolean includesClass = false;
-        logger.i("checking classes of \"" + chunk.nodeName() + "\"");
-        for(String cl : chunk.classNames()){
-            logger.i("found class \"" + cl + "\"");
-            if(classFilter.contains(cl)){
-                includesClass = true;
-                break;
-            }
-        }
-        if(!includesClass){
-            logger.e("\"" + chunk.nodeName() + "\" does not contain required class.");
-            throw new InvalidDataChunkException("data chunk (table) does not contain the required class.");
-        }
+        return monsterID + "_drops_n" + index;
     }
 
     @Override
@@ -124,21 +88,6 @@ public class DropTableExtractor extends DataMiner<String, Elements, Element, Lin
         unifiedData.add(dropTable);
     }
 
-
-    @Override
-    protected void processChunks() throws InvalidDataChunkException {
-        for(int i = 0; i < chunkedData.size(); i++){
-            Element chunk = chunkedData.get(i);
-            try{
-                validateDataChunk(chunk, i);
-                processDataChunk(chunk, i);
-            }catch (InvalidDataChunkException idce){
-                //Skip
-            }
-        }
-    }
-
-
     @Override
     protected void validateResult() throws InvalidResultException {
         List<Item> items = itemList.getItem();
@@ -160,6 +109,8 @@ public class DropTableExtractor extends DataMiner<String, Elements, Element, Lin
         for(String key : droptableItems.keySet()){
             items.add((Item) droptableItems.get(key).getItemID());
         }
+
+        monster.getDropTable().addAll(unifiedData);
     }
 
 }
