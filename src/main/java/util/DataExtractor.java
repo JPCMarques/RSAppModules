@@ -1,13 +1,11 @@
 package util;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import util.exceptions.dataMiner.*;
 
 /**
  * Created by jpcmarques on 07-09-2016.
  */
-public abstract class DataMiner <Input,
+public abstract class DataExtractor<Input,
         DataChunkContainer extends Iterable<?>,
         DataChunk,
         MinedData>{
@@ -15,9 +13,9 @@ public abstract class DataMiner <Input,
     protected Input input;
     protected DataChunkContainer chunkedData;
     protected MinedData unifiedData;
-    protected static IDLogger logger = new IDLogger(DataMiner.class, DataMiner.class.getName());
+    protected static IDLogger logger = new IDLogger(DataExtractor.class, DataExtractor.class.getName());
 
-    public DataMiner(Input input){
+    public DataExtractor(Input input){
         this.input = input;
     }
 

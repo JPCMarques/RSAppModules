@@ -1,4 +1,4 @@
-package pvm.dataMiner;
+package pvm.dataExtractors;
 
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;

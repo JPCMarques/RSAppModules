@@ -1,21 +1,14 @@
-package pvm.dataMiner;
+package pvm.dataExtractors;
 
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import slayer.Charm;
 import slayer.CharmDropRate;
 import slayer.Monster;
-import util.DataMiner;
-import util.IDLogger;
 import util.converters.NumberConverter;
-import util.exceptions.dataMiner.InvalidChunkingException;
 import util.exceptions.dataMiner.InvalidDataChunkException;
-import util.exceptions.dataMiner.InvalidInputException;
 import util.exceptions.dataMiner.InvalidResultException;
 
-import java.io.IOException;
 import java.util.List;
 
 /**

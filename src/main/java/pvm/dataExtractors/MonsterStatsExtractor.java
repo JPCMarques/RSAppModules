@@ -1,4 +1,4 @@
-package pvm.dataMiner;
+package pvm.dataExtractors;
 
 import org.jsoup.nodes.Element;
 import slayer.Monster;
@@ -6,8 +6,6 @@ import util.exceptions.dataMiner.InvalidChunkingException;
 import util.exceptions.dataMiner.InvalidDataChunkException;
 import util.exceptions.dataMiner.InvalidInputException;
 import util.exceptions.dataMiner.InvalidResultException;
-
-import java.util.LinkedList;
 
 /**
  * Created by jpcmarques on 21-09-2016.

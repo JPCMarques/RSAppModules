@@ -1,4 +1,4 @@
-package pvm.dataMiner;
+package pvm.dataExtractors;
 
 import slayer.Monster;
 

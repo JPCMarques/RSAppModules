@@ -1,16 +1,12 @@
-package pvm.dataMiner;
+package pvm.dataExtractors;
 
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import slayer.*;
-import util.DataMiner;
 import util.IDLogger;
 import util.converters.NumberConverter;
 import util.exceptions.dataMiner.*;
 
-import java.io.IOException;
 import java.math.BigInteger;
 import java.util.HashMap;
 import java.util.LinkedList;

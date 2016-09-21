@@ -1,10 +1,10 @@
-package pvm.dataMiner;
+package pvm.dataExtractors;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
-import util.DataMiner;
+import util.DataExtractor;
 import util.exceptions.dataMiner.InvalidChunkingException;
 import util.exceptions.dataMiner.InvalidDataChunkException;
 import util.exceptions.dataMiner.InvalidInputException;
@@ -14,7 +14,7 @@ import java.io.IOException;
 /**
  * Created by jpcmarques on 08-09-2016.
  */
-public abstract class RSWikiTableExtractor<Output> extends DataMiner<String, Elements, Element, Output> {
+public abstract class RSWikiTableExtractor<Output> extends DataExtractor<String, Elements, Element, Output> {
     private Document document;
     private final String classFilter;
 
