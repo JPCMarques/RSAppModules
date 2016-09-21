@@ -54,6 +54,8 @@ public class MasterListExtractor extends MonsterDataExtractor<Monster.MasterList
                 }
             }
         }
+
+        //TODO check "old-style" wiki pages
     }
 
     @Override
