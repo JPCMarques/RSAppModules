@@ -49,6 +49,7 @@ public class DropTableExtractor extends MonsterDataExtractor<LinkedList<DropTabl
 
         for(int i = 1; i < lines.size(); i++){
             Element line = lines.get(i);
+            logger.i("line:\n"+line);
             Drop drop = new Drop();
             DropRates dropRates = new DropRates();
             String initialPrice = line.child(4).text();

@@ -42,7 +42,11 @@ public abstract class RSWikiTableExtractor<Output> extends DataMiner<String, Ele
     @Override
     protected void validateDataChunk(Element chunk, int index) throws InvalidDataChunkException {
         boolean includesClass = false;
-        logger.w("validating chunk: \n" + chunk.toString());
+        if(classFilter.equals("")){
+            logger.i("skipping validation (no filter)...");
+            return;
+        }
+        logger.i("validating chunk: \n" + chunk.toString());
         logger.i("checking classes of \"" + chunk.nodeName() + "\"");
         includesClass = chunk.classNames().contains(classFilter);
         if(!includesClass){
