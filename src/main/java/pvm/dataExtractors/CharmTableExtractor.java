@@ -27,7 +27,8 @@ public class CharmTableExtractor extends MonsterDataExtractor<Monster.CharmList>
 
     @Override
     protected void processDataChunk(Element element, int index) throws InvalidDataChunkException {
-        Elements percentages = element.child(1).children();
+        logger.i("processing chunk : \n" + element.toString());
+        Elements percentages = element.child(0).child(1).children();
         logger.i("getting all child nodes...");
         List<CharmDropRate> charmDropRates = unifiedData.getCharmDropRate();
         Charm[] charms = new Charm[]{
@@ -42,7 +43,7 @@ public class CharmTableExtractor extends MonsterDataExtractor<Monster.CharmList>
             data = data.substring(0, data.indexOf("%"));
             double avg = NumberConverter.singleRangeConversion(data);
             CharmDropRate charmDropRate = new CharmDropRate();
-            charmDropRate.setBase(charms[i]);
+            charmDropRate.setBase(charms[i-1]);
             charmDropRate.setRate((float) avg);
             charmDropRates.add(charmDropRate);
         }

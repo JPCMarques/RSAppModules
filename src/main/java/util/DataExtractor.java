@@ -23,8 +23,8 @@ public abstract class DataExtractor<Input,
     protected abstract void validateInput() throws InvalidInputException;
     protected abstract void chunkData() throws InvalidChunkingException;
     protected abstract void validateDataChunk(DataChunk chunk, int index) throws InvalidDataChunkException;
-    protected abstract void processDataChunk(DataChunk chunk, int index) throws InvalidDataChunkException;
-    protected abstract void processChunks() throws InvalidDataChunkException;
+    protected abstract void processDataChunk(DataChunk chunk, int index) throws InvalidDataChunkException, InvalidResultException, InvalidInputException, InvalidChunkingException;
+    protected abstract void processChunks() throws InvalidDataChunkException, InvalidResultException, InvalidInputException, InvalidChunkingException;
     protected abstract void validateResult() throws InvalidResultException;
     protected MinedData getResult(){
         return unifiedData;

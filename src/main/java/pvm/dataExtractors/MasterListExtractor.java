@@ -1,6 +1,9 @@
 package pvm.dataExtractors;
 
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
+import org.jsoup.parser.Parser;
 import org.jsoup.select.Elements;
 import slayer.Monster;
 import slayer.SlayerMaster;
@@ -15,7 +18,8 @@ import java.util.HashMap;
  * Created by jpcmarques on 11-09-2016.
  */
 public class MasterListExtractor extends MonsterDataExtractor<Monster.MasterList> {
-    private String attributeToSearch = "assigned_by";
+    private String attributeToSearch = "assigned_by",
+            BASE_KEY = "data-attr-param";
     private static final String FILTER = ""; //Everything is accepted; assumed input directly from processed monster data.
     private HashMap<String, SlayerMaster> masterList;
 
@@ -25,12 +29,12 @@ public class MasterListExtractor extends MonsterDataExtractor<Monster.MasterList
 
     @Override
     protected void validateInput() throws InvalidInputException {
-        //Do nothing, always valid
+        document = Jsoup.parse(input, "", Parser.xmlParser());
     }
 
     @Override
     protected void chunkData() throws InvalidChunkingException {
-        //Data is pre-chunked
+        chunkedData = document.getElementsByAttributeValue(BASE_KEY, attributeToSearch);
     }
 
     @Override
@@ -44,14 +48,11 @@ public class MasterListExtractor extends MonsterDataExtractor<Monster.MasterList
 
     @Override
     protected void processDataChunk(Element element, int index) throws InvalidDataChunkException {
-        Elements matchedData = element.getElementsByAttribute(attributeToSearch);
 
-        for(Element master : matchedData){
-            for(String masterName : masterList.keySet()){
-                if(master.toString().contains(masterName)){
-                    unifiedData.getMaster().add(masterList.get(masterName));
-                    masterList.remove(masterName);
-                }
+        for(String masterName : masterList.keySet()){
+            if(element.toString().toLowerCase().contains(masterName.toLowerCase())){
+                unifiedData.getMaster().add(masterList.get(masterName));
+                masterList.remove(masterName);
             }
         }
 

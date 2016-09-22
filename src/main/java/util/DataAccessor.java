@@ -1,9 +1,6 @@
 package util;
 
-import slayer.DropData;
-import slayer.DropTable;
-import slayer.Item;
-import slayer.ItemList;
+import slayer.*;
 
 import javax.xml.bind.*;
 import java.io.File;
@@ -64,6 +61,21 @@ public class DataAccessor {
 
     private Marshaller getItemListMarshaller() throws JAXBException {
         JAXBContext jaxbContext = JAXBContext.newInstance(ItemList.class);
+        Marshaller marshaller = jaxbContext.createMarshaller();
+        marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+
+        return marshaller;
+    }
+
+    public Marshaller getDropDataMarshaller() throws JAXBException {
+        JAXBContext jaxbContext = JAXBContext.newInstance(DropData.class);
+        Marshaller marshaller = jaxbContext.createMarshaller();
+        marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+
+        return marshaller;
+    }
+    public Marshaller getMonsterMarshaller() throws JAXBException {
+        JAXBContext jaxbContext = JAXBContext.newInstance(Monster.class);
         Marshaller marshaller = jaxbContext.createMarshaller();
         marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 
