@@ -106,6 +106,10 @@ public class DropTableExtractor extends MonsterDataExtractor<LinkedList<DropTabl
         for(String key : droptableItems.keySet()){
             items.add((Item) droptableItems.get(key).getItemID());
         }
+        for(int i = unifiedData.size() - 1; i >= 0; i--){
+            DropTable dt = unifiedData.get(i);
+            if(dt.getDrop().size() == 0) unifiedData.remove(i);
+        }
 
         monster.getDropTable().addAll(unifiedData);
     }

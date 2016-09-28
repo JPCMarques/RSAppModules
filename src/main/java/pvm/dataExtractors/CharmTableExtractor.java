@@ -41,7 +41,7 @@ public class CharmTableExtractor extends MonsterDataExtractor<Monster.CharmList>
         for(int i = 1; i < percentages.size(); i++){
             String data = percentages.get(i).text();
             data = data.substring(0, data.indexOf("%"));
-            double avg = NumberConverter.singleRangeConversion(data);
+            double avg = NumberConverter.singleRangeConversion(data) / 100;
             CharmDropRate charmDropRate = new CharmDropRate();
             charmDropRate.setBase(charms[i-1]);
             charmDropRate.setRate((float) avg);

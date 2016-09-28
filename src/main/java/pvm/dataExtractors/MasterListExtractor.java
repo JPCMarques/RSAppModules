@@ -35,6 +35,7 @@ public class MasterListExtractor extends MonsterDataExtractor<Monster.MasterList
     @Override
     protected void chunkData() throws InvalidChunkingException {
         chunkedData = document.getElementsByAttributeValue(BASE_KEY, attributeToSearch);
+        if (chunkedData.size() == 0) chunkedData = document.getElementsByTag("th");
     }
 
     @Override
