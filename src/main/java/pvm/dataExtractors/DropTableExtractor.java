@@ -111,7 +111,6 @@ public class DropTableExtractor extends MonsterDataExtractor<LinkedList<DropTabl
             if(dt.getDrop().size() == 0) unifiedData.remove(i);
         }
 
-        monster.getDropTable().addAll(unifiedData);
     }
 
 }

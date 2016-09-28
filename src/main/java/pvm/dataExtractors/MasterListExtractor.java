@@ -35,7 +35,8 @@ public class MasterListExtractor extends MonsterDataExtractor<Monster.MasterList
     @Override
     protected void chunkData() throws InvalidChunkingException {
         chunkedData = document.getElementsByAttributeValue(BASE_KEY, attributeToSearch);
-        if (chunkedData.size() == 0) chunkedData = document.getElementsByTag("th");
+        if (chunkedData.size() == 0) chunkedData = document.getElementsByClass("item");
+
     }
 
     @Override
@@ -43,17 +44,20 @@ public class MasterListExtractor extends MonsterDataExtractor<Monster.MasterList
         unifiedData = new Monster.MasterList();
         masterList = new HashMap<>();
         for(SlayerMaster master : SlayerMaster.values()){
-            masterList.put(master.value(), master);
+            String masterName = master.value();
+            if(masterName.contains("/")) masterName = masterName.split("/")[0];
+            masterList.put(masterName, master);
+            System.out.println(masterName);
         }
     }
 
     @Override
     protected void processDataChunk(Element element, int index) throws InvalidDataChunkException {
-
+        System.out.println("FUCKING MASTERLIST " + index + " FOR\n" + element);
         for(String masterName : masterList.keySet()){
             if(element.toString().toLowerCase().contains(masterName.toLowerCase())){
                 unifiedData.getMaster().add(masterList.get(masterName));
-                masterList.remove(masterName);
+
             }
         }
 

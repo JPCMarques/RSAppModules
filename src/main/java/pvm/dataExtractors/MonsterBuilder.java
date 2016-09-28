@@ -57,10 +57,14 @@ public class MonsterBuilder extends RSWikiTableExtractor<LinkedList<Monster>> {
         mse.mine();
 
         LinkedList<DropTable> dropTables = dte.mine();
-        Monster.CharmList charmList = cte.mine();
+        try{
+            Monster.CharmList charmList = cte.mine();
+            monster.setCharmList(charmList);
+        } catch (InvalidChunkingException ice){
+            //skip, not mandatory
+        }
         Monster.MasterList masterList = mle.mine();
 
-        monster.setCharmList(charmList);
         monster.getDropTable().addAll(dropTables);
         monster.setMasterList(masterList);
 
