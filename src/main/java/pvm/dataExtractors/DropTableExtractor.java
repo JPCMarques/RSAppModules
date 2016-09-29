@@ -70,13 +70,15 @@ public class DropTableExtractor extends MonsterDataExtractor<LinkedList<DropTabl
             if(actualRarity.equals(Rarity.OUTLIER)) dropRates.setValue(BigInteger.valueOf(-1));
 
             Item item = new Item();
-            item.setValue(NumberConverter.toDouble(initialPrice));
+            double val = NumberConverter.toDouble(initialPrice);
+            double qty = NumberConverter.toDouble(amount);
+            item.setValue(val/qty);
             item.setId(itemName.replace(" ", "_"));
             item.setRsid(BigInteger.valueOf(-1));
             item.setName(itemName);
 
             drop.setItemID(item);
-            drop.setAmount((float) NumberConverter.toDouble(amount));
+            drop.setAmount((float) qty);
             drop.setDropRates(dropRates);
 
             logger.i("drop added to droptable.");
