@@ -94,7 +94,7 @@
             <drops:attribute name="slayerExp" type="drops:float" use="required"/>
             <drops:attribute name="hpExp" type="drops:float" use="required"/>
             <drops:attribute name="combatExp" type="drops:float" use="required"/>
-            <drops:attribute name="archetype" type="drops:string" use="required"/>
+            <drops:attribute name="archetype" type="drops:IDREF" use="required"/>
             <drops:attribute name="secondaryArchetype" type="drops:IDREF" use="optional"/>
         </drops:complexType>
     </drops:element>

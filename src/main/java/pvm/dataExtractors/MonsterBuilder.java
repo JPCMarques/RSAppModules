@@ -2,6 +2,7 @@ package pvm.dataExtractors;
 
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+import slayer.DropData;
 import slayer.DropTable;
 import slayer.ItemList;
 import slayer.Monster;
@@ -18,10 +19,12 @@ import java.util.LinkedList;
  */
 public class MonsterBuilder extends RSWikiTableExtractor<LinkedList<Monster>> {
     protected ItemList itemList;
+    protected DropData dropData;
 
-    public MonsterBuilder(String input, ItemList itemList) {
+    public MonsterBuilder(String input, DropData dropData) {
         super("http://runescape.wikia.com/wiki/" + input.replace(" ", "_"), "infobox-monster");
-        this.itemList = itemList;
+        this.itemList = dropData.getItemList();
+        this.dropData = dropData;
     }
 
     @Override
@@ -53,7 +56,7 @@ public class MonsterBuilder extends RSWikiTableExtractor<LinkedList<Monster>> {
         CharmTableExtractor cte = new CharmTableExtractor(input, monster);
         DropTableExtractor dte = new DropTableExtractor(input, monster, itemList);
         MasterListExtractor mle = new MasterListExtractor(element.toString(), monster);
-        MonsterStatsExtractor mse = new MonsterStatsExtractor(element.toString(), monster);
+        MonsterStatsExtractor mse = new MonsterStatsExtractor(element.toString(), monster, dropData);
         mse.mine();
 
         LinkedList<DropTable> dropTables = dte.mine();

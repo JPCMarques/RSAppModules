@@ -4,13 +4,18 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Element;
 import org.jsoup.parser.Parser;
 import org.jsoup.select.Elements;
+import slayer.ArchetypeMonsterList;
+import slayer.DropData;
 import slayer.Monster;
+import util.DataAccessor;
 import util.ElementDigger;
 import util.converters.NumberConverter;
 import util.exceptions.dataMiner.InvalidChunkingException;
 import util.exceptions.dataMiner.InvalidDataChunkException;
 import util.exceptions.dataMiner.InvalidInputException;
 import util.exceptions.dataMiner.InvalidResultException;
+
+import javax.xml.bind.JAXBException;
 
 /**
  * Created by jpcmarques on 21-09-2016.
@@ -24,6 +29,7 @@ public class MonsterStatsExtractor extends MonsterDataExtractor<Void> {
             SLAYER_CAT_KEY = "slayercat",
             EXAMINE_KEY = "examine",
             BASE_KEY = "data-attr-param";
+    private DropData dropData;
 
     private enum DiggerKeys {
         EXAMINE(0,0,0,1,5,1),
@@ -45,8 +51,9 @@ public class MonsterStatsExtractor extends MonsterDataExtractor<Void> {
     }
 
 
-    public MonsterStatsExtractor(String input, Monster monster) {
+    public MonsterStatsExtractor(String input, Monster monster, DropData dropData) {
         super(input, "", monster);
+        this.dropData = dropData;
     }
 
     @Override
@@ -81,6 +88,35 @@ public class MonsterStatsExtractor extends MonsterDataExtractor<Void> {
                 modeCParsing(element);
             }
         }
+
+        ArchetypeMonsterList archetypeMonsterList = dropData.getArchetypeMonsterList();
+        if(archetypeMonsterList == null) {
+            archetypeMonsterList = new ArchetypeMonsterList();
+            dropData.setArchetypeMonsterList(archetypeMonsterList);
+        }
+        String archetype = ((String) monster.getArchetype()).trim();
+        boolean archetypeExists = false;
+
+        for(ArchetypeMonsterList.Archetype arch : archetypeMonsterList.getArchetype()){
+            if(arch.getArchetypeID().equals(archetype)){
+                archetypeExists = true;
+                fillArchetype(arch);
+                break;
+            }
+        }
+        if(!archetypeExists){
+            ArchetypeMonsterList.Archetype arch = new ArchetypeMonsterList.Archetype();
+            arch.setArchetypeID(archetype);
+            fillArchetype(arch);
+            archetypeMonsterList.getArchetype().add(arch);
+        }
+    }
+
+    private void fillArchetype(ArchetypeMonsterList.Archetype arch){
+        ArchetypeMonsterList.Archetype.ArchetypeMonster archetypeMonster = new ArchetypeMonsterList.Archetype.ArchetypeMonster();
+        archetypeMonster.setMonsterID(monster);
+        monster.setArchetype(arch);
+        arch.getArchetypeMonster().add(archetypeMonster);
     }
 
     private void modeAParsing(Element element){
@@ -88,15 +124,20 @@ public class MonsterStatsExtractor extends MonsterDataExtractor<Void> {
                 hpExp = element.getElementsByAttributeValue(BASE_KEY, HP_EXP_KEY).first().text(),
                 examine = element.getElementsByAttributeValue(BASE_KEY, EXAMINE_KEY).first().text(),
                 slayerExp = element.getElementsByAttributeValue(BASE_KEY, SLAYER_EXP_KEY).first().text(),
-                slayerCat = element.getElementsByAttributeValue(BASE_KEY, SLAYER_CAT_KEY).first().text(),
                 level = element.getElementsByAttributeValue(BASE_KEY, LEVEL_KEY).first().text();
+        try {
+            String slayerCat = element.getElementsByAttributeValue(BASE_KEY, SLAYER_CAT_KEY).first().text();
+            monster.setArchetype(slayerCat);
+        }
+        catch (NullPointerException npe){
+            //Ignore, no slayer info
+        }
 
         monster.setCombatExp((float) NumberConverter.toDouble(exp));
         monster.setHpExp((float) NumberConverter.toDouble(hpExp));
         monster.setSlayerExp((float) NumberConverter.toDouble(slayerExp));
         monster.setMonsterID(monster.getMonsterID() + "_" + level);
         monster.setExamine(examine);
-        monster.setArchetype(slayerCat);
     }
 
     private void modeBParsing(Element element){

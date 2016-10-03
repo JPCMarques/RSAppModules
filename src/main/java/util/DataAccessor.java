@@ -67,6 +67,13 @@ public class DataAccessor {
         return marshaller;
     }
 
+    public Marshaller getMarshaller(Class<?> data) throws JAXBException {
+        JAXBContext jaxbContext = JAXBContext.newInstance(data);
+        Marshaller marshaller = jaxbContext.createMarshaller();
+        marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+        return marshaller;
+    }
+
     public Marshaller getDropDataMarshaller() throws JAXBException {
         JAXBContext jaxbContext = JAXBContext.newInstance(DropData.class);
         Marshaller marshaller = jaxbContext.createMarshaller();
