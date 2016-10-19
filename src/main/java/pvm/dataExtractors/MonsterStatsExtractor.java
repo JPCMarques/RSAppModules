@@ -94,7 +94,7 @@ public class MonsterStatsExtractor extends MonsterDataExtractor<Void> {
             archetypeMonsterList = new ArchetypeMonsterList();
             dropData.setArchetypeMonsterList(archetypeMonsterList);
         }
-        String archetype = ((String) monster.getArchetype()).trim();
+        String archetype = ((String) monster.getSlayercat()).trim();
         boolean archetypeExists = false;
 
         for(ArchetypeMonsterList.Archetype arch : archetypeMonsterList.getArchetype()){
@@ -115,7 +115,7 @@ public class MonsterStatsExtractor extends MonsterDataExtractor<Void> {
     private void fillArchetype(ArchetypeMonsterList.Archetype arch){
         ArchetypeMonsterList.Archetype.ArchetypeMonster archetypeMonster = new ArchetypeMonsterList.Archetype.ArchetypeMonster();
         archetypeMonster.setMonsterID(monster);
-        monster.setArchetype(arch);
+        monster.setSlayercat(arch);
         arch.getArchetypeMonster().add(archetypeMonster);
     }
 
@@ -127,7 +127,7 @@ public class MonsterStatsExtractor extends MonsterDataExtractor<Void> {
                 level = element.getElementsByAttributeValue(BASE_KEY, LEVEL_KEY).first().text();
         try {
             String slayerCat = element.getElementsByAttributeValue(BASE_KEY, SLAYER_CAT_KEY).first().text();
-            monster.setArchetype(slayerCat);
+            monster.setSlayercat(slayerCat);
         }
         catch (NullPointerException npe){
             //Ignore, no slayer info
@@ -156,7 +156,7 @@ public class MonsterStatsExtractor extends MonsterDataExtractor<Void> {
         }
 
         monster.setExamine(examineData);
-        monster.setArchetype(monster.getName());
+        monster.setSlayercat(monster.getName());
         monster.setMonsterID(monster.getMonsterID() + "_" + levelData);
         lastHpExp = (float) NumberConverter.toDouble(hpExpData);
         monster.setHpExp(lastHpExp);

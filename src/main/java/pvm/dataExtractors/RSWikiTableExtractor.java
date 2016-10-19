@@ -26,11 +26,17 @@ public abstract class RSWikiTableExtractor<Output> extends DataExtractor<String,
 
     @Override
     protected void validateInput() throws InvalidInputException {
-        try {
-            document = Jsoup.connect(input).get();
-        } catch (IOException e) {
-            logger.e("caught exception during input validation: " + e.getMessage());
-            throw new InvalidInputException();
+        while(true){
+            try {
+                document = Jsoup.connect(input).get();
+                break;
+            } catch (IOException e) {
+                try {
+                    wait(100);
+                } catch (InterruptedException e1) {
+                    e1.printStackTrace();
+                }
+            }
         }
     }
 
