@@ -1,12 +1,17 @@
 package pvm;
 
+import org.apache.commons.io.IOUtils;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import slayer.DropData;
 import slayer.Monster;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
@@ -84,16 +89,30 @@ public class MonsterBuilder {
         public Pattern getPattern(){
             return Pattern.compile(key);
         }
+
+        public Matcher getMatcher(String data) {
+            return getPattern().matcher(data);
+        }
     }
 
     public MonsterBuilder(DropData dropData, String monsterName){
         this.dropData = dropData;
         this.monsterName = monsterName;
+
     }
 
     private void processCharms() throws IOException {
+        Logger logger = LogManager.getLogger();
+        logger.info("Started charm processing, for monster: " + monsterName);
+        logger.debug("");
         String charmURL = URL_START + CHARMS_TOKEN + monsterName.replace(" ", "_") + URL_END;
         InputStream charmDataStream = new URL(charmURL).openStream();
+        String charmStringData = IOUtils.toString(new InputStreamReader(charmDataStream));
+        for(CharmsPattern cp : CharmsPattern.values()){
+            Matcher matcher = cp.getMatcher(charmStringData);
+            matcher.find();
+
+        }
     }
 
 }
