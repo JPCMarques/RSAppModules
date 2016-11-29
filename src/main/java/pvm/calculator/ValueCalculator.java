@@ -8,9 +8,9 @@ import java.util.HashMap;
  * Created by jpcmarques on 13-06-2016.
  */
 public abstract class ValueCalculator {
-    private HashMap<Rarity, Float> defaultValues;
+    private static HashMap<Rarity, Float> defaultValues;
 
-    public ValueCalculator() {
+    static  {
         defaultValues = new HashMap<>();
         defaultValues.put(Rarity.COMMON, 0.1f);
         defaultValues.put(Rarity.UNCOMMON, 0.01f);
@@ -18,7 +18,7 @@ public abstract class ValueCalculator {
         defaultValues.put(Rarity.VERY_RARE, 0.0001f);
     }
 
-    public double calcDropValue(Drop drop, Rarity assumedRarity) {
+    public static double calcDropValue(Drop drop, Rarity assumedRarity) {
         float avgAmount = drop.getAmount();
         if(avgAmount == 0) avgAmount=1;
         double unitPrice = ((Item) drop.getItemID()).getValue();
@@ -34,32 +34,22 @@ public abstract class ValueCalculator {
         return odds*avgPrice;
     }
 
-    public double calcDropTableValue(DropTable dropTable, boolean bypassIgnore) {
+    public static double calcDropTableValue(DropTable dropTable, boolean bypassIgnore) {
         double dropTableValue = 0;
         for(Drop drop: dropTable.getDrop()){
-            if(!dropTable.isIgnored() || bypassIgnore) dropTableValue += calcDropValue(drop, dropTable.getDefaultRarity());
+            dropTableValue += calcDropValue(drop, drop.getDropRates().getRarity());
         }
         for(DropTable.Composite.Dtref dtRef: dropTable.getComposite().getDtref())
             dropTableValue += calcDropTableValue((DropTable) dtRef.getRef(), true);
         return dropTableValue;
     }
 
-    public double calcDropTableValue(DropTable dropTable)  {
+    public static double calcDropTableValue(DropTable dropTable)  {
         return calcDropTableValue(dropTable, false);
     }
 
-    public double calcTaskValue(Monster monster, int killNumber)  {
-        float totalDropTableWorth = 0;
-        for(DropTable dropTable: monster.getDropTable()){
-            boolean bypass = false;
-            DropTable t;
-            if(dropTable.getRef() == null) t = dropTable;
-            else{
-                bypass = true;
-                t = (DropTable) dropTable.getRef();
-            }
-            totalDropTableWorth += calcDropTableValue(t, bypass);
-        }
+    public static double calcTaskValue(Monster monster, int killNumber)  {
+        float totalDropTableWorth = (float) calcDropTableValue(monster.getDropTable());
         return totalDropTableWorth*killNumber;
     }
 }

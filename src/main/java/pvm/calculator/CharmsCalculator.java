@@ -18,7 +18,7 @@ public abstract class CharmsCalculator {
         CharmCount charmCount = new CharmCount();
         Monster.CharmList charmList = monster.getCharmList();
         if(charmList==null) return charmCount;
-        Monster.CharmList charmListRef = (Monster.CharmList) charmList.getRef();
+        Monster.CharmList charmListRef = charmList;
         List<CharmDropRate> cdrs = (charmListRef == null ? charmList.getCharmDropRate() : charmListRef.getCharmDropRate());
         for(CharmDropRate cdr : cdrs){
             Charm charm = cdr.getBase();

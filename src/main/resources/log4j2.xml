@@ -1,25 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration status="WARN">
     <Properties>
-        <Property name="info_filename">logs/info.log</Property>
-        <Property name="debug_filename">logs/debug.log</Property>
+        <Property name="log_folder">logs/</Property>
+        <Property name="info_filename">info</Property>
+        <Property name="debug_filename">debug</Property>
+        <Property name="filename_terminator">.log</Property>
     </Properties>
     <Appenders>
         <Console name="Console" target="SYSTEM_OUT">
             <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
         </Console>
-        <File name="InfoFile" filename="${info_filename}">
+        <File name="InfoFile" filename="${log_folder}${info_filename}${filename_terminator}" append="false">
             <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
         </File>
-        <File name="DebugFile" filename="${info_filename}">
+        <File name="DebugFile" filename="${log_folder}${debug_filename}${filename_terminator}" append="false">
             <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
         </File>
     </Appenders>
     <Loggers>
-        <Root level="info">
+        <Root level="info" additivity="false">
             <AppenderRef ref="InfoFile"/>
         </Root>
-        <Root level="debug">
+        <Root level="debug" additivity="false">
             <AppenderRef ref="DebugFile"/>
         </Root>
     </Loggers>
