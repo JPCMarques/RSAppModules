@@ -43,10 +43,17 @@ public class DropTableProcessor extends StringProcessor<DropTable> {
             String[] splitData = cleanData.split("\\|");
             HashMap<String, String> tokenVals = new HashMap<>();
             for(String col : splitData){
+                logger.debug("col {}", col);
                 String[] splitCol = col.toLowerCase().split("=");
-                tokenVals.put(splitCol[0], splitCol[1].trim());
+                try{
+                    tokenVals.put(splitCol[0], splitCol[1].trim());
+                }catch (ArrayIndexOutOfBoundsException e){
+                    logger.debug("Index out of bounds found, continuing");
+                }
             }
-            String name = tokenVals.get("name"), iid = name.replace(" ", "_");
+            String name = tokenVals.get("name");
+            name = name.substring(0, 1).toUpperCase() + name.substring(1);
+            String iid = name.replace(" ", "_");
             if(name.equals("Rare_drop_table")) continue;
             boolean toAdd = itemMap.get(iid) == null;
 

@@ -39,8 +39,6 @@ public abstract class ValueCalculator {
         for(Drop drop: dropTable.getDrop()){
             dropTableValue += calcDropValue(drop, drop.getDropRates().getRarity());
         }
-        for(DropTable.Composite.Dtref dtRef: dropTable.getComposite().getDtref())
-            dropTableValue += calcDropTableValue((DropTable) dtRef.getRef(), true);
         return dropTableValue;
     }
 

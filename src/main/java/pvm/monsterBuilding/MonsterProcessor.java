@@ -5,7 +5,6 @@ import org.apache.commons.lang3.StringEscapeUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slayer.*;
-import util.DataAccessor;
 
 import javax.xml.bind.JAXBException;
 import java.io.FileNotFoundException;
