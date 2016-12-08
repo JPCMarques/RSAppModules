@@ -2,9 +2,9 @@ package pvm.monsterBuilding;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import slayer.Charm;
-import slayer.CharmDropRate;
-import slayer.Monster;
+import pvm.Charm;
+import pvm.CharmDropRate;
+import pvm.Monster;
 
 import java.io.IOException;
 import java.util.HashMap;

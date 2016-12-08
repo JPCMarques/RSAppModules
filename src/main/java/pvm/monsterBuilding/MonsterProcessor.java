@@ -1,12 +1,17 @@
 package pvm.monsterBuilding;
 
 import org.apache.commons.io.IOUtils;
-import org.apache.commons.lang3.StringEscapeUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import slayer.*;
+import pvm.ArchetypeMonsterList;
+import pvm.DropData;
+import pvm.DropTable;
+import pvm.ItemList;
+import pvm.Monster;
+import pvm.MonsterList;
+import pvm.SlayerMaster;
+import pvm.SlayerMasterAssignments;
 
-import javax.xml.bind.JAXBException;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
@@ -42,7 +47,7 @@ public class MonsterProcessor extends StringProcessor<DropData> {
         }
     }
 
-    //Used if slayer level exists, but assigned by doesnt
+    //Used if pvm level exists, but assigned by doesnt
     protected static enum MasterRegex {
         TURAEL("([t|T]urael|[S|s]pria)", SlayerMaster.TURAEL_SPRIA),
         MAZCHNA("([m|M]azchna|[A|a]chtryn)", SlayerMaster.MAZCHNA_ACHTRYN),
@@ -85,7 +90,7 @@ public class MonsterProcessor extends StringProcessor<DropData> {
     protected Monster.MasterList masterList = new Monster.MasterList();
     protected boolean masterListProcessed = false;
     protected int monsterCount;
-    protected ArchetypeMonsterList.Archetype slayerCat;
+    protected pvm.ArchetypeMonsterList.Archetype slayerCat;
 
     public MonsterProcessor(DropData dropData, String input) {
         super(dropData, input);

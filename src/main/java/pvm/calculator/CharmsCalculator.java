@@ -1,8 +1,8 @@
 package pvm.calculator;
 
-import slayer.Charm;
-import slayer.CharmDropRate;
-import slayer.Monster;
+import pvm.Charm;
+import pvm.CharmDropRate;
+import pvm.Monster;
 
 import java.util.List;
 
@@ -12,6 +12,13 @@ import java.util.List;
 public abstract class CharmsCalculator {
     private static class CharmCount{
         public float gold, green, crimson, blue;
+
+        public String toString() {
+            return "Gold charms: " + gold + "\n"
+                    + "Green charms: " + green + "\n"
+                    + "Crimson charms: " + crimson + "\n"
+                    + "Blue charms: " + blue + "\n";
+        }
     }
 
     public static CharmCount calcCharmCount (Monster monster, int killNumber){

@@ -1,6 +1,6 @@
 package pvm.calculator;
 
-import slayer.Monster;
+import pvm.Monster;
 
 /**
  * Created by jpcmarques on 13-06-2016.
@@ -8,6 +8,9 @@ import slayer.Monster;
 public abstract class ExperienceCalculator {
     public static class ExperienceValues{
         public float slayer, hp, combat;
+        public String toString(){
+            return "Slayer experience: " + slayer + "\nHp experience: " + hp + "\nCombat exp: "+combat;
+        }
     }
 
     public static ExperienceValues calcExperience (Monster monster, int killNumber){

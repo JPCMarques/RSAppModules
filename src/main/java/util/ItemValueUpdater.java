@@ -1,14 +1,12 @@
 package util;
 
 import org.apache.commons.io.IOUtils;
-import slayer.Item;
-import slayer.ItemList;
+import pvm.Item;
+import pvm.ItemList;
 
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.math.BigInteger;
 import java.net.URL;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

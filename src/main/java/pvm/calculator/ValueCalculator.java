@@ -1,6 +1,10 @@
 package pvm.calculator;
 
-import slayer.*;
+
+import pvm.Drop;
+import pvm.DropTable;
+import pvm.Item;
+import pvm.Rarity;
 
 import java.util.HashMap;
 
@@ -46,7 +50,7 @@ public abstract class ValueCalculator {
         return calcDropTableValue(dropTable, false);
     }
 
-    public static double calcTaskValue(Monster monster, int killNumber)  {
+    public static double calcTaskValue(pvm.Monster monster, int killNumber)  {
         float totalDropTableWorth = (float) calcDropTableValue(monster.getDropTable());
         return totalDropTableWorth*killNumber;
     }

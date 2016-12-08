@@ -1,7 +1,6 @@
 package pvm.monsterBuilding;
 
 import java.io.IOException;
-import java.net.MalformedURLException;
 
 /**
  * Created by joaop on 25/10/2016.

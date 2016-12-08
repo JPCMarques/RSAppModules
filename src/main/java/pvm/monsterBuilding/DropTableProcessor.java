@@ -2,8 +2,14 @@ package pvm.monsterBuilding;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import pvm.Drop;
+import pvm.DropRates;
+import pvm.DropTable;
+import pvm.Item;
+import pvm.ItemList;
+import pvm.Rarity;
 import util.ItemValueUpdater;
-import slayer.*;
+
 import util.converters.NumberConverter;
 
 import java.io.IOException;

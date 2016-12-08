@@ -6,7 +6,7 @@
 
     <groupId>JPCMarques</groupId>
     <artifactId>RSAppModules</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
     <build>
         <pluginManagement>
             <plugins>
@@ -29,10 +29,10 @@
                     <execution>
                         <configuration>
                             <sources>
-                                <source>${basedir}/src/main/resources/slayer/monsterDropSchema.xsd</source>
+                                <source>${basedir}/src/main/resources/pvm/monsterDropSchema.xsd</source>
                             </sources>
                             <!-- The package of your generated sources -->
-                            <packageName>slayer</packageName>
+                            <packageName>pvm</packageName>
                         </configuration>
                         <phase>generate-sources</phase>
                         <id>xjc</id>
